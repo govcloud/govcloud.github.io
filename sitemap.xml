@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://govcloud.github.io/doc/charts/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://govcloud.github.io/doc/charts/gitlab/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://govcloud.github.io/help/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://govcloud.github.io/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://govcloud.github.io/roadmap/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://govcloud.github.io/team/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://govcloud.github.io/tags/charts/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://govcloud.github.io/doc/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://govcloud.github.io/tags/help/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://govcloud.github.io/tags/index/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://govcloud.github.io/tags/kubernetes/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://govcloud.github.io/tags/misc/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://govcloud.github.io/tags/roadmap/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://govcloud.github.io/tags/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://govcloud.github.io/tags/team/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
