@@ -117,7 +117,7 @@
                 
                 
                 <li>
-                <a class="" href="/doc/charts/">
+                <a class="" href="../../doc/charts/">
                     
                     <span>Documentation</span>
                 </a>
@@ -126,7 +126,7 @@
                 
                 
                 <li>
-                <a class="" href="/roadmap/">
+                <a class="" href="../../roadmap/">
                     
                     <span>Roadmap</span>
                 </a>
@@ -135,7 +135,7 @@
                 
                 
                 <li>
-                <a class="" href="/help/">
+                <a class="" href="../../help/">
                     
                     <span>Help</span>
                 </a>
@@ -144,7 +144,7 @@
                 
                 
                 <li>
-                <a class="" href="/team/">
+                <a class="" href="../../team/">
                     
                     <span>Team</span>
                 </a>
@@ -312,46 +312,6 @@ I should mention that Open Data was developed completely in the open and is free
     }
   });
   $(function() { $('table').addClass('wb-tables table table-striped table-hover').attr('data-wb-tables', '{ "bFilter" : 1, "bInfo" : 0, "bPaginate" : false }'); })
-  var gitHubApiUrl = 'https://api.github.com/repos/';
-  var getData = function(target, callback) {
-    var responses = {
-      composerjson: null,
-      composerlock: null
-    };
-    var checkFinished = function() {
-      if (responses.composerjson && responses.composerlock) {
-        callback(responses.composerjson, responses.composerlock);
-      }
-    }
-    d3.xhr(gitHubApiUrl + target + '/contents/composer.json', 'application/vnd.github.VERSION.raw', function(err, composerjson) {
-      responses.composerjson = JSON.parse(composerjson.responseText);
-      checkFinished();
-    });
-    d3.xhr(gitHubApiUrl + target + '/contents/composer.lock', 'application/vnd.github.VERSION.raw', function(err, composerlock) {
-      responses.composerlock = JSON.parse(composerlock.responseText);
-      checkFinished();
-    });
-  };
-  var chart = d3.chart.dependencyWheel();
-  d3.json("https:\/\/govcloud.github.io/data/composer.json", function(composerjson) {
-    d3.json("https:\/\/govcloud.github.io/data/composer.lock", function(composerlock) {
-      var data = buildMatrixFromComposerJsonAndLock(composerjson, composerlock);
-      d3.select('#chart_placeholder')
-        .datum(data)
-        .call(chart);
-    });
-  });
-  document.getElementById('composerRedraw').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var composerjson = JSON.parse(document.getElementById('composerJson').value);
-    var composerlock = JSON.parse(document.getElementById('composerLock').value);
-    var data = buildMatrixFromComposerJsonAndLock(composerjson, composerlock);
-    d3.select('#chart_placeholder svg').remove();
-    d3.select('#chart_placeholder')
-      .datum(data)
-      .call(chart);
-  }, false);
-
 </script>
 
 

@@ -32,9 +32,9 @@
 
 <link rel="shortcut icon" href="https://govcloud.github.io/assets/images/favicon.ico">
 
-	<link rel="stylesheet" href="/lib/reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="/lib/reveal.js/css/theme/black.css" id="theme">
-	<link rel="stylesheet" href="/lib/reveal.js/lib/css/zenburn.css">
+	<link rel="stylesheet" href="../lib/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../lib/reveal.js/css/theme/black.css" id="theme">
+	<link rel="stylesheet" href="../lib/reveal.js/lib/css/zenburn.css">
     
 <link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/monokai.min.css">
 <link rel="stylesheet" href="https://govcloud.github.io/css/styles.css">
@@ -99,8 +99,8 @@ agenda highlights the areas I am hoping to cover in short order.
 	</section>
 	</div>
 	</div>
-<script src="/lib/reveal.js/lib/js/head.min.js"></script>
-	<script src="/lib/reveal.js/js/reveal.js"></script>
+<script src="../lib/reveal.js/lib/js/head.min.js"></script>
+	<script src="../lib/reveal.js/js/reveal.js"></script>
 	<script>
 		Reveal.initialize({
 		      	embedded : true,
@@ -203,46 +203,6 @@ agenda highlights the areas I am hoping to cover in short order.
     }
   });
   $(function() { $('table').addClass('wb-tables table table-striped table-hover').attr('data-wb-tables', '{ "bFilter" : 1, "bInfo" : 0, "bPaginate" : false }'); })
-  var gitHubApiUrl = 'https://api.github.com/repos/';
-  var getData = function(target, callback) {
-    var responses = {
-      composerjson: null,
-      composerlock: null
-    };
-    var checkFinished = function() {
-      if (responses.composerjson && responses.composerlock) {
-        callback(responses.composerjson, responses.composerlock);
-      }
-    }
-    d3.xhr(gitHubApiUrl + target + '/contents/composer.json', 'application/vnd.github.VERSION.raw', function(err, composerjson) {
-      responses.composerjson = JSON.parse(composerjson.responseText);
-      checkFinished();
-    });
-    d3.xhr(gitHubApiUrl + target + '/contents/composer.lock', 'application/vnd.github.VERSION.raw', function(err, composerlock) {
-      responses.composerlock = JSON.parse(composerlock.responseText);
-      checkFinished();
-    });
-  };
-  var chart = d3.chart.dependencyWheel();
-  d3.json("https:\/\/govcloud.github.io/data/composer.json", function(composerjson) {
-    d3.json("https:\/\/govcloud.github.io/data/composer.lock", function(composerlock) {
-      var data = buildMatrixFromComposerJsonAndLock(composerjson, composerlock);
-      d3.select('#chart_placeholder')
-        .datum(data)
-        .call(chart);
-    });
-  });
-  document.getElementById('composerRedraw').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var composerjson = JSON.parse(document.getElementById('composerJson').value);
-    var composerlock = JSON.parse(document.getElementById('composerLock').value);
-    var data = buildMatrixFromComposerJsonAndLock(composerjson, composerlock);
-    d3.select('#chart_placeholder svg').remove();
-    d3.select('#chart_placeholder')
-      .datum(data)
-      .call(chart);
-  }, false);
-
 </script>
 
 
