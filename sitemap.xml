@@ -28,11 +28,6 @@
   </url>
   
   <url>
-    <loc>https://govcloud.github.io/slide/</loc>
-    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://govcloud.github.io/team/</loc>
     <lastmod>2017-01-01T13:10:52-05:00</lastmod>
   </url>
@@ -45,12 +40,6 @@
   
   <url>
     <loc>https://govcloud.github.io/doc/</loc>
-    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://govcloud.github.io/tags/drupal/</loc>
     <lastmod>2017-01-01T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
@@ -81,18 +70,6 @@
   
   <url>
     <loc>https://govcloud.github.io/tags/roadmap/</loc>
-    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://govcloud.github.io/slide/</loc>
-    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://govcloud.github.io/tags/slide/</loc>
     <lastmod>2017-01-01T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>

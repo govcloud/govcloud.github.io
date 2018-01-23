@@ -10,16 +10,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>
         
-        Cloud Operations
+        Dev Ops
         
     </title>
     <!--[if gte IE 9 | !IE ]><!-->
     <link href="https://govcloud.github.io/lib/wet-boew/assets/images/favicon.ico" rel="icon" type="image/x-icon" />
-    <link rel="stylesheet" href="https://govcloud.github.io/lib/theme-gcweb/css/theme.min.css" />
+    <link rel="stylesheet" href="https://govcloud.github.io/lib/theme-wet-boew/css/theme.min.css" />
 <!--<![endif]-->
 <!--[if lt IE 9]>
-	<link href="https://govcloud.github.io/lib/theme-gcweb/assets/images/favicon.ico" rel="shortcut icon" />
-	<link rel="stylesheet" href="https://govcloud.github.io/lib/theme-gcweb/css/ie8-theme.min.css" />
+	<link href="https://govcloud.github.io/lib/theme-wet-boew/assets/images/favicon.ico" rel="shortcut icon" />
+	<link rel="stylesheet" href="https://govcloud.github.io/lib/theme-wet-boew/css/ie8-theme.min.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://govcloud.github.io/lib/wet-boew/js/ie8-wet-boew.min.js"></script>
 <![endif]-->
@@ -42,7 +42,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="https://govcloud.github.io/index.xml">
 
 </head>
-<body vocab="http://schema.org/" typeof="WebPage" class="theme-gcweb">
+<body vocab="http://schema.org/" typeof="WebPage" class="theme-wet-boew">
     <ul id="wb-tphp">
     <li class="wb-slc">
         <a class="wb-sl" href="#wb-cont">Skip to main content</a>
@@ -54,57 +54,59 @@
 
     <header role="banner">
     
-        <div id="wb-bnr" class="container">
-    <section id="wb-lng" class="visible-md visible-lg text-right">
+        <div id="wb-bnr">
+        <div id="wb-bar">
+            <div class="container">
+                <div class="row">
+                   <section id="wb-lng" class="visible-md visible-lg text-right">
     
-    <div class="row">
-        <div class="col-md-12">
-            <ul class="list-inline margin-bottom-none">
-                <li class="curr">English</li>
-            </ul>
-        </div>
-    </div>
+    <h2 class="wb-inv">Language selection</h2>
+    <ul class="text-right">
+        <li class="curr">English</li>
+    </ul>
     
 </section>
 
-    <div class="row">
-        <div class="brand col-xs-8 col-sm-9 col-md-6">
-            <a href="https://govcloud.github.io">
-                <object type="image/svg+xml" tabindex="-1" data="https://govcloud.github.io/lib/theme-gcweb/assets/sig-blk-en.svg"></object>
-                <span class="wb-inv"> Government of Canada</span>
-            </a>
+                    <section class="wb-mb-links col-xs-12 visible-sm visible-xs" id="wb-glb-mn">
+                        <h2>Search and menus</h2>
+                        <ul class="pnl-btn list-inline text-right">
+                            <li>
+                                <a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button">
+                                    <span class="glyphicon glyphicon-search">
+                                        <span class="glyphicon glyphicon-th-list">
+                                        <span class="wb-inv">Search and menus</span>
+                                    </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div id="mb-pnl"></div>
+                    </section>
+                </div>
+            </div>
         </div>
-        <section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
-            <h2>Search and menus</h2>
-            <ul class="list-inline text-right chvrn">
-                <li>
-                    <a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button">
-                    <span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list">
-                        <span class="wb-inv">Search and menus</span>
+        <div class="container">
+            <div class="row">
+                <div id="wb-sttl" class="col-md-8">
+                    <a href="https://govcloud.github.io">
+                        <object type="image/svg+xml" tabindex="-1" data="https://govcloud.github.io/assets/images/logo.svg"></object>
+                        <span>Dev Ops<span class="wb-inv">, </span><small>Portfolio site for Dev Ops @ Statistics Canada</small>
                         </span>
-                    </span>
                     </a>
-                </li>
-            </ul>
-            <div id="mb-pnl"></div>
-        </section>
-        <section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
-            <h2>Search</h2>
-            <form action="https://google.ca/search" method="get" name="search" role="search" class="form-inline">
-                <div class="form-group">
-                    <label for="wb-srch-q" class="wb-inv">Search website</label>
-                    <input id="wb-srch-q" class="form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Cloud Operations">
-                    <input type="hidden" name="q" value="site:govcloud.ca OR site:github.com/govcloud/govcloud.github.io">
                 </div>
-                <div class="form-group submit">
-                    <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
-                        <span class="glyphicon-search glyphicon"></span>
-                        <span class="wb-inv">Search</span>
-                    </button>
-                </div>
-            </form>
-        </section>
-    </div>
+                <section id="wb-srch" class="col-md-4 visible-md visible-lg">
+                    <h2>Search</h2>
+                    <form action="https://google.ca/search" method="get" role="search" class="form-inline">
+                        <div class="form-group">
+                            <label for="wb-srch-q">Search website</label>
+                            <input id="wb-srch-q" class="form-control" name="q" type="search" value="" size="27" maxlength="150">
+                            <input type="hidden" name="q" value="site:govcloud.ca OR site:github.com/govcloud/govcloud.github.io">
+                        </div>
+                        <button type="submit" id="wb-srch-sub" class="btn btn-default">Search</button>
+                    </form>
+                </section>
+            </div>
+        </div>
 </div>
 
     
@@ -189,12 +191,8 @@
 </header>
 
     <main role="main" property="mainContentOfPage" class="container">
-        <h1 id="wb-cont" property="name">Cloud Operations</h1>
+        <h1 id="wb-cont" property="name">Dev Ops</h1>
         <div class="posts">
-            
-            
-            
-            
             
             
             
@@ -213,58 +211,38 @@
         </div>
     </main>
     
-  <footer role="contentinfo" id="wb-info">
-    <nav role="navigation" class="container wb-navcurr">
-        <h2>About this site</h2>
-        <section class="col-sm-3">
-            <h3>Contact us</h3>
-            <ul class="list-unstyled">
-                <li><a href="https://github.com/govcloud/govcloud.github.io/issues/new">Questions or comments?</a></li>
-            </ul>
-        </section>
-        <section class="col-sm-3">
-            <h3>About</h3>
-            <ul class="list-unstyled">
-                <li><a href="http://wet-boew.github.io/wet-boew/index-en.html#about">About the Web Experience Toolkit</a></li>
-                <li><a href="http://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a>
-                </li>
-            </ul>
-        </section>
-        <section class="col-sm-3">
-            <h3>News</h3>
-            <ul class="list-unstyled">
-                <li><a href="https://github.com/govcloud/govcloud.github.io/pulse">Recent project activity</a></li>
-                <li><a href="https://github.com/govcloud/govcloud.github.io/graphs">Project statistics</a></li>
-            </ul>
-        </section>
-        <section class="col-sm-3">
-            <h3>Stay connected</h3>
-            <ul class="list-unstyled">
-                <li><a href="https://twitter.com/statcan_eng">Twitter</a></li>
-            </ul>
-        </section>
-    </nav>
-    <div class="brand">
-        <div class="container">
-            <div class="row">
-                <nav class="col-md-10 ftr-urlt-lnk">
-                    <h2 class="wb-inv">About this site</h2>
-                    <ul>
-                        <li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
-                        <li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
-                        <li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
-                        <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-                        <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-                    </ul>
-                </nav>
-                <div class="col-xs-6 visible-sm visible-xs tofpg">
-                    <a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
-                </div>
-                <div class="col-xs-6 col-md-2 text-right">
-                    <object type="image/svg+xml" tabindex="-1" role="img" data="https://govcloud.github.io/lib/theme-gcweb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
-                </div>
-            </div>
-        </div>
+  <footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
+    <div class="container">
+        <nav role="navigation" class="row">
+            <h2>About this site</h2>
+            <section class="col-sm-3">
+                <h3>Contact us</h3>
+                <ul class="list-unstyled">
+                    <li><a href="https://github.com/govcloud/govcloud.github.io/issues/new">Questions or comments?</a></li>
+                </ul>
+            </section>
+            <section class="col-sm-3">
+                <h3>About</h3>
+                <ul class="list-unstyled">
+                    <li><a href="http://wet-boew.github.io/wet-boew/index-en.html#about">About the Web Experience Toolkit</a></li>
+                    <li><a href="http://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="col-sm-3">
+                <h3>News</h3>
+                <ul class="list-unstyled">
+                    <li><a href="https://github.com/govcloud/govcloud.github.io/pulse">Recent project activity</a></li>
+                    <li><a href="https://github.com/govcloud/govcloud.github.io/graphs">Project statistics</a></li>
+                </ul>
+            </section>
+            <section class="col-sm-3">
+                <h3>Stay connected</h3>
+                <ul class="list-unstyled">
+                    <li><a href="https://twitter.com/statcan_eng">Twitter</a></li>
+                </ul>
+            </section>
+        </nav>
     </div>
 </footer>
 
