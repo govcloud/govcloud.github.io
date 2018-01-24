@@ -55,11 +55,14 @@
 		data-charset="utf8">
 	&lt;!-- .slide: id=&#34;hadoop&#34; data-transition=&#34;concave&#34; --&gt;
 
-# Hadoop
+# Cloud Ops
 
 [govcloud/charts](http://github.com/govcloud/charts) &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt;&lt;/li&gt;
 
 Note:
+
+This a presentation created by the new cloud operations team. Expect to see a lot more from us in the coming weeks. Additionally if want to follow our work more closely please consult either our website, slack
+channel, or github organization.
 
 ---
 
@@ -69,9 +72,14 @@ Note:
 
 1. Containers
 2. Kubernetes
-3. Charts
+3. Toolchain
+4. Helm (Charts)
+5. Big Data
+6. Azure (AKS/ACS)
 
 Note:
+
+The agenda for this presentation is fairly straightforward and while each of these sections could easily take hours to explain I will do my best to provide an accurate summation.
 
 ---
 
@@ -100,6 +108,8 @@ Note:
 &lt;/div&gt;
 
 Note:
+
+Everyone that learns about containers and their server immutability concept invariably loves them, because of the power they give, both on the development and in the deployment sides.
 
 **Platform independence: Build it once, run it anywhere**
 
@@ -153,6 +163,7 @@ A container-based infrastructure offers many advantages, promoting an effective 
     &lt;li&gt;Vendor lock-in&lt;/li&gt;
     &lt;li&gt;Multi cloud&lt;/li&gt;
     &lt;li&gt;Self-healing&lt;/li&gt;
+    &lt;li&gt;Open Service Broker&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -167,6 +178,14 @@ A container-based infrastructure offers many advantages, promoting an effective 
 
 Note:
 
+As containers become more popular each day, more technology is being developed to help unleash all the power containers can offer. One of the most useful technologies created around containers in the deployment side is orchestrators.
+
+A container orchestrator is a software that is able to orchestrate and organize containers across any number of physical or virtual nodes. The potential of this is enormous, as it greatly simplifies the deployment of the infrastructure (each node only has Docker installed) and its operation (as all servers are exactly equal). The container orchestrator takes in account things as failing nodes, adding more nodes to the cluster or removing nodes from the cluster by moving the containers from one node to another to keep them available at all times.
+
+While containers &#43; orchestrators technology not only resolves a lot of problems related with infrastructure management, it also resolves a lot of problems regarding deploying software in the infrastructure, as the software, its dependencies and runtime are always deployed at the same time, minimizing the errors commonly associated to deployments in non-immutable environments.
+
+Kubernetes has won the orchestrator wars, hands down and as of 2018 now takes center stage. This is proved by every single cloud vendor integrating with it and providing their own managed service. Additionally by most PAAS&#39;s offering first class support for it. (Pivotal, OpenShift, Tectonic, ...)
+
 **Managed complexity**: Automation of the deployment, scaling, and operation of application containers in a clustered environment via primitives
 
 **Vendor Lock-in**: Essentially every major cloud provider (public, private, hybrid) support Kubernetes
@@ -177,7 +196,7 @@ Note:
 
 **Google Backed**: Originally built by Google leveraging a decade of experience running containers at scale
 
-**Vibrant Community**: One of the fastest moving projects in open source history
+**Vibrant Community**: One of the fastest moving projects in open source history, 2nd largest. Additionally over 30,000 users on slack many google engineers.
 
 **Big Name Supporters**: Google, Microsoft, AWS, IBM, RedHat, Oracle, VMWare, Intel, Pivotal etc
 
@@ -193,6 +212,186 @@ Note:
 * With that, Kubernetes has emerged as the leading orchestration method in the market with a 71% adoption rate.
 
 ---
+
+&lt;!-- .slide: id=&#34;tooling&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Tooling
+
+&gt; The dev tooling on top of k8s namely Helm, Draft, Brigade and Kashti are the Bell Labs of the cloud era
+
+Note:
+
+This was a quote that I have heard more then a few times by some big name developers working on AKS @ Microsoft.
+
+I&#39;ll only be demonstrating the Helm component but wanted to very quickly highlight applicable tooling.
+
+---
+
+&lt;!-- .slide: id=&#34;charts&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Helm (Charts)
+
+&gt; Helm is a tool for managing Kubernetes charts. Charts are packages of pre-configured Kubernetes resources.
+
+* Kubernetes package manager
+* Reproducible builds of your k8s applications
+* Intelligently manage your k8s manifest files
+* Manage releases of Helm packages
+
+Note:
+
+Helm makes doing reliable reproducible deployments ridiculously easy to Kubernetes, and is the standard way of working with Kubernetes.
+
+Think of Helm as the package manager for Kubernetes similar to apt/yum/apk. If you deploy applications to Kubernetes, Helm makes it incredibly easy to version those deployments, package it, make a release of it, and deploy, delete, upgrade and even rollback those deployments as charts. Charts being the terminology that helm use for package of configured Kubernetes resources.
+
+---
+
+# Helm (Charts)
+
+* CNCF
+* Prometheus
+* Grafana
+* Portal
+
+Note:
+
+Now that we have a brief overview of what a Helm chart is I thought I would go over a couple before get into specific Big Data topics.
+
+---
+
+## Big Data
+
+* Advantages of Containers &#43; Orchestrators for distributed computing
+* Spark on k8s
+* HDFS on k8s
+
+Note:
+
+With the numerous advantages of containers and orchestrators being in the distributed computing domain, the BigData world, which extensively relies on enormous amounts of distributed computing power have taken notice over the past couple years.
+
+Particular companies such as:
+
+* Google
+* Red Hat
+* Comcast
+* Intel
+* Palantir
+* Bloomberg
+* PepperData
+* TerraData
+
+have solved many of the barriers that initially thwarted containers from thriving in the Big Data ecosystem.
+
+## Spark on k8s
+
+* Patching up Spark Driver and Executor Code
+* Often times Spark stores data on HDFS
+* Show different aspects of Spark ecosystem in k8s
+* Spark cluster
+* Spark on k8s
+* Spark operator
+
+## Comparison with Spark Standalone on Kubernetes
+
+The proposed design is more flexible than the basic Kubernetes Spark example for several
+reasons:
+
+1. Spark executors can be elastic depending on job demands, since spark can speak
+
+directly to kubernetes in order to provision executors as required.
+2. The proposed solution allows leveraging of Kubernetes constructs like ResourceQuota,
+
+namespaces, audit logging, etc. Contrasting with Spark standalone where Spark’s notion
+of identity is disparate and unaware of Kubernetes constructs like service accounts.
+
+3. The proposed solution allows for greater isolation between Spark Jobs than standalone
+
+mode, as each of them runs in their own container, utilizing cgroups to enforce CPU and
+memory requests and limits.
+
+4. When submitting jobs against a standalone Spark cluster running on Kubernetes, one is
+
+restricted to using the Docker image that the standalone Spark cluster was launched
+with to run the executors. The proposed design allows the user to specify a custom
+docker image​ for the driver and executors when the user submits the job.
+
+5. The proposed design simplifies the process of running Spark jobs: while the current
+
+solution requires two steps to first run the standalone Spark cluster and then to run the
+Spark jobs against that cluster, the proposed design requires no prior k8s setup​ to run
+the user&#39;s application.
+
+6. The proposed solution adds a Resource Staging Server (RSS) component that simplifies
+
+the deployment of user-specified jars and files which is still difficult with a Spark
+Standalone cluster on Kubernetes.
+
+7. In the existing solution, resource negotiation for spark jobs is tied to the configuration of
+
+the standalone Spark cluster as well as the configuration of the Kubernetes cluster. If the
+second layer of the standalone cluster manager is eliminated, then the user can unify all
+resource administration and configuration​ into the Kubernetes framework alone.
+
+8. Kubernetes is a popular container orchestration environment with wide adoption. Users
+
+who are already deploying applications on Kubernetes, or who plan to, will benefit from
+the ability to run Spark applications on Kubernetes as well, instead of running a separate
+standalone Spark cluster or managing a separate orchestration environment.
+
+## HDFS on k8s
+
+* Data locality
+* Rack locality
+* Node preference
+* Kerberos
+* Namenode High Availability
+
+## Why deploy Hadoop in Containers?
+
+1) You are heavily over provisioned. You run Hadoop clusters in silos, and every time you need to bring up a silo, you create a new physical (cloud or on prem) hardware footprint to host this Hadoop cluster. Virtualization is not an option, since you want to get bare-metal performance. You have unused clusters that are consuming storage and compute resources. Since they are pinned to physical infrastructure, it is difficult to reuse resources.
+
+2) You desire to host a common platform as a service for multiple Hadoop end users (internal customers). You also want to run other data services like Cassandra on this same infrastructure.
+
+3) Your HDFS data lakes have inconsistencies. Since you create multiple silos for each Hadoop cluster, you are unable to audit or validate the correctness of the data in the data lakes. Since these data lakes are created separately from the deployment of your Hadoop cluster, you have no control over the governance of its data.
+
+4) You are spending too much time with manual resources used to create silos. Your end users are unable to deploy Hadoop clusters without IT intervention and out of band compute and storage provisioning. You want to get to a mode where clusters can be deployed in a self-service, programmatic manner.
+
+Traditionally, Hadoop has been deployed directly on bare metal servers in a siloed environment. As the number of Hadoop instances and deployments grow, managing multiple silos becomes problematic. The specific issues with managing multiple Hadoop silos on fixed physical infrastructure are:
+
+* Under utilization of server and storage resources.
+* Manual out of band storage and compute provisioning for each new deployment.
+* Creation of multiple conflicting data lakes (data inconsistencies between silos).
+* Zombie resources after the completion of a job.
+
+Typically, some form of virtualization is needed to manage any large application deployment to solve these issues. Virtual machines however add a layer of overhead that is not conducive to big data deployments. This is where the advent of containers becomes useful. By deploying Hadoop inside of Linux containers, you can get the power of virtualization with bare metal performance. You also empower a DevOps model of deploying applications - one in which out-of-band IT is not involved as your application owners deploy and scale their Hadoop clusters.
+
+The benefits of running Hadoop with containers are:
+
+* Enable Hadoop to run on a cloud-native storage infrastructure that is managed the same way, whether you run on-premise or in any public cloud
+* Faster recovery times during a failure for Data, Name and Journal nodes.
+* Increased resource utilization because multiple Hadoop clusters can be safely run on the same hosts
+* Improved Hadoop performance with data locality or hyperconvergence
+* Dynamic resizing of HDFS volumes with no downtime
+* Simplified installation and configuration of Hadoop
+
+---
+
+&lt;!-- .slide: id=&#34;azure&#34; data-transition=&#34;concave&#34; --&gt;
+# Azure
+
+* aks scale
+
+Note:
+
+---
+
+&lt;!-- .slide: id=&#34;pachyderm&#34; data-transition=&#34;concave&#34; --&gt;
+# Pachyderm
+
+* Hadoop hard to find at Strata
+* According to Gartner Hadoop is dead
+
+Note:
 
 	</section>
 	</div>
