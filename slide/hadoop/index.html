@@ -24,19 +24,19 @@
 	<script src="https://govcloud.github.io/lib/wet-boew/js/ie8-wet-boew.min.js"></script>
 <![endif]-->
 
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/monokai.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/monokai.min.css">
 <noscript><link rel="stylesheet" href="https://govcloud.github.io/lib/wet-boew/css/noscript.min.css" /></noscript>
 <link rel="stylesheet" href="https://govcloud.github.io/css/styles.css">
 <link rel="stylesheet" href="https://govcloud.github.io/css/custom.css">
 
 <link rel="shortcut icon" href="https://govcloud.github.io/assets/images/favicon.ico">
 
-	<link rel="stylesheet" href="/lib/reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="/lib/reveal.js/css/theme/black.css" id="theme">
-	<link rel="stylesheet" href="/lib/reveal.js/lib/css/zenburn.css">
+	<link rel="stylesheet" href="https://govcloud.github.io/lib/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="https://govcloud.github.io/lib/reveal.js/css/theme/black.css" id="theme">
+	<link rel="stylesheet" href="https://govcloud.github.io/lib/reveal.js/lib/css/zenburn.css">
     
-<link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/monokai.min.css">
+<link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/monokai.min.css">
 <link rel="stylesheet" href="https://govcloud.github.io/css/styles.css">
 <link rel="stylesheet" href="https://govcloud.github.io/css/custom.css">
 
@@ -61,46 +61,144 @@
 
 Note:
 
-Hi there!
-
-We were tasked with creating a 10-15 minute presentation to demonstrate the work
-being done on the new Open Data portal powered by Drupal 8. Honestly, there was
-alot to learn, far more then I initially expected.
-
-However with the fundamentals of dependency injection, service containers,
-plugins API, etc in hand. One soon realizes the sheer power and versatility of
-this platform.
-
-I should mention that Open Data was developed completely in the open and is
-freely available on GitHub in the `Open Data` repository.
-
-The Open by Default pilot is also essentially the same codebase so for
-simplicity sake I am just referring to everything as Open Data.
-
 ---
 
-&lt;!-- .slide: id=&#34;agenda&#34; data-transition=&#34;concave&#34; --&gt;
+&lt;!-- .slide: id=&#34;intro&#34; data-transition=&#34;concave&#34; --&gt;
 
 # Agenda
 
-1. Developers for OD
-2. Profiles: [Open Data](http://github.com/drupalwxt/wxt) / [WxT](http://drupal.org/project/wxt) / [Lightning](http://drupal.org/project/lightning)
-3. OD Components
-4. Questions
+1. Containers
+2. Kubernetes
+3. Charts
 
 Note:
 
-I am going to try my best to keep this presentation brief, so can more freely
-engage with audience / answering questions / highlighting code. The following
-agenda highlights the areas I am hoping to cover in short order.
+---
+
+&lt;!-- .slide: id=&#34;containers&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Containers
+
+&gt; Containers will yield the following benefits to Government:
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+  &lt;ul class=&#34;list-unstyled&#34;&gt;
+    &lt;li&gt;Platform independence&lt;/li&gt;
+    &lt;li&gt;Resource efficiency and density&lt;/li&gt;
+    &lt;li&gt;Effective isolation and resource sharing&lt;/li&gt;
+    &lt;li&gt;Speed&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+  &lt;ul class=&#34;list-unstyled&#34;&gt;
+    &lt;li&gt;Immense and smooth scaling&lt;/li&gt;
+    &lt;li&gt;Operational simplicity&lt;/li&gt;
+    &lt;li&gt;Developer productivity&lt;/li&gt;
+    &lt;li&gt;Development pipeline&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+Note:
+
+**Platform independence: Build it once, run it anywhere**
+
+A major benefit of containers is their portability. In particular containers help to facilitate a cloud native approach via a microservices architectural design pattern.
+
+A container wraps up an application with everything it needs to run, like configuration files and dependencies. This enables you to easily and reliably run applications on different environments such as your local desktop, physical servers virtual servers, testing, staging, production environments and public or private clouds.
+
+This portability grants organisations a great amount of flexibility, speeds up the development process and makes it easier to switch to another cloud environment or provider, if need be.
+
+**Resource efficiency and density**
+
+Since containers do not require a separate operating system, they use up less resources. While a VM often measures several gigabytes in size, a container usually measures only a few dozen megabytes, making it possible to run many more containers than VMs on a single server.
+
+Since containers have a higher utilisation level with regard to the underlying hardware, you require less hardware, resulting in a reduction of bare metal costs as well as datacentre costs.
+
+**Effective isolation and resource sharing**
+
+Although containers run on the same server and use the same resources, they do not interact with each other. If one application crashes, other containers with the same application will keep running flawlessly and won’t experience any technical problems. This isolation also decreases security risks: If one application should be hacked or breached by malware, any resulting negative effects won’t spread to the other running containers.
+
+**Speed: Start, create, replicate or destroy containers in seconds**
+
+As mentioned before, containers are lightweight and start in less than a second since they do not require an operating system boot. Creating, replicating or destroying containers is also just a matter of seconds, thus greatly speeding up the development process, the time to market and the operational speed. Releasing new software or versions has never been so easy and quick. But the increased speed also offers great opportunities for improving customer experience, since it enables organisations and developers to act quickly, for example when it comes to fixing bugs or adding new features.
+
+**Immense and smooth scaling**
+
+A major benefit of containers is that they offer the possibility of horizontal scaling, meaning you add more identical containers within a cluster to scale out. With smart scaling, where you only run the containers needed in real time, you can reduce your resource costs drastically and accelerate your return on investment. Container technology and horizontal scaling has been used by major vendors like Google and Twitter for years now.
+
+**Operational simplicity**
+
+Contrary to traditional virtualisation, where each VM has its own OS, containers execute application processes in isolation from the underlying host OS. This means that your host OS doesn’t need specific software to run applications, which makes it simpler to manage your host system and quickly apply updates and security patches.
+
+**Improved developer productivity and development pipeline**
+
+A container-based infrastructure offers many advantages, promoting an effective development pipeline. Let’s start with one of the most well-known benefits. As mentioned before, containers ensure that applications run and work as designed locally. This elimination of environmental inconsistencies makes testing and debugging less complicated and less time-consuming since there are fewer differences between running your application on your workstation, test server or in production environment. The same goes for updating your applications: you simply modify the configuration file, create new containers and destroy the old ones, a process which can be executed in seconds. In addition to these well-known benefits, container tools like Docker offer many other advantages. One of these is version control, making it possible for you to roll-out or roll-back with zero downtime. The possibility to use a remote repository is also a major benefit when working in a project-team, since it enables you to share your container with others.
+
+## Data Points
+
+* 71% of Fortune 100 companies are running containers
+
+---
+
+&lt;!-- .slide: id=&#34;kubernetes&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Kubernetes
+
+&gt; Kubernetes will yield the following benefits to Government:
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+  &lt;ul class=&#34;list-unstyled&#34;&gt;
+    &lt;li&gt;Managed complexity&lt;/li&gt;
+    &lt;li&gt;Vendor lock-in&lt;/li&gt;
+    &lt;li&gt;Multi cloud&lt;/li&gt;
+    &lt;li&gt;Self-healing&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+  &lt;ul class=&#34;list-unstyled&#34;&gt;
+    &lt;li&gt;Google backed&lt;/li&gt;
+    &lt;li&gt;Vibrant community&lt;/li&gt;
+    &lt;li&gt;Big name supporters&lt;/li&gt;
+    &lt;li&gt;Flexibility&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+Note:
+
+**Managed complexity**: Automation of the deployment, scaling, and operation of application containers in a clustered environment via primitives
+
+**Vendor Lock-in**: Essentially every major cloud provider (public, private, hybrid) support Kubernetes
+
+**Multi-Cloud**: Ideal for managing multi-cloud environments / workloads
+
+**Self-healing**: Auto-placement, auto-restart, auto-replication, auto-scaling
+
+**Google Backed**: Originally built by Google leveraging a decade of experience running containers at scale
+
+**Vibrant Community**: One of the fastest moving projects in open source history
+
+**Big Name Supporters**: Google, Microsoft, AWS, IBM, RedHat, Oracle, VMWare, Intel, Pivotal etc
+
+**Flexibility**: Simplicity of a PaaS with the flexibility of IaaS
+
+&gt; Interesting data points
+
+* 54% of Fortune 100 companies are running Kubernetes
+* Housed within a large, neutral open source foundation, the Cloud Native Computing Foundation
+* CNCF consists of enterprise companies such as Microsoft, Google, AWS, SAP, Oracle, Pivotal, etc
+* Kubernetes has won the orchestration wars and is recognized as the de facto standard for container orchestration
+* Gartner: By 2020, more than 50% of global enterprises will be running containerized applications in production.
+* With that, Kubernetes has emerged as the leading orchestration method in the market with a 71% adoption rate.
 
 ---
 
 	</section>
 	</div>
 	</div>
-<script src="/lib/reveal.js/lib/js/head.min.js"></script>
-	<script src="/lib/reveal.js/js/reveal.js"></script>
+<script src="https://govcloud.github.io/lib/reveal.js/lib/js/head.min.js"></script>
+	<script src="https://govcloud.github.io/lib/reveal.js/js/reveal.js"></script>
 	<script>
 		Reveal.initialize({
 		      	embedded : true,
@@ -109,12 +207,12 @@ agenda highlights the areas I am hoping to cover in short order.
 		        
 		        
 		        dependencies: [
-		          { src: '\/lib\/reveal.js\/lib\/js\/classList.js"', condition: function() { return !document.body.classList; } },
-		          { src: '\/lib\/reveal.js\/plugin\/markdown\/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-		          { src: '\/lib\/reveal.js\/plugin\/markdown\/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-		          { src: '\/lib\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-		          { src: '\/lib\/reveal.js\/plugin\/zoom-js\/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-		          { src: '\/lib\/reveal.js\/plugin\/notes\/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/lib\/js\/classList.js"', condition: function() { return !document.body.classList; } },
+		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/plugin\/markdown\/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/plugin\/markdown\/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/plugin\/zoom-js\/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/plugin\/notes\/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 		        ]
 		      });
 	</script>
@@ -182,7 +280,7 @@ agenda highlights the areas I am hoping to cover in short order.
 <!--[if lt IE 9]>
     <script src="https://wet-boew.github.io/wet-boew/js/ie8-wet-boew2.min.js"></script>
 <![endif]-->
-<script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -203,46 +301,6 @@ agenda highlights the areas I am hoping to cover in short order.
     }
   });
   $(function() { $('table').addClass('wb-tables table table-striped table-hover').attr('data-wb-tables', '{ "bFilter" : 1, "bInfo" : 0, "bPaginate" : false }'); })
-  var gitHubApiUrl = 'https://api.github.com/repos/';
-  var getData = function(target, callback) {
-    var responses = {
-      composerjson: null,
-      composerlock: null
-    };
-    var checkFinished = function() {
-      if (responses.composerjson && responses.composerlock) {
-        callback(responses.composerjson, responses.composerlock);
-      }
-    }
-    d3.xhr(gitHubApiUrl + target + '/contents/composer.json', 'application/vnd.github.VERSION.raw', function(err, composerjson) {
-      responses.composerjson = JSON.parse(composerjson.responseText);
-      checkFinished();
-    });
-    d3.xhr(gitHubApiUrl + target + '/contents/composer.lock', 'application/vnd.github.VERSION.raw', function(err, composerlock) {
-      responses.composerlock = JSON.parse(composerlock.responseText);
-      checkFinished();
-    });
-  };
-  var chart = d3.chart.dependencyWheel();
-  d3.json("https:\/\/govcloud.github.io/data/composer.json", function(composerjson) {
-    d3.json("https:\/\/govcloud.github.io/data/composer.lock", function(composerlock) {
-      var data = buildMatrixFromComposerJsonAndLock(composerjson, composerlock);
-      d3.select('#chart_placeholder')
-        .datum(data)
-        .call(chart);
-    });
-  });
-  document.getElementById('composerRedraw').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var composerjson = JSON.parse(document.getElementById('composerJson').value);
-    var composerlock = JSON.parse(document.getElementById('composerLock').value);
-    var data = buildMatrixFromComposerJsonAndLock(composerjson, composerlock);
-    d3.select('#chart_placeholder svg').remove();
-    d3.select('#chart_placeholder')
-      .datum(data)
-      .call(chart);
-  }, false);
-
 </script>
 
 
