@@ -23,7 +23,7 @@
   </url>
   
   <url>
-    <loc>https://govcloud.github.io/roadmap/</loc>
+    <loc>https://govcloud.github.io/register/</loc>
     <lastmod>2017-01-01T13:10:52-05:00</lastmod>
   </url>
   
@@ -75,6 +75,12 @@
   
   <url>
     <loc>https://govcloud.github.io/tags/misc/</loc>
+    <lastmod>2017-01-01T13:10:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://govcloud.github.io/tags/registration/</loc>
     <lastmod>2017-01-01T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
