@@ -673,12 +673,18 @@ YouTube
 
 &lt;!-- .slide: id=&#34;jupyterhub&#34; data-transition=&#34;concave&#34; --&gt;
 
-## JupyterHub to Kubernetes
+## JupyterHub to K8S
 
-* Elasticsearch &#43; Fluentd &#43; Kibana
-* Fluentd data collector
-* Scalable, flexible, log / analytics pipeline
-* Decouple aggregation of logs from app code
+```sh
+helm install jupyterhub/jupyterhub \
+    --version=v0.7-4c22c3d \
+    --name=jupyter \
+    --namespace=jupyter \
+    -f values.yaml
+```
+
+* Reproducible deployments of JupyterHub
+* Data8 Program at **UC Berkeley**
 
 Note:
 
@@ -708,6 +714,221 @@ c) Choice of JupyterLab / Classic Jupyter
 YouTube
 
 * https://www.youtube.com/watch?v=uijwYd8Wxzg
+
+---
+
+&lt;!-- .slide: id=&#34;workflows-ci&#34; data-transition=&#34;concave&#34; --&gt;
+
+# CI/CD
+
+* Jenkins w/Kubernetes plug-in
+* GitLab w/GitLab CI
+* Configuration as code (jobs, init scripts)
+* Jenkinsfile
+
+Note:
+
+___
+
+&lt;!-- .slide: id=&#34;workflows-jenkins-examples&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Some Examples
+
+* Active Directory w/Matrix authorization
+* Automated golden image provisioning
+* Virtualbox node selection from Jenkins
+* Packer &#43; Azure
+
+Note:
+
+___
+
+&lt;!-- .slide: id=&#34;workflows-jenkinsx&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Jenkins X
+
+* CI/CD solution for modern cloud applications on Kubernetes
+* Environment Promotion via GitOps
+* Pull Request Preview Environments
+* Easy to install on any cloud / on-premise
+
+Note:
+
+Each team gets a set of Environments. Jenkins X then automates the management of the Environments and the Promotion of new versions of Applications between Environments via GitOps
+
+Jenkins X automatically spins up Preview Environments for your Pull Requests so you can get fast feedback before changes are merged to master
+
+If all you do please just watch the 9 min demo video on the projects website.
+
+---
+
+&lt;!-- .slide: id=&#34;workflows-pachyderm&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Pachyderm
+
+![Pachyderm](/img/architecture/pachyderm/logo-elephant.png)
+
+&gt; The open source data pipelining and data management layer for K8S.
+
+Note:
+
+* Hadoop hard to find at Strata
+* According to Gartner Hadoop is dead
+
+___
+
+&lt;!-- .slide: id=&#34;pachyderm-data-versioning&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Data Versioning
+
+![Data Versioning](/img/architecture/pachyderm/data-versioning.png)
+
+Note:
+
+All of the data that flows into and out of a Pachyderm Pipeline stage is version controlled. You can look back to see what your training data looked like when a particular model was created or how your results have changed over time.
+
+What Git does, in terms of Collaboration and Reproducibility, for code, Pachyderm does for your data. Collaborate on the same data with teammates and ensure that your analyses are kept in sync with the latest changes to data, or backtest models on historical states of data.
+___
+
+&lt;!-- .slide: id=&#34;pachyderm-containers-analysis&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Containers for Analysis
+
+![Data Versioning](/img/architecture/pachyderm/containers-analysis.png)
+
+Note:
+
+Data scientists utilize a diverse set of tools, languages, and frameworks. Because Pachdyerm utilizes software containers as the main element of data processing, data scientists and data engineers can use and combine any tools they need for a certain set of analyses or modeling.
+
+Data scientists can develop code locally (e.g., in Jupyter) on samples of data and utilize that exact same code in a Docker image as a stage in a distributed Pachyderm pipeline. They don&#39;t need to import special libraries or add complication. They just declare what processing needs to be run on what data, and Pachyderm takes care of the details.
+
+___
+
+&lt;!-- .slide: id=&#34;pachyderm-dag&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Distributive Processing
+
+![Distributed Processing](/img/architecture/pachyderm/dag.png)
+
+Note:
+
+Pachyderm automatically parallelizes your analyses by providing subsets of data to multiple instances of your code. Data scientists don&#39;t have to worry themselves with explicit implementations of parallelism and data sharding in their code. They can keep their code simple (even single threaded) and let Pachyderm worry about the complications of distributed processing.
+
+Data scientists can even declare types of nodes that should run their analysies (e.g., GPUs). Pachyderm will make sure that the right data get processed by the right types of nodes, and it will even help you auto-scale resources as your team or workloads grow or shrink.
+
+___
+
+&lt;!-- .slide: id=&#34;pachyderm-provenance&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Provenance
+
+![Provenance](/img/architecture/pachyderm/provenance.png)
+
+Note:
+
+Not all changes to code or data produce the expected results, and it can be super difficult to figure out what changes to code or data produced what results, especially as data science teams grow. Pachyderm makes this super easy!!
+
+Pachyderm let&#39;s you quickly and easily understand the provenance of any result or intermediate piece of data. For example, you can quickly deduce which version of a model produced certain results and determine which training data was used to build that model. This let&#39;s data science teams iteratively build, change, and collaborate on analyses, while ensuring that they can debug, maintain, and understand those analyses over time.
+
+___
+
+&lt;!-- .slide: id=&#34;pachyderm-helm&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Helm
+
+```sh
+helm install --namespace pachyderm \
+             --name pachyderm \
+             --set pachd.image.tag=1.7.0rc2 \
+             --set pachd.worker.tag=1.7.0rc2 stable/pachyderm
+```
+
+Note:
+
+___
+
+&lt;!-- .slide: id=&#34;pachyderm-dashboard&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Dashboard
+
+```sh
+pachctl deploy local --dashboard-only \
+                     --namespace pachyderm
+```
+
+```sh
+pachctl -k &#39;-n=pachyderm&#39; port-forward &amp;
+```
+
+Note:
+
+___
+
+&lt;!-- .slide: id=&#34;pachyderm-opencv&#34; data-transition=&#34;concave&#34; --&gt;
+
+# OpenCV
+
+Create images repository:
+
+```sh
+pachctl create-repo images
+pachctl list-repo
+```
+
+Put image inside repository:
+
+```sh
+pachctl put-file images master liberty.png -c -f http://imgur.com/46Q8nDz.png
+pachctl list-commit images
+pachctl get-file images master liberty.png | open -f -a /Applications/Preview.app
+```
+
+Note:
+
+___
+
+&lt;!-- .slide: id=&#34;pachyderm-opencv-2&#34; data-transition=&#34;concave&#34; --&gt;
+
+# OpenCV
+
+Create Pipeline:
+
+```sh
+pachctl create-pipeline -f https://bit.ly/2Gx10ZU
+```
+
+See jobs kicked off:
+
+```sh
+pachctl list-job
+pachctl list-repo
+```
+
+Output:
+
+```sh
+pachctl get-file edges master liberty.png |
+  open -f -a /Applications/Preview.app
+```
+
+Note:
+
+___
+
+&lt;!-- .slide: id=&#34;pachyderm-got&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Tensorflow
+
+* Generation of GoT scripts
+* Adapting LSTM Neural Net
+* Low Perplexity
+
+```sh
+make input-data
+make run
+```
+
+Note:
 
 	</section>
 	</div>
