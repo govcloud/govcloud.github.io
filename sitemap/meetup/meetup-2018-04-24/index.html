@@ -231,7 +231,20 @@
 <li>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
+<li><a href="#minutes">Minutes</a></li>
+<li><a href="#what-kind-of-applications-are-people-consider-containerizing">What kind of applications are people consider containerizing?</a></li>
 </ul></li>
+<li><a href="#upcoming-presentations">Upcoming Presentations</a></li>
+<li><a href="#planning">Planning</a></li>
+<li><a href="#what-kind-of-applications-are-people-consider-containerizing-1">What kind of applications are people consider containerizing?</a></li>
+<li><a href="#aks-azure-kubernetes-service">AKS (Azure Kubernetes Service)</a></li>
+<li><a href="#azure-container-service-acs">Azure Container Service (ACS)</a></li>
+<li><a href="#acs-engine">ACS Engine</a></li>
+<li><a href="#autoscaler">Autoscaler</a></li>
+<li><a href="#heptio-ark">Heptio Ark</a></li>
+<li><a href="#distributed-logging">Distributed Logging</a></li>
+<li><a href="#jupyterhub">Jupyterhub</a></li>
+<li><a href="#vs-code">VS Code</a></li>
 </ul>
 </nav>
                                         </div>
@@ -249,7 +262,165 @@
 
 <h2 id="introduction">Introduction</h2>
 
-<p>This meeting hasn&rsquo;t occurred yet.</p>
+<p><strong>Canadian Digital Services - Collaboration Room</strong></p>
+
+<ul>
+<li>Canadian Digital Services / Statistics Canada organized</li>
+<li>Importance of Cloud native</li>
+<li>As Developers our view points aren&rsquo;t always appreciated</li>
+<li>Policy makers make decisions and we enact it</li>
+</ul>
+
+<h2 id="minutes">Minutes</h2>
+
+<p>But first we need to quickly go over some highlight from the minutes during the last meetup.</p>
+
+<ul>
+<li>Review of planning decisions from last meeting</li>
+<li>Website govcloud.ca</li>
+<li>More documentation being pushed to YouTube</li>
+<li>Will cut out planning discussion from video minutes</li>
+<li>Will upload 1.5hrs in chunks</li>
+<li>AKS / ACS (Benefits / Comparisons)</li>
+<li>ACS Engine
+
+<ul>
+<li>Take bare minimum cluster definition (small JSON) which then generates ARM templates</li>
+<li>For operators that need complete control and customizability</li>
+<li>Deploys cluster on Ubuntu</li>
+<li>OpenShift support also being added</li>
+<li>Can add custom extensions (e.g., choco)</li>
+</ul></li>
+<li>Autoscaler</li>
+<li>Heptio Ark: Must have for any cluster</li>
+<li>VS Code: Many Kubernetes / Helm integration</li>
+<li>JupyterHub and custom developer environments</li>
+<li>Distributed Logging with EFK</li>
+<li>Pachyderm</li>
+</ul>
+
+<h2 id="what-kind-of-applications-are-people-consider-containerizing">What kind of applications are people consider containerizing?</h2>
+
+<ul>
+<li>Identity management platform (6 services together) - Pat, Public Works
+
+<ul>
+<li>Working locally, automated pipeline, test</li>
+<li>Alpine Linux, a few that are Ubuntu (more for COTS)</li>
+<li>GitLab CI</li>
+</ul></li>
+<li>Data science framework (spark, Hadoop, Drupal, etc.) - Will, Statistics Canada
+
+<ul>
+<li>Horizontal services that devops can deploy and maintain to support dev groups</li>
+<li>Private NuGet repo, Jenkins, GitLab, etc.</li>
+<li>Windows 17.09 or higher (Azure, Kubernetes) due to networking issues</li>
+<li>Build containers for non-core applications of .NET</li>
+</ul></li>
+<li>Best ways to set up local:
+
+<ul>
+<li>Easiest: Docker for Mac / Windows (currently in edge)</li>
+<li>Hyperkube, Kubespray</li>
+</ul></li>
+</ul>
+
+<h1 id="upcoming-presentations">Upcoming Presentations</h1>
+
+<ul>
+<li>Next meet up by Laurent (co-maintainer of Node.JS container)</li>
+<li>After that, Zachary with OpenFaaS</li>
+<li>Mark w/ Windows Workloads (.NET, CI/CD, Jenkins, etc.)</li>
+</ul>
+
+<h1 id="planning">Planning</h1>
+
+<ul>
+<li>Review of planning decisions from last meeting</li>
+<li>Website govcloud.ca</li>
+<li>Documentation on YouTube after its done</li>
+<li>Will cut out planning discussion from last time</li>
+<li>Will upload 1.5hrs in chunks</li>
+</ul>
+
+<h1 id="what-kind-of-applications-are-people-consider-containerizing-1">What kind of applications are people consider containerizing?</h1>
+
+<ul>
+<li>Identity management platform (6 services together) - Pat, Public Works
+
+<ul>
+<li>Working locally, automated pipeline, test</li>
+<li>Alpine Linux, a few that are Ubuntu (more for COTS)</li>
+<li>GitLab CI</li>
+</ul></li>
+<li>Data science framework (spark, Hadoop, Drupal, etc.) - Will, Statistics Canada
+
+<ul>
+<li>Horizontal services that devops can deploy and maintain to support dev groups</li>
+<li>Private NuGet repo, Jenkins, GitLab, etc.</li>
+<li>Windows 17.09 or higher (Azure, Kubernetes) due to networking issues</li>
+<li>Build containers for non-core applications of .NET</li>
+</ul></li>
+</ul>
+
+<h1 id="aks-azure-kubernetes-service">AKS (Azure Kubernetes Service)</h1>
+
+<ul>
+<li>Downside: cannot customize the master</li>
+<li>Downside: no custom VNETS</li>
+<li>Fixed in ACS engine, and will eventually make its way up to AKS.</li>
+<li>Standard D4s_v3 (16GB RAM, 4 cores) (v3 or higher for nested virtualization)</li>
+<li>Templates are not stored by you (ARM templates, etc.)</li>
+<li>Works in Canada East with 1.9.6 (some extensions have issues)</li>
+</ul>
+
+<h1 id="azure-container-service-acs">Azure Container Service (ACS)</h1>
+
+<ul>
+<li>Exact same as AKS, but gives you the master</li>
+<li>Similar downsides as AKS</li>
+</ul>
+
+<h1 id="acs-engine">ACS Engine</h1>
+
+<ul>
+<li>Take bare minimum cluster definition (small JSON) which then generates ARM templates</li>
+<li>For operators that need complete control and customizability</li>
+<li>Deploys cluster on Ubuntu</li>
+<li>OpenShift support also being added (changes to 1 line)</li>
+<li>Can add custom extensions (e.g., choco)</li>
+</ul>
+
+<h1 id="autoscaler">Autoscaler</h1>
+
+<ul>
+<li>Gave a brief demo</li>
+</ul>
+
+<h1 id="heptio-ark">Heptio Ark</h1>
+
+<ul>
+<li>A must-have on any cluster</li>
+</ul>
+
+<h1 id="distributed-logging">Distributed Logging</h1>
+
+<ul>
+<li>EFK (Elasticsearch, Fluentd, Kibana)</li>
+</ul>
+
+<h1 id="jupyterhub">Jupyterhub</h1>
+
+<ul>
+<li><a href="https://zero-to-jupyterhub.readthedocs.io">https://zero-to-jupyterhub.readthedocs.io</a></li>
+</ul>
+
+<h1 id="vs-code">VS Code</h1>
+
+<ul>
+<li>You can preview templates (Helm: Preview template)</li>
+<li>VSCode has great integration with Kubernetes</li>
+</ul>
 
                     </div>
                     <aside>
