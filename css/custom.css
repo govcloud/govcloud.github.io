@@ -99,3 +99,10 @@ img[src$='#floatright']
 #profiles ul {
   margin: 20px 0px;
 }
+
+.reveal section img{
+  margin-top: none;
+  background: none !important;
+  border:none !important;
+  box-shadow:none !important;
+}

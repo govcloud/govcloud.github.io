@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://govcloud.github.io/slide/cloud-05-29-18/</loc>
+    <loc>https://govcloud.github.io/slide/05-29-18/</loc>
     <lastmod>2018-05-29T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://govcloud.github.io/slide/cloud-04-24-18/</loc>
+    <loc>https://govcloud.github.io/slide/04-24-18/</loc>
     <lastmod>2018-04-24T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://govcloud.github.io/sitemap/meetup/meetup-2018-04-24/</loc>
+    <loc>https://govcloud.github.io/sitemap/meetup/04-24-18/</loc>
+    <lastmod>2018-04-24T13:10:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://govcloud.github.io/sitemap/meetup/05-29-18/</loc>
     <lastmod>2018-04-24T13:10:52-05:00</lastmod>
   </url>
   
@@ -23,7 +28,7 @@
   </url>
   
   <url>
-    <loc>https://govcloud.github.io/slide/cloud/</loc>
+    <loc>https://govcloud.github.io/slide/03-22-18/</loc>
     <lastmod>2018-03-22T13:10:52-05:00</lastmod>
   </url>
   
@@ -43,12 +48,12 @@
   </url>
   
   <url>
-    <loc>https://govcloud.github.io/sitemap/meetup/meetup-2018-03-22/</loc>
+    <loc>https://govcloud.github.io/sitemap/meetup/03-22-18/</loc>
     <lastmod>2018-03-22T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://govcloud.github.io/sitemap/</loc>
+    <loc>https://govcloud.github.io/sitemap/slides/</loc>
     <lastmod>2018-03-22T13:10:52-05:00</lastmod>
   </url>
   
@@ -95,12 +100,6 @@
   </url>
   
   <url>
-    <loc>https://govcloud.github.io/tags/sitemap/</loc>
-    <lastmod>2018-03-22T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://govcloud.github.io/slide/</loc>
     <lastmod>2018-05-29T13:10:52-05:00</lastmod>
     <priority>0</priority>
@@ -109,6 +108,12 @@
   <url>
     <loc>https://govcloud.github.io/tags/slide/</loc>
     <lastmod>2018-05-29T13:10:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://govcloud.github.io/tags/slides/</loc>
+    <lastmod>2018-03-22T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
