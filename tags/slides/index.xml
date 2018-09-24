@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GovCloud </title>
+    <title>Slides on GovCloud</title>
     <link>https://govcloud.github.io/tags/slides/</link>
+    <description>Recent content in Slides on GovCloud</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Statistics Canada: Cloud Ops Team</author>
-    <rights>(C) 2018</rights>
-    <updated>2018-03-22 13:10:52 -0500 -0500</updated>
-
+    <lastBuildDate>Thu, 22 Mar 2018 13:10:52 -0500</lastBuildDate>
     
+	<atom:link href="https://govcloud.github.io/tags/slides/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Slides</title>
+      <link>https://govcloud.github.io/sitemap/slides/</link>
+      <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
       
+      <guid>https://govcloud.github.io/sitemap/slides/</guid>
+      <description>Presentations given during the Cloud Native meetup:
+ 03-22-18 04-24-18 05-29-18 08-26-18  </description>
+    </item>
     
-
   </channel>
 </rss>

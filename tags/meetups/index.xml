@@ -1,24 +1,71 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GovCloud </title>
+    <title>Meetups on GovCloud</title>
     <link>https://govcloud.github.io/tags/meetups/</link>
+    <description>Recent content in Meetups on GovCloud</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Statistics Canada: Cloud Ops Team</author>
-    <rights>(C) 2018</rights>
-    <updated>2018-04-24 13:10:52 -0500 -0500</updated>
-
+    <lastBuildDate>Tue, 24 Apr 2018 13:10:52 -0500</lastBuildDate>
     
+	<atom:link href="https://govcloud.github.io/tags/meetups/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Minutes for 2018-04-24</title>
+      <link>https://govcloud.github.io/sitemap/meetup/04-24-18/</link>
+      <pubDate>Tue, 24 Apr 2018 13:10:52 -0500</pubDate>
       
+      <guid>https://govcloud.github.io/sitemap/meetup/04-24-18/</guid>
+      <description>Minutes taken by: Zachary Seguin
+ Introduction Canadian Digital Services - Collaboration Room
+ Canadian Digital Services / Statistics Canada organized Importance of Cloud native As Developers our view points aren&amp;rsquo;t always appreciated Policy makers make decisions and we enact it  Minutes But first we need to quickly go over some highlight from the minutes during the last meetup.
+ Review of planning decisions from last meeting Website govcloud.</description>
+    </item>
     
+    <item>
+      <title>Minutes for 2018-05-29</title>
+      <link>https://govcloud.github.io/sitemap/meetup/05-29-18/</link>
+      <pubDate>Tue, 24 Apr 2018 13:10:52 -0500</pubDate>
       
+      <guid>https://govcloud.github.io/sitemap/meetup/05-29-18/</guid>
+      <description>Minutes taken by: Zachary Seguin
+ Introduction n/a</description>
+    </item>
     
+    <item>
+      <title>GoC Cloud Native Meetups</title>
+      <link>https://govcloud.github.io/meetups/</link>
+      <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
       
+      <guid>https://govcloud.github.io/meetups/</guid>
+      <description>n/a</description>
+    </item>
     
+    <item>
+      <title>Meetups</title>
+      <link>https://govcloud.github.io/sitemap/meetup/</link>
+      <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
       
+      <guid>https://govcloud.github.io/sitemap/meetup/</guid>
+      <description>Overview We ask that you register for our working group and that you at least provide your real full name when signing up.
+ Cloud Native @ GoC Meetup  Meetups are usually held once a month at:
+Canadian Digital Service
+90 Elgin Street Ottawa, ON
+Room 2064 on the second floor of 90 elgin
+  Notice: This meetup is for Government of Canada employees only. We intend to invite outside partners for special events, i.</description>
+    </item>
     
+    <item>
+      <title>Minutes for 2018-03-22</title>
+      <link>https://govcloud.github.io/sitemap/meetup/03-22-18/</link>
+      <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
       
+      <guid>https://govcloud.github.io/sitemap/meetup/03-22-18/</guid>
+      <description>Minutes taken by: Zachary Seguin
+ Introduction Canadian Digital Services - Collaboration Room
+ Canadian Digital Services / Statistics Canada organized Importance of Cloud native As Developers our view points aren&amp;rsquo;t always appreciated Policy makers make decisions and we enact it  Vision  Long road, not everything can be done by cloud native IaaS formulas, Amazon, Azure, etc. is not cloud native Should focus on purely cloud native, can go any cloud If it&amp;rsquo;s been solved in cloud native, we should take and learn.</description>
+    </item>
     
-
   </channel>
 </rss>

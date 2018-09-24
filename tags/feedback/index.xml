@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GovCloud </title>
+    <title>Feedback on GovCloud</title>
     <link>https://govcloud.github.io/tags/feedback/</link>
+    <description>Recent content in Feedback on GovCloud</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Statistics Canada: Cloud Ops Team</author>
-    <rights>(C) 2018</rights>
-    <updated>2018-03-22 13:10:52 -0500 -0500</updated>
-
+    <lastBuildDate>Thu, 22 Mar 2018 13:10:52 -0500</lastBuildDate>
     
+	<atom:link href="https://govcloud.github.io/tags/feedback/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Feedback Form</title>
+      <link>https://govcloud.github.io/feedback/</link>
+      <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
       
+      <guid>https://govcloud.github.io/feedback/</guid>
+      <description>In order to help the working group please offer some:
+Session(s) proposals Constructive feedback Topics you would like to see  Classification (required)  Select a classification Governent Employee Private Sector Other   Name   Email   Message (required)       </description>
+    </item>
     
-
   </channel>
 </rss>

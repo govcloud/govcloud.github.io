@@ -1,12 +1,12 @@
 {
   "name": "theme-gcweb",
   "_cacheHeaders": {
-    "ETag": "\"3c87b61932e9ec8c71733bfad25754ec8242a0c1\"",
+    "ETag": "\"c3e0c9d9ad67d0e556ad8822140256e5b977b40e\"",
     "Content-Type": "application/x-gzip",
-    "Content-Disposition": "attachment; filename=themes-cdn-4.0.26-gcweb.tar.gz"
+    "Content-Disposition": "attachment; filename=themes-cdn-4.0.28.1-gcweb.tar.gz"
   },
-  "_release": "e-tag:3c87b6193",
-  "_source": "https://github.com/wet-boew/themes-cdn/archive/v4.0.26-gcweb.tar.gz",
+  "_release": "e-tag:c3e0c9d9a",
+  "_source": "https://github.com/wet-boew/themes-cdn/archive/v4.0.28.1-gcweb.tar.gz",
   "_target": "*",
-  "_originalSource": "https://github.com/wet-boew/themes-cdn/archive/v4.0.26-gcweb.tar.gz"
+  "_originalSource": "https://github.com/wet-boew/themes-cdn/archive/v4.0.28.1-gcweb.tar.gz"
 }

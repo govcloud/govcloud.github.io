@@ -1,20 +1,56 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GovCloud </title>
+    <title>Slide on GovCloud</title>
     <link>https://govcloud.github.io/tags/slide/</link>
+    <description>Recent content in Slide on GovCloud</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Statistics Canada: Cloud Ops Team</author>
-    <rights>(C) 2018</rights>
-    <updated>2018-05-29 13:10:52 -0500 -0500</updated>
-
+    <lastBuildDate>Tue, 29 May 2018 13:10:52 -0500</lastBuildDate>
     
+	<atom:link href="https://govcloud.github.io/tags/slide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GoC Cloud Native</title>
+      <link>https://govcloud.github.io/slide/05-29-18/</link>
+      <pubDate>Tue, 29 May 2018 13:10:52 -0500</pubDate>
       
+      <guid>https://govcloud.github.io/slide/05-29-18/</guid>
+      <description>Cloud Native govcloud/charts 
+Note:
+This is a presentation created in conjunction with the Canadian Digital Services and Cloud Operations team at Statistics Canada.
+Agenda  Planning Items Azure AKS / ACS Engine NodeJS Multi Stage Builds NodeJS Developer Improvements GitLab CI / CD w/Kubernetes  Note:
+Starting to hit our stride now and meetings for next 2 months are planned.
+As mentioned we are always looking for constructive criticism and are currently enacted the two we have already recieved:</description>
+    </item>
     
+    <item>
+      <title>GoC Cloud Native</title>
+      <link>https://govcloud.github.io/slide/04-24-18/</link>
+      <pubDate>Tue, 24 Apr 2018 13:10:52 -0500</pubDate>
       
+      <guid>https://govcloud.github.io/slide/04-24-18/</guid>
+      <description>Cloud Native Meetup github.com/govcloud 
+Note:
+This is a presentation created in conjunction with the Canadian Digital Services and Cloud Operations team at Statistics Canada.
+Agenda  Planning Items Azure AKS / ACS Engine Auto Scaler ARK Disaster Recovery Distributed Logging Securing Helm  Note:
+The agenda for today is to keep things a bit more straightforward (even though I said that last week).
+Some constructive criticism already recieved was jumping around topics a bit which for the first meeting to form a broad base is fine but less ideal for meetings going onwards.</description>
+    </item>
     
+    <item>
+      <title>GoC Cloud Native</title>
+      <link>https://govcloud.github.io/slide/03-22-18/</link>
+      <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
       
+      <guid>https://govcloud.github.io/slide/03-22-18/</guid>
+      <description>Cloud Native Meetups github.com/govcloud 
+Note:
+This is a presentation created in conjunction with the Canadian Digital Services and Cloud Operations team at Statistics Canada.
+Agenda  Planning Items Containers Kubernetes CNCF Azure AKS and ACS Workflows  Note:
+The agenda for today is fairly straightforward though I would like to apologize in advance for any minor foibles as this is our first meeting and honestly we are just trying to get off the ground.</description>
+    </item>
     
-
   </channel>
 </rss>

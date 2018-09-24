@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Protoc on GovCloud</title>
+    <link>https://govcloud.github.io/tags/protoc/</link>
+    <description>Recent content in Protoc on GovCloud</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Aug 2018 13:10:52 -0500</lastBuildDate>
+    
+	<atom:link href="https://govcloud.github.io/tags/protoc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GoC Cloud Native</title>
+      <link>https://govcloud.github.io/slide/08-26-18/</link>
+      <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/slide/08-26-18/</guid>
+      <description>Cloud Native Meetup github.com/govcloud 
+Note:
+Hi there!
+Welcome to what is I think is the 6th Cloud Native meetup.
+I just hoping to mention before we begin that at the end of this session I was hoping to get advice from you all via a quick roundtable.
+I really want us to take off in September and get a range of presenters in, but might need help.
+I thought I would kick this off by talking about the upcoming presenters for those who are tired of seeing this one annoying guy :) &amp;lt;&amp;ndash; Points at self.</description>
+    </item>
+    
+  </channel>
+</rss>
