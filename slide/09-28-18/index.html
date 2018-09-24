@@ -536,17 +536,17 @@ Cloud Enabled has become a policy mandate for many departments:
 
 a) Public sector agencies are looking to the cloud for speed scale and resilience
 b) Cloud isn&#39;t a cure-all though as higher levels of application performance and digital enablement require precise software design patterns
-c) Platforms migrating apps to the cloud can be tricky since your legacy apps probably weren&#39;t built with distributed computing and scalability in mind
+c) Platforms migrating apps to the cloud can be tricky since sometimes your legacy apps probably weren&#39;t built with distributed computing and scalability in mind
 d) Need to either modify and optimize those existing apps or build new apps for the cloud
-e) These can be seen as the traditional IaaS which is often more of a &#34;Lift and Shift&#34; approach
+e) This can be seen as the traditional IaaS approach which is akin to more of a &#34;Lift and Shift&#34; approach
 
-&gt; Note: There here I am making the distinction between Cloud First and Cloud Enabled.
+&gt; Note: That here I am making the distinction between Cloud First and Cloud Enabled.
 
 ___
 
 &lt;!-- .slide: id=&#34;cloudnative&#34; data-transition=&#34;concave&#34; --&gt;
 
-# Cloud Native via Kubernetes
+# Cloud Native
 
 &gt; Orchestration of containers as part of a microservices architecture.
 
@@ -570,17 +570,17 @@ ___
 
 Note:
 
-The fundamentals of being Cloud Native is loosely described as container packaging, dynamic management and a Microservices-oriented architecture.
-
 Cloud Native promotes five architectural principles:
 
-1. At very least when using IaaS: run on servers that can be flexibly provisioned on demand.
-2. Design systems using, or evolve them towards, a microservices architecture: individual components are small and decoupled.
-3. Automate and encode: replace manual tasks with scripts or code.
-4. Containerize: package processes with their dependencies making them easy to test, move and deploy.
-5. Orchestrate: abstract away individual servers in production using off-the-shelf management and orchestration tools.
+1. At very least when using IaaS: Run on servers that can be flexibly provisioned on demand.
+2. Design systems using, or evolve them towards, a microservices architecture: Individual components are small and decoupled.
+3. Automate and encode: Replace manual tasks with scripts or code.
+4. Containerize: Package processes with their dependencies making them easy to test, move and deploy.
+5. Orchestrate: Abstract away individual servers in production using off-the-shelf management and orchestration tools.
 
 These steps have many benefits but ultimately they are about the reduction of risk and the ability to scale.
+
+Near the end I will also talk about Serverless technology and how it fits into this paradigm.
 
 ___
 
@@ -637,20 +637,6 @@ What Go Cloud then gives these developers is a set of open generic cloud APIs fo
 This, Google argues, allows developer teams to build applications that can easily run on any supported cloud without having to re-architect large parts of their applications.
 
 As Google VP of developer relations Adam Seligman told me, the company hopes this move will kick off an explosion of libraries around Go — and, of course, that it will accelerate Go’s growth as a language for the cloud.
-
-___
-
-&lt;!-- .slide: id=&#34;golang-gophers&#34; data-transition=&#34;concave&#34; --&gt;
-
-# Gophers
-
-&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
-  &lt;img src=&#34;https://storage.googleapis.com/gopherizeme.appspot.com/gophers/64993e4fd1e3008ad453690af0c21e8fb6776215.png&#34;&gt;
-&lt;/div&gt;
-
-&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
-  &lt;img src=&#34;https://storage.googleapis.com/gopherizeme.appspot.com/gophers/0c9f1682a737032df29e6d5eb727a7448466009d.png&#34;&gt;
-&lt;/div&gt;
 
 ___
 
@@ -753,6 +739,10 @@ Revocation: Vault has built-in support for secret revocation. Vault can revoke n
 
 ---
 
+&lt;!-- .slide: id=&#34;containers-docker-nyan&#34; data-background-size=&#34;contain&#34; data-background=&#34;https://maraaverick.rbind.io/banners/nyan_docker_whale_gfycat.gif&#34; --&gt;
+
+___
+
 &lt;!-- .slide: id=&#34;containers-overview&#34; data-transition=&#34;concave&#34; --&gt;
 
 # Containers
@@ -829,8 +819,6 @@ ___
 
 * Docker for Windows / Mac
 * Docker Intricacies
-* Composer w/PHP
-* Data Science (SAS, Kylo, NiFi)
 
 Note:
 
@@ -838,7 +826,7 @@ ___
 
 &lt;!-- .slide: id=&#34;containers-vscode&#34; data-transition=&#34;concave&#34; --&gt;
 
-# VSCode
+# VSCode / Visual Studio
 
 * Dockerfile code completion
 * Docker Compose support
@@ -849,44 +837,12 @@ ___
 Note:
 
 https://code.visualstudio.com/docs/azure/docker
-
-___
-
-&lt;!-- .slide: id=&#34;containers-visual-studio&#34; data-transition=&#34;concave&#34; --&gt;
-
-# Visual Studio
-
-* Dockerfile code completion
-* Docker Compose support
-* Generation of Docker files
-* Docker Hub
-* Linting
-
-Note:
-
-https://code.visualstudio.com/docs/azure/docker
-
-___
-
-&lt;!-- .slide: id=&#34;containers-patterns&#34; data-transition=&#34;concave&#34; --&gt;
-
-# Container Design Patterns
-
-* There are certain fundamental truths
-* Patterns developed from KISS, DRY, SoC
-* Inspired from 12 factors app
-
-&gt; Facilitate creating a containerized application that can be automated and orchestrated effectively by a cloud-native platform.
-
-Note:
-
-The principles for creating containerized applications listed below use the container image as the
-basic primitive and the container orchestration platform as the target container runtime environment.
-Following these principles will ensure that the resulting containers behave like a good cloudnative
-citizen in most container orchestration engines, allowing them to be scheduled, scaled, and
-monitored in an automated fashion. These principles are presented in no particular order.
 
 ---
+
+&lt;!-- .slide: id=&#34;k8s-magic&#34; data-background-size=&#34;contain&#34; data-background=&#34;https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif&#34; --&gt;
+
+___
 
 &lt;!-- .slide: id=&#34;k8s&#34; data-transition=&#34;concave&#34; --&gt;
 
@@ -978,7 +934,7 @@ ___
   &lt;ul class=&#34;list-unstyled&#34;&gt;
     &lt;li&gt;SSC Cloud Platform&lt;/li&gt;
     &lt;li&gt;CSE / CSIS&lt;/li&gt;
-		&lt;li&gt;CDS / TBS&lt;/li&gt;
+    &lt;li&gt;CDS / TBS&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -1005,16 +961,6 @@ A few other departments have either procured OpenShift / Pivotal:
 At the foundation of both these Cloud Management Platform is the agreed upon standard of Kubernetes which powers both
 
 * Can send full list of Departments as is impressive the agreement on K8S
-
-___
-
-&lt;!-- .slide: id=&#34;k8s-app-delivery&#34; d data-transition=&#34;concave&#34; --&gt;
-
-## App Delivery
-
-&lt;div class=&#34;stretch&#34;&gt;
-  &lt;iframe height=&#34;100%&#34; width=&#34;100%&#34; src=&#34;https://www.youtube.com/embed/tE3k-pOJdTc&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
 
 ___
 
@@ -1058,8 +1004,8 @@ ___
 
 &lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
   &lt;ul class=&#34;list-unstyled&#34;&gt;
-    &lt;li&gt;Artifactory&lt;/li&gt;
-    &lt;li&gt;X-Ray&lt;/li&gt;
+    &lt;li&gt;Artifactory (Procured)&lt;/li&gt;
+    &lt;li&gt;X-Ray (Procured)&lt;/li&gt;
     &lt;li&gt;SonarQube&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
@@ -1067,16 +1013,6 @@ ___
 Note:
 
 All cloud native apps often vetted and extended from official sources.
-
-___
-
-&lt;!-- .slide: id=&#34;chart-efk&#34; d data-transition=&#34;concave&#34; --&gt;
-
-## EFK
-
-&lt;div class=&#34;stretch&#34;&gt;
-  &lt;iframe height=&#34;100%&#34; width=&#34;100%&#34; src=&#34;https://www.youtube.com/embed/QoHNkjtbHPg&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
 
 ___
 
@@ -1134,7 +1070,7 @@ ___
     &lt;li&gt;Blockchain&lt;/li&gt;
     &lt;li&gt;Hadoop / HDFS&lt;/li&gt;
     &lt;li&gt;JupyterHub&lt;/li&gt;
-		&lt;li&gt;Kylo&lt;/li&gt;
+    &lt;li&gt;Kylo&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -1196,16 +1132,6 @@ ToDo
 
 ___
 
-&lt;!-- .slide: id=&#34;ndm-stack&#34; data-transition=&#34;concave&#34; --&gt;
-
-# Demo
-
-Note:
-
-ToDo
-
-___
-
 &lt;!-- .slide: id=&#34;.net&#34; data-transition=&#34;concave&#34; --&gt;
 
 # .NET
@@ -1217,7 +1143,7 @@ ___
 
 ---
 
-&lt;!-- .slide: id=&#34;serverless-challenger&#34; data-background=&#34;https://media.giphy.com/media/bGd3K98aIx104/giphy.gif&#34; --&gt;
+&lt;!-- .slide: id=&#34;serverless-challenger&#34; data-background-size=&#34;contain&#34; data-background=&#34;https://media.giphy.com/media/bGd3K98aIx104/giphy.gif&#34; --&gt;
 
 ___
 
