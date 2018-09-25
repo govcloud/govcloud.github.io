@@ -472,8 +472,9 @@ GoC @ Open Data&lt;!-- .element: class=&#34;col-xs-9 col-sm-9 col-md-9 text-left
 
 * User Engagement
 * Decoupled improvements
-* CKAN integration
+* CKAN / Solr integration
 * Refined workflows
+* Improved search
 
 Note:
 
@@ -510,43 +511,125 @@ Note:
 
 ---
 
-&lt;!-- .slide: id=&#34;cloudenabled&#34; data-transition=&#34;concave&#34; --&gt;
+&lt;!-- .slide: id=&#34;cloudnative-infra&#34; data-transition=&#34;concave&#34; --&gt;
 
-# Cloud Enabled
+# Cloud Native Infra
 
-&gt; A policy mandate and call to action across departments
+&gt; Cloud native infrastructure is infrastructure that is:
 
 &lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
 &lt;ul class=&#34;list-unstyled&#34;&gt;
-&lt;li&gt;Speed, Scale, Resiliency&lt;/li&gt;
-&lt;li&gt;Application uptime / performance&lt;/li&gt;
-&lt;li&gt;Service Delivery&lt;/li&gt;
+  &lt;li&gt;Hidden behind useful abstractions&lt;/li&gt;
+  &lt;li&gt;Controlled by API&#39;s&lt;/li&gt;
+  &lt;li&gt;Managed by software&lt;/li&gt;
 &lt;/div&gt;
 
 &lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
 &lt;ul class=&#34;list-unstyled&#34;&gt;
-&lt;li&gt;Software design patterns&lt;/li&gt;
-&lt;li&gt;Apps must be modernized&lt;/li&gt;
-&lt;li&gt;Cloud not immediate cure-all&lt;/li&gt;
+  &lt;li&gt;Purpose is to run application lifecycle&lt;/li&gt;
+  &lt;li&gt;Exposes own API&lt;/li&gt;
+  &lt;li&gt;Move up the stack&lt;/li&gt;
 &lt;/div&gt;
 
 Note:
 
-Cloud Enabled has become a policy mandate for many departments:
+Cloud native infrastructure is infrastructure that is hidden behind useful abstractions, controlled by APIs, managed by software, and has the purpose of running applications. Running infrastructure with these traits gives rise to a new pattern for managing that infrastructure in a scalable, efficient way.
 
-a) Public sector agencies are looking to the cloud for speed scale and resilience
-b) Cloud isn&#39;t a cure-all though as higher levels of application performance and digital enablement require precise software design patterns
-c) Platforms migrating apps to the cloud can be tricky since sometimes your legacy apps probably weren&#39;t built with distributed computing and scalability in mind
-d) Need to either modify and optimize those existing apps or build new apps for the cloud
-e) This can be seen as the traditional IaaS approach which is akin to more of a &#34;Lift and Shift&#34; approach
+Abstractions are useful when they successfully hide complexity for their consumer. They can enable more complex uses of the technology, but they also limit how the technology is used. They apply to low-level technology, such as how TCP abstracts IP, or higher levels, such as how VMs abstract physical servers. Abstractions should always allow the consumer to “move up the stack” and not reimplement the lower layers.
 
-&gt; Note: That here I am making the distinction between Cloud First and Cloud Enabled.
+Cloud native infrastructure needs to abstract the underlying IaaS offerings to provide its own abstractions. The new layer is responsible for controlling the IaaS below it as well as exposing its own APIs to be controlled by a consumer.
+
+Infrastructure that is managed by software is a key differentiator in the cloud. Software-controlled infrastructure enables infrastructure to scale, and it also plays a role in resiliency, provisioning, and maintainability. The software needs to be aware of the infrastructure’s abstractions and know how to take an abstract resource and implement it in consumable IaaS components accordingly.
+
+So at its most fundamental level a cloud native application is engineered to run on a cloud platform and is designed for:
+
+* Resiliency: Embraces failures instead of trying to prevent them; it takes advantage of the dynamic nature of running on a cloud platform
+* Agility: Allows for fast deployments and quick iterations
+* Operability: Adds control of application life cycles from inside the application instead of relying on external processes and monitors
+* Observability: Provides information to answer questions about application state
 
 ___
 
 &lt;!-- .slide: id=&#34;cloudnative&#34; data-transition=&#34;concave&#34; --&gt;
 
-# Cloud Native
+# Path to Cloud Native
+
+&gt; The following doesn&#39;t automatically mean your Cloud Native.
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+  &lt;ul class=&#34;list-unstyled&#34;&gt;
+    &lt;li&gt;Infra on public cloud&lt;/li&gt;
+    &lt;li&gt;Apps in containers&lt;/li&gt;
+	&lt;li&gt;Container orchestrator&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+  &lt;ul class=&#34;list-unstyled&#34;&gt;
+    &lt;li&gt;Microservices&lt;/li&gt;
+    &lt;li&gt;Infra as Code&lt;/li&gt;
+    &lt;li&gt;Config management&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+Note:
+
+Cloud native infrastructure is not only running infrastructure on a public cloud. Just because you rent server time from someone else does not make your infrastructure cloud native. The processes to manage IaaS are often no different than running a physical data center, and many companies that have migrated existing infrastructure to the cloud have failed to reap the rewards.
+
+Cloud native is not about running applications in containers. When Netflix pioneered cloud native infrastructure, almost all its applications were deployed with virtualmachine images, not containers. The way you package your applications does not mean you will have the scalability and benefits of autonomous systems. Even if your applications are automatically built and deployed with a continuous integration and continuous delivery pipeline, it does not mean you are benefiting from infrastructure that can complement API-driven deployments.
+
+It also doesn’t mean you only run a container orchestrator (e.g., Kubernetes and Mesos). Container orchestrators provide many platform features needed in cloud native infrastructure, but not using the features as intended means your applications aren&#39;t dynamically scheduled to run on a set of servers. This is a very good first step, but there is still work to be done.
+
+Cloud native is not about microservices or infrastructure as code. Microservices enable faster development cycles on smaller distinct functions, but monolithic applications can have the same features that enable them to be managed effectively by software and can also benefit from cloud native infrastructure. Infrastructure as code defines and automates your infrastructure in machine-parsible language or domain-specific language (DSL). Traditional tools to apply code to infrastructure include configuration management tools (e.g., Chef and Puppet). These tools help greatly in automating tasks and providing consistency, but they fall short in providing the necessary abstractions to describe infrastructure beyond a single server. Configuration management tools automate one server at a time and depend on humans to tie together the functionality provided by the servers. This positions humans as a potential bottleneck for infrastructure scale. These tools also don’t automate the extra parts of cloud infrastructure (e.g., storage and network) that are needed to make a complete system.
+
+While configuration management tools can help automate parts of infrastructure, they don’t help manage applications better. We will explore how cloud native infrastructure is different by looking at the processes to deploy, manage, test, and operate infrastructure in later chapters, but first we will look at which applications are successful and when you should use cloud native infrastructure.
+
+___
+
+&lt;!-- .slide: id=&#34;cloudnative-impl&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Implementation
+
+&gt; Acquire the traits of Resiliency, Agility, Operability, Observability through:
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+  &lt;ul class=&#34;list-unstyled&#34;&gt;
+    &lt;li&gt;Microservices&lt;/li&gt;
+    &lt;li&gt;Health reporting&lt;/li&gt;
+    &lt;li&gt;Telemetry data&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+  &lt;ul class=&#34;list-unstyled&#34;&gt;
+    &lt;li&gt;Resiliency&lt;/li&gt;
+    &lt;li&gt;Declarative not Reactive&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+Note:
+
+Cloud native applications acquire the traits of (Resiliency, Agility, Operability, Observability) through various methods.
+
+The following represents a common way to implement the desired characteristics:
+
+&gt; Reminder: It can often depend on where your applications run and the processes and culture of the business.
+
+* Microservices: Separate clearly defined functionality into smaller services and let each service independently iterate
+* Health reporting: To increase the operability of cloud native applications, applications should expose a health check, liveness, and readyness probes
+* Telemetry data: Teleetry data can overlap with health reporting, but serve different purposes. Health reporting informs us of application life cycle, while telemetry data informs us of application business objectives.
+  * How many requests per minute does the application receive?
+  * Are there any errors?
+  * What is the application latency?
+  * How long does it take to place an order?
+* Resiliency: Become resilient to failure and embrace it as a function of design.
+* Declarative: Communication through the network through REST and/or Remote Procedure Calls (RPC)
+
+___
+
+&lt;!-- .slide: id=&#34;cloudnative-cncf&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Cloud Native: CNCF
 
 &gt; Orchestration of containers as part of a microservices architecture.
 
@@ -555,65 +638,93 @@ ___
     &lt;li&gt;Containerization&lt;/li&gt;
     &lt;li&gt;Dynamically orchestrated&lt;/li&gt;
     &lt;li&gt;Microservices oriented&lt;/li&gt;
-    &lt;li&gt;Align with Open First initiative&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
   &lt;ul class=&#34;list-unstyled&#34;&gt;
-    &lt;li&gt;Deploy faster&lt;/li&gt;
     &lt;li&gt;Optimized resource utilization&lt;/li&gt;
     &lt;li&gt;Distributed computing&lt;/li&gt;
-    &lt;li&gt;Cloud Native computing foundation&lt;/li&gt;
-	&lt;/ul&gt;
+    &lt;li&gt;41,145 Contributors&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 
 Note:
 
-Cloud Native promotes five architectural principles:
+The Cloud Native Computing Foundation is an open source software foundation dedicated to making cloud native computing universal and sustainable.
 
-1. At very least when using IaaS: Run on servers that can be flexibly provisioned on demand.
-2. Design systems using, or evolve them towards, a microservices architecture: Individual components are small and decoupled.
-3. Automate and encode: Replace manual tasks with scripts or code.
-4. Containerize: Package processes with their dependencies making them easy to test, move and deploy.
-5. Orchestrate: Abstract away individual servers in production using off-the-shelf management and orchestration tools.
+Cloud native computing uses an open source software stack to deploy applications as microservices, packaging each part into its own container, and dynamically orchestrating those containers to optimize resource utilization.
 
-These steps have many benefits but ultimately they are about the reduction of risk and the ability to scale.
-
-Near the end I will also talk about Serverless technology and how it fits into this paradigm.
-
-___
-
-&lt;!-- .slide: id=&#34;cloudnative-cncf&#34; data-transition=&#34;concave&#34; --&gt;
-
-# CNCF
-
-* High Quality OS Projects
-* Vendor Neutral
-* Industry&#39;s Best from multiple disciplines
-* Graduated Projects
-
-Note:
-
-## CNCF
-
-The Cloud Native Computing Foundation builds sustainable ecosystems and fosters a community around a constellation of high-quality open source projects that orchestrate containers as part of a microservices architecture.
-
-CNCF serves as the vendor-neutral home for many of the fastest-growing projects on GitHub, including Kubernetes, Prometheus and Envoy, fostering collaboration between the industry’s top developers, end users, and vendors. Kubernetes is the world’s most popular container-orchestration platform and the first CNCF project.
-
-## Important Points
-
-We should be a member of the CNCF as I think Government should be a leader in this. We need to invest in our next generation of developers and allow them to improve our governmental services.
+The CNCF serves as the vendor-neutral home for many of the fastest-growing projects on GitHub, including Kubernetes, Prometheus and Envoy, fostering collaboration between the industry’s top developers, end users, and vendors.
 
 ___
 
 &lt;!-- .slide: id=&#34;cloudnative-cncf-meetups&#34; data-transition=&#34;concave&#34; --&gt;
 
-# Meetups
+# GoC Meetups
 
 * GoC Cloud Native Working Group
+* 80&#43; Members
+* CDS / Statistics Canada
+* Usually 2 x 45 minute sessions
 
 Note:
+
+___
+
+&lt;!-- .slide: id=&#34;cloudnative-cncf-meetups-past&#34; data-transition=&#34;concave&#34; --&gt;
+
+# GoC Past Meetups
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+  &lt;ul class=&#34;list-unstyled&#34;&gt;
+    &lt;li&gt;Container Architecture&lt;/li&gt;
+    &lt;li&gt;Kubernetes Orchestrator&lt;/li&gt;
+    &lt;li&gt;Azure ACS/AKS and ACS-Engine&lt;/li&gt;
+    &lt;li&gt;Terraform&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+  &lt;ul class=&#34;list-unstyled&#34;&gt;
+    &lt;li&gt;JupyterHub&lt;/li&gt;
+    &lt;li&gt;gRPC/Protobuffers&lt;/li&gt;
+    &lt;li&gt;Artifactory / XRay&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+Note:
+
+___
+
+&lt;!-- .slide: id=&#34;cloudnative-cncf-meetups-future&#34; data-transition=&#34;concave&#34; --&gt;
+
+# GoC Future Meetups
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+  &lt;ul class=&#34;list-unstyled&#34;&gt;
+    &lt;li&gt;GCTools&lt;/li&gt;
+    &lt;li&gt;OpenShift&lt;/li&gt;
+    &lt;li&gt;Traefik&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+  &lt;ul class=&#34;list-unstyled&#34;&gt;
+    &lt;li&gt;Windows Containers&lt;/li&gt;
+    &lt;li&gt;Rancher Cattle&lt;/li&gt;
+    &lt;li&gt;Terraform with GitLab CI&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+Note:
+
+* GCTools is willing to do a demo and show off their CI/CD process
+* OpenShift demo by both CDS and RedHat
+* Traefik presentation given by one of the maintainers who met a K8S meetup
+* Terraform with GitLab CI by Andriy Drozdyuk
+* Bernard Maltais (PSPC) showcasing Rancher Cattle
+* Mark Tessier / William Hearn discussing Windows containers
 
 ---
 
@@ -647,9 +758,7 @@ ___
 * Traefik
 * Vault
 * Docker
-* Envoy / Istio
 * Kubernetes
-* gRPC / Protocol Buffers
 
 Note:
 

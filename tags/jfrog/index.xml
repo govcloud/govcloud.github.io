@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jfrog on GovCloud</title>
+    <link>https://govcloud.github.io/tags/jfrog/</link>
+    <description>Recent content in Jfrog on GovCloud</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Aug 2018 13:10:52 -0500</lastBuildDate>
+    
+	<atom:link href="https://govcloud.github.io/tags/jfrog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GoC Cloud Native</title>
+      <link>https://govcloud.github.io/slide/06-26-18/</link>
+      <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/slide/06-26-18/</guid>
+      <description>Cloud Native Meetup github.com/govcloud 
+Note:
+Hi there!
+Welcome to what is I think is the 4th Cloud Native meetup.
+Presenter(s)  Modernizing app delivery for Canadians
+ William Hearn @sylus   Ross Clarke @rossclarke   Agenda  Overview of Minutes New Items Terraform Presentation  Benefits of Terraform for Hybrid Cloud Terraform Demo Terraform integration with Azure  JFrog Artifactory / XRay with Aqua Scanning  Note:</description>
+    </item>
+    
+  </channel>
+</rss>

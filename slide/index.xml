@@ -13,6 +13,20 @@
     
     <item>
       <title>GoC Cloud Native</title>
+      <link>https://govcloud.github.io/slide/06-26-18/</link>
+      <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/slide/06-26-18/</guid>
+      <description>Cloud Native Meetup github.com/govcloud 
+Note:
+Hi there!
+Welcome to what is I think is the 4th Cloud Native meetup.
+Presenter(s)  Modernizing app delivery for Canadians
+ William Hearn @sylus   Ross Clarke @rossclarke   Agenda  Overview of Minutes New Items Terraform Presentation  Benefits of Terraform for Hybrid Cloud Terraform Demo Terraform integration with Azure  JFrog Artifactory / XRay with Aqua Scanning  Note:</description>
+    </item>
+    
+    <item>
+      <title>GoC Cloud Native</title>
       <link>https://govcloud.github.io/slide/08-26-18/</link>
       <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
       
@@ -35,7 +49,7 @@ I thought I would kick this off by talking about the upcoming presenters for tho
       <description>Cloud Native govcloud/charts 
 Note:
 This is a presentation created in conjunction with the Canadian Digital Services and Cloud Operations team at Statistics Canada.
-Agenda  Planning Items Azure AKS / ACS Engine NodeJS Multi Stage Builds NodeJS Developer Improvements GitLab CI / CD w/Kubernetes  Note:
+Agenda  Planning Items NodeJS Multi Stage Builds NodeJS Developer Improvements GitLab CI / CD w/Kubernetes  Note:
 Starting to hit our stride now and meetings for next 2 months are planned.
 As mentioned we are always looking for constructive criticism and are currently enacted the two we have already recieved:</description>
     </item>

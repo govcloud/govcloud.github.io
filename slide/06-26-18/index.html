@@ -53,15 +53,38 @@
 		 data-separator-vertical="^___"
 		 data-separator-notes="^Note:"
 		data-charset="utf8">
-	&lt;!-- .slide: id=&#34;ops&#34; data-transition=&#34;concave&#34; --&gt;
+	&lt;!-- .slide: id=&#34;intro&#34; data-transition=&#34;concave&#34; --&gt;
 
-# Cloud Native
+# Cloud Native Meetup
 
-[govcloud/charts](http://github.com/govcloud/charts) &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+[github.com/govcloud](https://github.com/govcloud) &lt;i class=&#34;fa fa-download&#34;&gt;&lt;/i&gt;&lt;/li&gt;
 
 Note:
 
-This is a presentation created in conjunction with the Canadian Digital Services and Cloud Operations team at Statistics Canada.
+Hi there!
+
+Welcome to what is I think is the 4th Cloud Native meetup.
+
+---
+
+&lt;!-- .slide: id=&#34;presenters&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Presenter(s)
+
+&gt; Modernizing app delivery for Canadians
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+
+&lt;ul class=&#34;list-unstyled&#34;&gt;
+&lt;li&gt;William Hearn&lt;/li&gt;
+&lt;li&gt;@sylus &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+&lt;ul class=&#34;list-unstyled&#34;&gt;
+&lt;li&gt;Ross Clarke&lt;/li&gt;
+&lt;li&gt;@rossclarke &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;/div&gt;
 
 ---
 
@@ -69,118 +92,17 @@ This is a presentation created in conjunction with the Canadian Digital Services
 
 # Agenda
 
-* Planning Items
-* NodeJS Multi Stage Builds
-* NodeJS Developer Improvements
-* GitLab CI / CD w/Kubernetes
+* Overview of Minutes
+* New Items
+* Terraform Presentation
+  * Benefits of Terraform for Hybrid Cloud
+  * Terraform Demo
+  * Terraform integration with Azure
+* JFrog Artifactory / XRay with Aqua Scanning
 
 Note:
-
-Starting to hit our stride now and meetings for next 2 months are planned.
-
-As mentioned we are always looking for constructive criticism and are currently enacted the two we have already recieved:
-
-* More focused on specific topics
-* Don&#39;t assume users are familiar with fundamentals
-
-We did also get some positive feedback:
-
-* Videos are great and want more like it
-* Appreciate the open source repo examples
-
-Important: A lot of us are on the #cloudnative channel if ever need assistance!
 
 ---
-
-&lt;!-- .slide: id=&#34;planning&#34; data-transition=&#34;concave&#34; --&gt;
-
-# Planning Items
-
-* Minutes
-* Miscellaneous / Questions
-* Future presentations
-
-Note:
-
-## Minutes
-
-But first we need to quickly go over some highlight from the minutes during the last meetup.
-
-* Review of planning decisions from last meeting
-* Website govcloud.ca
-* More documentation being pushed to YouTube
-* Will cut out planning discussion from video minutes
-* Will upload 1.5hrs in chunks
-* AKS / ACS (Benefits / Comparisons)
-* ACS Engine
-  * Take bare minimum cluster definition (small JSON) which then generates ARM templates
-  * For operators that need complete control and customizability
-  * Deploys cluster on Ubuntu
-  * OpenShift support also being added
-  * Can add custom extensions (e.g., choco)
-* Autoscaler
-* Heptio Ark: Must have for any cluster
-* VS Code: Many Kubernetes / Helm integration
-* JupyterHub and custom developer environments
-* Distributed Logging with EFK
-* Pachyderm
-
-## Miscellaneous / Questions
-
-What kind of applications are people consider containerizing?
-
-* Identity management platform (6 services together) - Pat, Public Works
-  * Working locally, automated pipeline, test
-  * Alpine Linux, a few that are Ubuntu (more for COTS)
-  * GitLab CI
-* Data science framework (spark, Hadoop, Drupal, etc.) - Will, Statistics Canada
-  * Horizontal services that devops can deploy and maintain to support dev groups
-  * Private NuGet repo, Jenkins, GitLab, etc.
-  * Windows 17.09 or higher (Azure, Kubernetes) due to networking issues
-  * Build containers for non-core applications of .NET
-* Best ways to set up local:
-  * Easiest: Docker for Mac / Windows (currently in edge)
-  * Hyperkube, Kubespray
-
-## Future Presentations
-
-* Zachary Seguin: Will be talking about his work with OpenFaaS, Serverless Functions Made Simple for Docker and Kubernetes and how he leveraged react
-* Marc Tessier: Will be showing the great work done with Windows container development in the .NET / Nuget space. As well as refined CI/CD workflow from local dev -&gt; prod
-* Ross Clarke: Will be showcasing his work with Terraform and how it facilitates hybrid cloud development
-
-___
-
-&lt;!-- .slide: id=&#34;nodejs&#34; data-transition=&#34;concave&#34; --&gt;
-
-# NodeJS Multi Stage Builds
-
-* NodeJS Docker Core Maintainer
-* Introduced Alpine build
-* Multi Stage Builds
-* Many improvements towards speed / performance
-* New Windows branch
-
-Note:
-
-Introduce Laurent Goderre one of the Core Maintainer on NodeJS Docker image.
-
-___
-
-&lt;!-- .slide: id=&#34;gitlab&#34; data-transition=&#34;concave&#34; --&gt;
-
-# GitLab CI / CD
-
-* GitLab CI / CD
-* Auto Devops
-* Integration with Kubernetes
-* Pipelines
-* Demo
-
-Note:
-
-Demo a full GitLab workflow for development all the way through to production.
-
-___
 
 	</section>
 	</div>

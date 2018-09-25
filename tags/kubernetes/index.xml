@@ -20,7 +20,7 @@
       <description>Cloud Native govcloud/charts 
 Note:
 This is a presentation created in conjunction with the Canadian Digital Services and Cloud Operations team at Statistics Canada.
-Agenda  Planning Items Azure AKS / ACS Engine NodeJS Multi Stage Builds NodeJS Developer Improvements GitLab CI / CD w/Kubernetes  Note:
+Agenda  Planning Items NodeJS Multi Stage Builds NodeJS Developer Improvements GitLab CI / CD w/Kubernetes  Note:
 Starting to hit our stride now and meetings for next 2 months are planned.
 As mentioned we are always looking for constructive criticism and are currently enacted the two we have already recieved:</description>
     </item>
@@ -62,6 +62,26 @@ Some constructive criticism already recieved was jumping around topics a bit whi
     </item>
     
     <item>
+      <title>Minutes for 2018-06-26</title>
+      <link>https://govcloud.github.io/sitemap/meetup/06-26-18/</link>
+      <pubDate>Tue, 24 Apr 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/sitemap/meetup/06-26-18/</guid>
+      <description>Minutes taken by: Zachary Seguin
+ Introduction n/a</description>
+    </item>
+    
+    <item>
+      <title>Minutes for 2018-08-26</title>
+      <link>https://govcloud.github.io/sitemap/meetup/08-26-18/</link>
+      <pubDate>Tue, 24 Apr 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/sitemap/meetup/08-26-18/</guid>
+      <description>Minutes taken by: Zachary Seguin
+ Post Discussion  More flexibility with some of the timing Procurement people are allowed to come into presentations Full remote meetings would be a big plus  Still have issues with some departments blocking access Face to Face is of course important though and will be main type of meetup  Interest in talking to people who have taken Kubernetes all the way into production Request to ask if we can get Jonathan Pulcifier (Security) at Shopify Interest in hosting a Kubernetes Basics Course Serverless talks on:  Lambda When to use versus containers KNative  GCTools is willing to do a demo Chris Allison wants to help and better support communities that to exist We can apparently get translation and transcription Desire for focused problem sets and interactive demos Mentioned dev.</description>
+    </item>
+    
+    <item>
       <title>GoC Cloud Native</title>
       <link>https://govcloud.github.io/slide/03-22-18/</link>
       <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
@@ -97,16 +117,6 @@ Room 2064 on the second floor of 90 elgin
       <description>Minutes taken by: Zachary Seguin
  Introduction Canadian Digital Services - Collaboration Room
  Canadian Digital Services / Statistics Canada organized Importance of Cloud native As Developers our view points aren&amp;rsquo;t always appreciated Policy makers make decisions and we enact it  Vision  Long road, not everything can be done by cloud native IaaS formulas, Amazon, Azure, etc. is not cloud native Should focus on purely cloud native, can go any cloud If it&amp;rsquo;s been solved in cloud native, we should take and learn.</description>
-    </item>
-    
-    <item>
-      <title>Slides</title>
-      <link>https://govcloud.github.io/sitemap/slides/</link>
-      <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
-      
-      <guid>https://govcloud.github.io/sitemap/slides/</guid>
-      <description>Presentations given during the Cloud Native meetup:
- 03-22-18 04-24-18 05-29-18 08-26-18  </description>
     </item>
     
   </channel>
