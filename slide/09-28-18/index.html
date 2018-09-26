@@ -515,9 +515,17 @@ Note:
 
 ---
 
+# Go
+
+&lt;!-- .slide: id=&#34;cloudnative-landscape&#34; data-background-size=&#34;contain&#34; data-background=&#34;#FFFFFF&#34; --&gt;
+
+![Gophers](/img/architecture/openfirst/gophers.png)
+
+___
+
 &lt;!-- .slide: id=&#34;golang&#34; data-transition=&#34;concave&#34; --&gt;
 
-# GoLang
+# Go
 
 * Language of the cloud
 * Efficient and easy to learn
@@ -526,15 +534,19 @@ Note:
 
 Note:
 
-The Google -incubated Go language is one of the fastest growing programming languages today, with about one million active developers using it worldwide. But the company believes it can still accelerate its growth, especially when it comes to its role in writing cloud applications. And to do this, the company today announced Go Cloud, a new open-source library and set of tools that makes it easier to build cloud apps with Go.
-
-While Go is highly popular among developers, Google argues that the language was missing a standard library for interfacing with cloud services. Today, developers often have to essentially write their own libraries to use the features of each cloud, but organizations today want to be able to easily move their workloads between clouds.
-
-What Go Cloud then gives these developers is a set of open generic cloud APIs for accessing blog storage, MySQL databases and runtime configuration, as well as an HTTP server with built-in logging, tracing and health checking. Right now, the focus is on AWS and Google Cloud Platform. Over time, Google plans to add more features to Go Cloud and support for more cloud providers (and those cloud providers can, of course, build their own support, too).
-
-This, Google argues, allows developer teams to build applications that can easily run on any supported cloud without having to re-architect large parts of their applications.
-
-As Google VP of developer relations Adam Seligman told me, the company hopes this move will kick off an explosion of libraries around Go — and, of course, that it will accelerate Go’s growth as a language for the cloud.
+* Incredibly fast and on par with a well written C program and you can write Go much faster
+* The static binaries it builds are incredibly easy to deploy. Think scratch container &#43; go app itself
+* Incredible amount of freedom but usually only one best practice way of doing some
+* Don&#39;t need to prove how cool you are by doing pointer arithmetic for no other reason then you can
+* Build your programs for many different platforms:
+  * Linux, Solaris, Mac OSX
+  * Windows
+  * BSD&#39;s on am64, i686, or ARM
+  * Obviously need to make sure your libraries aren&#39;t platform specific
+* Backend and systems programming so much more accessible thanks to a simple elegant language:
+  * Profiling and Tracing tools are great
+  * Concurrency is built into go and so easy to work with
+  * Go&#39;s interfaces can take some time to wrap your brain around
 
 ___
 
@@ -542,16 +554,288 @@ ___
 
 # Projects
 
-* Traefik
-* Vault
-* Docker
-* Kubernetes
+&gt; We use the following projects quite extensively at Statistics Canada
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+&lt;ul class=&#34;list-unstyled&#34;&gt;
+&lt;li&gt;ACS Engine&lt;/li&gt;
+&lt;li&gt;ARK&lt;/li&gt;
+&lt;li&gt;Traefik&lt;/li&gt;
+&lt;li&gt;Grafana / Prometheus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+&lt;ul class=&#34;list-unstyled&#34;&gt;
+&lt;li&gt;Hugo&lt;/li&gt;
+&lt;li&gt;Vault&lt;/li&gt;
+&lt;li&gt;**Docker**&lt;/li&gt;
+&lt;li&gt;**Kubernetes**&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
 Note:
 
+While not an exhaustive list these are a few of the projects we are actively using and taking into Production.
+
+Just wanted to mention we will go over Docker and Kubernetes later in the presentation so won&#39;t mention here.
+
 ___
 
-&lt;!-- .slide: id=&#34;golang-traefik&#34; data-transition=&#34;concave&#34; --&gt;
+&lt;!-- .slide: id=&#34;golang-acs-engine&#34; data-transition=&#34;concave&#34; --&gt;
+
+# ACS Engine
+
+&gt; For operators that need complete control and customizability of a Kubernetes cluster.
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+&lt;ul class=&#34;list-unstyled&#34;&gt;
+&lt;li&gt;OS core of ACS/AKS&lt;/li&gt;
+&lt;li&gt;ARM templates via spec&lt;/li&gt;
+&lt;li&gt;Immense customization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+&lt;ul class=&#34;list-unstyled&#34;&gt;
+&lt;li&gt;Custom extensions&lt;/li&gt;
+&lt;li&gt;Provided examples&lt;/li&gt;
+&lt;li&gt;Detailed scenarios&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+Note:
+
+The Azure Container Service Engine (acs-engine) generates ARM (Azure Resource Manager) templates for Docker enabled clusters on Microsoft Azure.
+
+The input to the tool is a cluster definition.
+
+The cluster definition is very similar to (in many cases the same as) the ARM template syntax used to deploy a Microsoft Azure Container Service cluster.
+
+acs-engine reads a JSON cluster definition and generates a number of files that may be submitted to Azure Resource Manager (ARM). The generated files include:
+
+* apimodel.json: is an expanded version of the cluster definition provided to the generate command. All default or computed values will be expanded during the generate phase
+* azuredeploy.json: represents a complete description of all Azure resources required to fulfill the cluster definition from apimodel.json
+* azuredeploy.parameters.json: the parameters file holds a series of custom variables which are used in various locations throughout azuredeploy.json
+* certificate and access config files: orchestrators like Kubernetes require certificates and additional configuration files (apiserver certificates and kubeconfig)
+
+Normally you can simply run acs-engine deploy to do a one-off cluster, however as we are building lots of clusters we are generating our templates first, and then running the deployment.
+
+This has advantages because we can iterate over a bunch of different cluster declarations.
+
+We can then run them through acs-engine generate to get the definitive template/params for sending to ARM.
+
+## Generation of ARM Templates
+
+```sh
+acs-engine generate --api-model=k8s.default.json
+```
+
+There are a variety of examples that acs-engine provides to get you started with the following:
+
+## Examples
+
+* Clear Containers
+* OpenShift
+* Hybrid Windows
+* ACI Connector
+* Key vault
+* GPU
+* Managed Identity
+* Service Mesh (istio)
+* Encryption by Default
+* Private Clusters
+
+Additionally ACS Engine support extensions that can provide additional logic to your cluster when deploying. We actually made and submitted the Choco extension to acs-engine.
+
+## Custom Extensions
+
+* Choco: This extension installs packages passed as parameters via via Chocolatey package manager.
+* Register DNS: Registers the Node the extension is applied against into the Azure active directory domain via nsupdate.
+* Virtualbox: Extension which provisions a node with virtualbox drivers which can be leveraged via CI by Jenkins.
+
+The following represents a list of some common scenarios that we have been using internally at Statistics Canada
+
+## Scenarios
+
+### Custom DNS:
+
+When there are custom dns servers k8s needs the custom dns to handle the routing and as a result /etc/resolv.conf isn&#39;t correct.
+
+https://github.com/Azure/acs-engine/issues/1603
+
+### Custom VNET
+
+https://github.com/Azure/acs-engine/blob/master/examples/vnet/kubernetesvnet.json
+
+Very important to specify the vnetSubnetId and firstConsecutiveStaticIp.
+
+### Linux / Windows node pool
+
+Adding a node pool
+
+* Add (or copy) an entry in the agentPoolProfiles section in the _output/&lt;clustername&gt;/apimodel.json file
+
+Removing a node pool
+
+* Delete the related entry from agentPoolProfiles section in the _output/&lt;clustername&gt;/apimodel.json file
+* Drain nodes from inside Kubernetes
+* Generate and deploy
+* Delete VM&#39;s and related resources (disk, NIC, availability set) from Azure portal
+
+Resizing Virtual Machines in a node pool
+
+* Modify the vmSize in the agentPoolProfiles section
+* Generate and deploy
+
+Resizing a Node Pool
+
+* Should use acs-engine scale see in a few slides the implementation
+
+YouTube
+
+* https://www.youtube.com/watch?v=VuPmL25_Cls
+
+___
+
+&lt;!-- .slide: id=&#34;golang-acs-engine-demo&#34; data-transition=&#34;concave&#34; --&gt;
+
+# ACS Engine
+
+&gt; Demo: Lets quickly look at how acs-engine is leverage for deploying clusters
+
+* Generate ARM templates from Cluster Definition
+* Execute the newly generated ARM templates
+* Scale an agent pool inside cluster
+* Delete the entire cluster
+
+Note:
+
+## Create Cluster
+
+Deployment of the cluster is relatively straight forward and can be executed again once changes are made to the api model and then regenerated.
+
+* Execute the generated artifacts
+* Always use **azuredeploy.json** file
+* Check the activity log for status
+* Consider leveraging Azure Key Vault for Certs
+
+```sh
+az group deployment create --name &#34;acs-default&#34; \
+                          --resource-group &#34;acs-default&#34; \
+                          --template-file &#34;./_output/k8s-acs-default/azuredeploy.json&#34; \
+                          --parameters &#34;./_output/k8s-acs-default/azuredeploy.parameters.json&#34;
+```
+
+## Scale Cluster
+
+After a cluster has been deployed using acs engine the cluster can be interacted further by using the scale command.
+
+The scale command can add more nodes to an existing node pool or remove them.
+
+Nodes will always be added or removed from the end of the agent pool. Nodes will be cordoned and drained before deletion.
+
+```sh
+acs-engine scale --subscription-id &lt;subscription-id&gt; \
+                 --resource-group acs-default \
+                 --location eastus \
+                 --deployment-dir _output/k8s-acs-default \
+                 --new-node-count 3 \
+                 --node-pool linuxpool1 \
+                 --master-FQDN &lt;fqdn&gt;
+```
+
+___
+
+&lt;!-- .slide: id=&#34;golang-ark&#34; data-transition=&#34;concave&#34; --&gt;
+
+# ARK
+
+&gt; Demo: Lets quickly look at how ARK can help us with disaster recovery
+
+* Manages disaster recovery
+* Backups of cluster and restore
+* Copy cluster resources across clouds
+* Replicate your production environments
+
+Note:
+
+Heptio Ark is a utility for managing disaster recovery, specifically for your Kubernetes cluster resources and persistent volumes.
+
+Ark gives you tools to back up and restore your Kubernetes cluster resources and persistent volumes. Ark lets you:
+
+* Take backups of your cluster and restore in case of loss.
+* Copy cluster resources across cloud providers. NOTE: Cloud volume migrations are not yet supported.
+* Replicate your production environment for development and testing environments.
+
+Ark consists of:
+
+* A server that runs on your cluster
+* A command-line client that runs locally
+
+YouTube
+
+* https://www.youtube.com/watch?v=sHLRedoRSp0
+
+# Backup Application
+
+```sh
+ark backup create jenkins --selector app=jenkins-jenkins \
+                          --snapshot-volumes
+```
+
+# Backup Cluster
+
+```sh
+ark backup create cluster --exclude-namespaces=kube-system \
+                          --snapshot-volumes
+```
+
+# Scheduled Backup
+
+```sh
+ark schedule create gitlab --selector app=gitlab-gitlab \
+                           --snapshot-volumes \
+                           --schedule &#34;0 7 * * *&#34;
+```
+
+___
+
+&lt;!-- .slide: id=&#34;golang-grafana&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Grafana / Prometheus
+
+&lt;div class=&#34;col-xs-12 col-sm-12 col-md-12&#34;&gt;
+&lt;ul class=&#34;list-unstyled&#34;&gt;
+&lt;iframe src=&#34;https://grafana.k8s.cloud.statcan.ca/d-solo/a72yEIoik/k8s?orgId=1&amp;panelId=13&amp;from=1537965871160&amp;to=1537976671160&amp;var-node=172.20.57.4&#34; width=&#34;900&#34; height=&#34;250&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-12 col-sm-12 col-md-12&#34;&gt;
+&lt;ul class=&#34;list-unstyled&#34;&gt;
+&lt;iframe src=&#34;https://grafana.k8s.cloud.statcan.ca/d-solo/a72yEIoik/k8s?orgId=1&amp;from=1537803639069&amp;to=1537976439069&amp;panelId=14&amp;var-node=172.20.57.4&#34; width=&#34;900&#34; height=&#34;250&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+Note:
+
+&gt; Demo: [grafana.k8s.cloud.statcan.ca](http://grafana.k8s.cloud.statcan.ca)
+
+As a time series database, prometheus is often used in the world of monitoring systems in combination with grafana, which is at the very basic level a visualization tool for time series data.
+
+I will show you an example of what our full dashboard looks like.
+
+# Important Points
+
+* Brought up in K8S
+* Linked with Active Directory
+* Assignment to Different Groups
+* Dashboard can become embeddable
+* Custom Alerts based on metrics you define (slack)
+
+___
+
+&lt;!-- .slide: id=&#34;golang-traefik&#34; data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34; --&gt;
 
 # Traefik
 
@@ -607,6 +891,29 @@ Træfik listens to your service registry/orchestrator API and instantly generate
 
 ___
 
+&lt;!-- .slide: id=&#34;golang-traefik&#34; data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34; --&gt;
+
+# Traefik
+
+&gt; Demo: Lets take a look at a couple of our Traefik environments
+
+* [traefik.k8s.cloud.statcan.ca](http://traefik.k8s.cloud.statcan.ca)
+* [traefik.inno.cloud.statcan.ca](http://traefik.inno.cloud.statcan.ca)
+* [traefik.devtest.cloud.statcan.ca](http://traefik.devtest.cloud.statcan.ca)
+
+Note:
+
+We use Traefik extensively for our Kubernetes clusters.
+
+* Lets Encrypt for all of our Ingresses in Management Cluster
+* Ability for automatic ingress in GitLab CI Pipelines
+* CIDR blocking at the Traefik level for JupyterHub
+* Passing of special headers for applications that need them
+* Working on end to end encryption for all the backend services
+* ToDo: Ask Zach for more information
+
+___
+
 &lt;!-- .slide: id=&#34;golang-vault&#34; data-transition=&#34;concave&#34; --&gt;
 
 # Vault
@@ -632,6 +939,32 @@ Data Encryption: Vault can encrypt and decrypt data without storing it. This all
 Leasing and Renewal: All secrets in Vault have a lease associated with it. At the end of the lease, Vault will automatically revoke that secret. Clients are able to renew leases via built-in renew APIs.
 
 Revocation: Vault has built-in support for secret revocation. Vault can revoke not only single secrets, but a tree of secrets, for example all secrets read by a specific user, or all secrets of a particular type. Revocation assists in key rolling as well as locking down systems in the case of an intrusion.
+
+* ToDo: Ask Zach for more information
+
+___
+
+&lt;!-- .slide: id=&#34;golang-hugo&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Hugo
+
+* Static site generator 30,000 stars
+* WxT support @ wet-boew/wet-boew-hugo
+* Used for documentation sites at STC
+* GitLab CI generates / deploys to GitLab Pages
+
+Note:
+
+&gt; Demo: [wet-boew/wet-boew-hugo](http://github.com/wet-boew/wet-boew-hugo)
+
+Also will quickly demo and do a brief tour of the govcloud Hugo site.
+
+* Markdown
+* Concept of Content Types
+* Fully supports i18n
+* Supports shortcodes (gh-starred, img, youtube)
+* Incredibly fast
+* Tons of other features
 
 ---
 
@@ -708,7 +1041,7 @@ Cloud native is not only about running applications in containers. When Netflix 
 
 It also doesn’t mean you only run a container orchestrator (e.g., Kubernetes and Mesos). Container orchestrators provide many platform features needed in cloud native infrastructure, but not using the features as intended means your applications aren&#39;t dynamically scheduled to run on a set of servers. This is a very good first step, but there is still work to be done.
 
-Cloud native is not about microservices or infrastructure as code. Microservices enable faster development cycles on smaller distinct functions, but monolithic applications can have the same features that enable them to be managed effectively by software and can also benefit from cloud native infrastructure. Infrastructure as code defines and automates your infrastructure in machine-parsible language or domain-specific language (DSL). Traditional tools to apply code to infrastructure include configuration management tools (e.g., Chef and Puppet). These tools help greatly in automating tasks and providing consistency, but they fall short in providing the necessary abstractions to describe infrastructure beyond a single server. Configuration management tools automate one server at a time and depend on humans to tie together the functionality provided by the servers. This positions humans as a potential bottleneck for infrastructure scale. These tools also don’t automate the extra parts of cloud infrastructure (e.g., storage and network) that are needed to make a complete system.
+Cloud native is not about microservices or infrastructure as code. Microservices enable faster development cycles on smaller distinct functions, but monolithic applications can have the same features that enable them to be managed effectively by software and can also benefit from cloud native infrastructure. Infrastructure as code defines and automates your infrastructure in machine-parsible language or domain-specific language (DSL). Traditional tools to apply code to infrastructure include configuration management tools (e.g., Chef and Puppet). These tools help greatly in automating tasks and providing consistency, but they fall short in providing the necessary abstractions to describe infrastructure beyond a single server. Configuration management tools automate one server at a time and depend on humans to tie together the functionality provided by the servers. This positions humans as a potential bottleneck for infrastructure scale. These tools also don’t automate the extra parts of cloud infrastructure (e.g., storage and network that are needed to make a complete system.
 
 ___
 
@@ -1066,7 +1399,7 @@ ___
 
 * Artifactory
 * Nuget
-* DotNet Build / MSPublish
+* .Net Build / MSPublish
 * Multi-Stage Build
 
 Note:
@@ -1249,31 +1582,20 @@ ToDo
 
 ___
 
-&lt;!-- .slide: id=&#34;devsecops&#34; data-transition=&#34;concave&#34; --&gt;
+&lt;!-- .slide: id=&#34;chart-gitlab&#34; data-transition=&#34;concave&#34; --&gt;
 
-# Dev / Sec / Ops
+# Jenkins
 
-&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
-  &lt;ul class=&#34;list-unstyled&#34;&gt;
-    &lt;li&gt;ELK stack&lt;/li&gt;
-    &lt;li&gt;GitLab&lt;/li&gt;
-    &lt;li&gt;Jenkins&lt;/li&gt;
-    &lt;li&gt;Sentry&lt;/li&gt;
-    &lt;li&gt;Traefik&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
-  &lt;ul class=&#34;list-unstyled&#34;&gt;
-    &lt;li&gt;Artifactory (Procured)&lt;/li&gt;
-    &lt;li&gt;X-Ray (Procured)&lt;/li&gt;
-    &lt;li&gt;SonarQube&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
+![jenkins](/img/architecture/openfirst/jenkinsx.svg)
 
 Note:
 
-All cloud native apps often vetted and extended from official sources.
+* Plugin Architecture
+* Plugins with Artifactory
+* Kubernetes Clusters and Innovation / DevTest
+* YETI (Building and Deploy in a Kubernetes Cluster, DoTNet Application running on Linux frontend, and VM backend for * Databases (90% of our workflow)
+* Application itself is build with container and Kubernetes deploy
+* All of our infrastructure is done via Jenkins &#43; Kubernetes
 
 ___
 
@@ -1281,24 +1603,59 @@ ___
 
 # GitLab
 
+![GitLab](/img/architecture/openfirst/gitlab-workflow.png)
+
+Note:
+
+We use GitLab to host our source code as well as GitLab CI to perform builds and deployment to Kubernetes.
+
+Of course Jenkins can do this to but we have found the polish and workflow in GitLab to be quite exceptional for K8S.
+
+This is likely because the same people who help to build and steer Kubernetes development also use GitLab itself.
+
+___
+
+&lt;!-- .slide: id=&#34;chart-gitlab-overview&#34; data-transition=&#34;concave&#34; --&gt;
+
+# GitLab
+
+&gt; Demo: Lets show of the key benefits GitLab provides us
+
 &lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
   &lt;ul class=&#34;list-unstyled&#34;&gt;
     &lt;li&gt;GitLab running in K8S&lt;/li&gt;
     &lt;li&gt;CI runners in separate cluster&lt;/li&gt;
     &lt;li&gt;Multiple backups via ARK / CronJob&lt;/li&gt;
-    &lt;li&gt;6 months operational&lt;/li&gt;
+    &lt;li&gt;9 months operational&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
   &lt;ul class=&#34;list-unstyled&#34;&gt;
-    &lt;li&gt;Highest in Gardner&lt;/li&gt;
+    &lt;li&gt;Highest in Gartner&lt;/li&gt;
     &lt;li&gt;Fully cloud native&lt;/li&gt;
     &lt;li&gt;Improved build/test workflow&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 
 Note:
+
+There are a few key important points I would like to talk about in order to show the value GitLab brings to us:
+
+* Running in Kubernetes without issue for 9&#43; months
+* CI runners run in a separate cluster so as to not affect production (demo)
+* ARK is leveraged to perform daily PVC backups (demo)
+* Updated GitLab over 5 releases without issue simply by bumping container version
+* All of our configuration is housed in the Helm chart
+  * GitLab pages is enabled with some teams using Hugo to generate static site documentation
+  * Prometheus monitoring is enabled so can see health of GitLab as well as CI builds
+  * Email is set to use SendGrid
+  * We have both LDAP and Azure Oauth authentication to reduce accounts
+* Full CI/CD pipeline across a few projects
+  * Drupal @ ADSD
+  * .NET @ ADSD
+  * Python / Pachyderm @ ADD
+  * NodeJS @ Digital Innovation
 
 ___
 
