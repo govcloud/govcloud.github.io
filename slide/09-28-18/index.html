@@ -93,11 +93,16 @@ Will:
 
 I&#39;m an Open Source developer of I don&#39;t want to say how many years and am currently working as a cloud engineer for the cloud operations team at Statistics Canada.
 
-In my past I have worn many hats but primarily some people may know me from the Drupal community a platform which incidentally powers both Statistics Canada and Open Data portal as well as many other departments across the GoC.
+In my past I have worn many hats but primarily some people may know me from the Drupal community a platform which incidentally powers both Statistics Canada and the Open Data portal as well as many other departments across the GoC.
 
-I&#39;ve been very lucky throughout my life to have been a part of some amazing open source communities particularly because I have been able to grow so much as a developer and meet some amazing people throughout.
+I&#39;ve been very lucky throughout my life to have been a part of some amazing open source communities particularly because I have been able to grow so much as a developer and meet some amazing friends throughout.
 
 As a personal note I can&#39;t really describe how it feels when you get to interact with one of your heroes in a GitHub issue.
+
+* Jessie Frazelle from Docker
+* Tianon Gravi from Docker
+* Brandon Phillips from CoreOS
+* Angie Byron (webchick) from Drupal
 
 If you get one thing from me during this talk I hope that it is that I wholeheartedly believe that it is &#34;All about the community&#34;.
 
@@ -130,9 +135,10 @@ ___
 
 # Use of Open Source
 
-* Angular / React.JS / Vue.js
+* Angular / React.JS / Vue.js / D3.js
 * Drupal
 * Solr
+* ELK
 * Docker / Kubernetes
 
 Note:
@@ -168,7 +174,8 @@ ___
 * Bootstrap / WET-BOEW Framework
 * Drupal
 * Docker / Kubernetes
-* Data Visualizations
+* Node.js
+* Data Visualizations (D3.js)
 * CNCF Meet-up
 
 Note:
@@ -348,6 +355,14 @@ ___
 
 Note:
 
+* WET Implementation
+* SEO
+* Accessibility
+* Multilingualism
+* Manage of Assets
+* FGP NRCAN
+* Open Data
+
 ___
 
 &lt;!-- .slide: id=&#34;wxt-d7&#34; data-transition=&#34;concave&#34; --&gt;
@@ -358,11 +373,37 @@ A installation profile which relies on and integrates extensively with the
 WxT jQuery Framework.&lt;!-- .element: class=&#34;col-xs-9 col-sm-9 col-md-9 text-left&#34; style=&#34;padding-left: 1em; padding-bottom: 1em;&#34; --&gt;
 
 * 5&#43; years operational track record
-* 10&#43; departments leveraging
-* Some provinces / municipalities
+* 20&#43; departments leveraging
+* National collaboration provinces / municipalities
+* Incredibly stable platform for development
 * A lot of lessons learned
 
 Note:
+
+Departments:
+
+* Industry Canada
+* TBS
+* Museum of Nature
+* FinTrac
+* PCO / CDS
+* CATSA
+* Health Canada
+* CIHR
+* CSE
+* RCMP
+* OCOL
+* CTA
+* PMO
+* PCO
+* City of Hamilton
+* PEI
+* Science.gc.ca
+* SSC
+* City of Ottawa
+* CMHR
+* Buy and Sell
+* VAC
 
 ___
 
@@ -418,6 +459,12 @@ module due to theme system limitations.
 
 A variety of WxT plugins have been ported.
 
+## WET 5 Integration
+
+Drupal has added ReactJS to core which nicely aligns us with some of the WET5 work being done.
+
+We are actively working on ensuring when WET 5 launches we also provide full support.
+
 ___
 
 &lt;!-- .slide: id=&#34;lightning&#34; data-transition=&#34;concave&#34; --&gt;
@@ -437,10 +484,9 @@ experiences and empower editorial teams.&lt;!-- .element: class=&#34;col-xs-9 co
 
 Note:
 
-Lightning is a top Distribution in Drupal 8 backed by Acquia allowing you to
-build experiences quickly using the best of Drupal 8 in a feature rich,
-extensively tested, and secure open source distribution. Lightning powers huge
-sites such as:
+We had to learn and build alot in D7 to lesson our burden and increase the community collaboration
+
+Lightning is a top Distribution in Drupal 8 backed by Acquia allowing you to build experiences quickly using the best of Drupal 8 in a feature rich, extensively tested, and secure open source distribution. Lightning powers huge sites such as:
 
 * Princeton
 * Tesla
@@ -503,13 +549,34 @@ Statistics Canada&lt;!-- .element: class=&#34;col-xs-9 col-sm-9 col-md-9 text-le
 
 Note:
 
+* New Dissemination Model
+* Solr Integrations
+  * Faceted Search
+  * Rendering data from multiple backend systems such as Oracle
+* WCMS
+  * Refined Content Authoring / Publishing tailored to StatCan business requirements
+  * Content Staging / Deployment
+    * Content team can author content in a staging environment, get their verifications and approvals, then publish to a production environment
+    * Content abstractions to make editing and validation easier
+    * Decouple the presentation layer and abstract it as is easier to change
+  * Blog
+  * Chat with an Expert
+  * Question of the Month
+  * MyStatcan
+  * Authenticated Apps
+  * oAuth
+
 ___
 
 &lt;!-- .slide: id=&#34;wxt-ask&#34; data-transition=&#34;concave&#34; --&gt;
 
-# Need Your Help
+# Future Direction
 
-* ToDo (Talk w/Nathan)
+* We are looking for Open Source talent
+* Progressive Enhancement / Decoupling
+* WET 5 Integration
+* Centre of Excellence
+* More community / contributions
 
 Note:
 
@@ -914,6 +981,30 @@ We use Traefik extensively for our Kubernetes clusters.
 
 ___
 
+&lt;!-- .slide: id=&#34;golang-hugo&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Hugo
+
+* Static site generator 30,000 stars
+* WxT support @ wet-boew/wet-boew-hugo
+* Used for documentation sites at STC
+* GitLab CI generates / deploys to GitLab Pages
+
+Note:
+
+&gt; Demo: [wet-boew/wet-boew-hugo](http://github.com/wet-boew/wet-boew-hugo)
+
+Also will quickly demo and do a brief tour of the govcloud Hugo site.
+
+* Markdown
+* Concept of Content Types
+* Fully supports i18n
+* Supports shortcodes (gh-starred, img, youtube)
+* Incredibly fast
+* Tons of other features
+
+___
+
 &lt;!-- .slide: id=&#34;golang-vault&#34; data-transition=&#34;concave&#34; --&gt;
 
 # Vault
@@ -944,27 +1035,23 @@ Revocation: Vault has built-in support for secret revocation. Vault can revoke n
 
 ___
 
-&lt;!-- .slide: id=&#34;golang-hugo&#34; data-transition=&#34;concave&#34; --&gt;
+&lt;!-- .slide: id=&#34;golang-minie&#34; data-transition=&#34;concave&#34; --&gt;
 
-# Hugo
+# Minie
 
-* Static site generator 30,000 stars
-* WxT support @ wet-boew/wet-boew-hugo
-* Used for documentation sites at STC
-* GitLab CI generates / deploys to GitLab Pages
+![Minie](/img/architecture/openfirst/minie-mascot.png)
 
 Note:
 
-&gt; Demo: [wet-boew/wet-boew-hugo](http://github.com/wet-boew/wet-boew-hugo)
+___
 
-Also will quickly demo and do a brief tour of the govcloud Hugo site.
+&lt;!-- .slide: id=&#34;golang-minie-arch&#34; data-transition=&#34;concave&#34; --&gt;
 
-* Markdown
-* Concept of Content Types
-* Fully supports i18n
-* Supports shortcodes (gh-starred, img, youtube)
-* Incredibly fast
-* Tons of other features
+# Minie Arch
+
+![Minie](/img/architecture/openfirst/minie-arch.png)
+
+Note:
 
 ---
 
@@ -1336,7 +1423,7 @@ https://code.visualstudio.com/docs/azure/docker
 
 ___
 
-&lt;!-- .slide: id=&#34;windows&#34; data-transition=&#34;concave&#34; --&gt;
+&lt;!-- .slide: id=&#34;windows&#34; data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34; --&gt;
 
 # Windows
 
@@ -1357,7 +1444,7 @@ Whitepaper: https://www.microsoft.com/en-ca/cloud-platform/containers
 
 ___
 
-&lt;!-- .slide: id=&#34;windows-server&#34; data-transition=&#34;concave&#34; --&gt;
+&lt;!-- .slide: id=&#34;windows-server&#34; data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34; --&gt;
 
 # Windows Server
 
@@ -1375,7 +1462,7 @@ Note:
 
 ___
 
-&lt;!-- .slide: id=&#34;windows-server-startup&#34; data-transition=&#34;concave&#34; --&gt;
+&lt;!-- .slide: id=&#34;windows-server-startup&#34; data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34; --&gt;
 
 # Windows Server
 
@@ -1391,7 +1478,7 @@ Note:
 
 ___
 
-&lt;!-- .slide: id=&#34;windows-server-dockerfile&#34; data-transition=&#34;concave&#34; --&gt;
+&lt;!-- .slide: id=&#34;windows-server-dockerfile&#34; data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34; --&gt;
 
 # Windows Dockerfile
 
@@ -1591,11 +1678,12 @@ ___
 Note:
 
 * Plugin Architecture
-* Plugins with Artifactory
-* Kubernetes Clusters and Innovation / DevTest
-* YETI (Building and Deploy in a Kubernetes Cluster, DoTNet Application running on Linux frontend, and VM backend for * Databases (90% of our workflow)
+  * Azure Plugins
+  * Artifactory
+* Building and Deploying to multiple Kubernetes Clusters
+* .NET application running on Linux frontend and VM backend for Databases (90%)
+* Moving Jenkins agent pool to Kubernetes cluster
 * Application itself is build with container and Kubernetes deploy
-* All of our infrastructure is done via Jenkins &#43; Kubernetes
 
 ___
 
@@ -1659,88 +1747,64 @@ There are a few key important points I would like to talk about in order to show
 
 ___
 
-&lt;!-- .slide: id=&#34;chart-artifactory&#34; data-transition=&#34;concave&#34; --&gt;
+&lt;!-- .slide: id=&#34;chart-jfrog-workflow&#34; data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34; --&gt;
 
-## jFrog Artifactory
+# jFrog
+
+![jFrog](/img/architecture/openfirst/jfrog-workflow.jpg)
+
+Note:
+
+___
+
+&lt;!-- .slide: id=&#34;chart-jfrog&#34; data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34; --&gt;
+
+## jFrog
+
+* Facilitates a DevSecOps pipeline
+* Artifactory for package management
+* XRay for package analysis
+* Complete visibility of your dependencies
+
+Note:
+
+At the time of this writing there is no universal open source package management system that met our needs.
+
+As a result we procured jFrog Artifactory and XRay to support our open source work and the larger toolchain at Statistics Canada.
+
+___
+
+&lt;!-- .slide: id=&#34;chart-artifactory&#34; data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34; --&gt;
+
+## Artifactory
 
 &lt;div class=&#34;stretch&#34;&gt;
   &lt;iframe height=&#34;100%&#34; width=&#34;100%&#34; src=&#34;https://www.youtube.com/embed/CypEkbB-JRU&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
+Note:
+
 ___
 
-&lt;!-- .slide: id=&#34;chart-xray&#34; data-transition=&#34;concave&#34; --&gt;
+&lt;!-- .slide: id=&#34;chart-xray&#34; data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34;  --&gt;
 
-## jFrog X-Ray
+## X-Ray
 
 &lt;div class=&#34;stretch&#34;&gt;
   &lt;iframe height=&#34;100%&#34; width=&#34;100%&#34; src=&#34;https://www.youtube.com/embed/lghfzM9R1i0&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
-___
-
-&lt;!-- .slide: id=&#34;chart-octopus&#34; data-transition=&#34;concave&#34; --&gt;
-
-## Octopus
-
-___
-
-&lt;!-- .slide: id=&#34;chart-datasci&#34; data-transition=&#34;concave&#34; --&gt;
-
-# Data Science
-
-&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
-  &lt;ul class=&#34;list-unstyled&#34;&gt;
-    &lt;li&gt;Blockchain&lt;/li&gt;
-    &lt;li&gt;Hadoop / HDFS&lt;/li&gt;
-    &lt;li&gt;JupyterHub&lt;/li&gt;
-    &lt;li&gt;Kylo&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
-  &lt;ul class=&#34;list-unstyled&#34;&gt;
-    &lt;li&gt;Nifi&lt;/li&gt;
-    &lt;li&gt;Pachyderm&lt;/li&gt;
-    &lt;li&gt;Spark&lt;/li&gt;
-    &lt;li&gt;SAS 4 Containers&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
 Note:
 
-All cloud native apps vetted and extended from official sources.
-
 ___
 
-&lt;!-- .slide: id=&#34;chart-drupal&#34; data-transition=&#34;concave&#34; --&gt;
+&lt;!-- .slide: id=&#34;chart-jfrog-octopus&#34; data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34; --&gt;
 
-# Drupal 7/8
+# Octopus
 
-&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
-  &lt;ul class=&#34;list-unstyled&#34;&gt;
-    &lt;li&gt;gccode -&gt; cloud.statcan&lt;/li&gt;
-    &lt;li&gt;Microservice approach&lt;/li&gt;
-    &lt;li&gt;Generation of artifacts&lt;/li&gt;
-    &lt;li&gt;Every Drupal site with full CI/CD&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
-  &lt;ul class=&#34;list-unstyled&#34;&gt;
-    &lt;li&gt;Improved Architecture&lt;/li&gt;
-    &lt;li&gt;Autoscale / Elastic&lt;/li&gt;
-    &lt;li&gt;Stateless / Stateful&lt;/li&gt;
-    &lt;li&gt;Notifications / Metrics&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
+![Octopus](/img/architecture/openfirst/octopus-k8s.png)
 
 Note:
-
-* All 5 groups and 188 projects moved to STC GitLab
-* All Drupal 7/8 sites are now Containerized / MicroServiced across CI / CD
-* As Containers are Stateless, Stateful data problem has been solved elegantly through Azure Storage
-* Autoscale both vertically and horizontally across all services via replicasets on demand
 
 ---
 
