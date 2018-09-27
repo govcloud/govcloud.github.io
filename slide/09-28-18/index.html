@@ -393,21 +393,176 @@ ___
 
 # Drupal
 
-* Data Modeling
-* Configuration Management
-* ACL
-* Web Services: jsonAPI, GraphQL
-* Workspaces
+&gt; Enterprise Content Management System and Application Development Framework
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Rich Data Modeling&lt;/li&gt;
+    &lt;li&gt;Content Architecture&lt;/li&gt;
+    &lt;li&gt;Config Management&lt;/li&gt;
+    &lt;li&gt;SEO&lt;/li&gt;
+    &lt;li&gt;Multilingualism&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;ACL&lt;/li&gt;
+    &lt;li&gt;jsonAPI, GraphQL&lt;/li&gt;
+    &lt;li&gt;Workspaces&lt;/li&gt;
+    &lt;li&gt;Accessibility&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
 
 Note:
 
-* WET Implementation
-* SEO
-* Accessibility
-* Multilingualism
-* Manage of Assets
-* FGP NRCAN
-* Open Data
+# Content Authors
+
+&gt; **Drupal 8** provides the following features built-in for authoring (to only name a few):
+
+1. Accessibility
+2. HTML5 / Mobile First
+3. Multilingual
+4. Tour
+5. Content Workflow / Staging
+
+# Developers
+
+&gt; **Drupal 8** is an enterprise `CMD/CMF` built with developers in mind:
+
+1. Data Modeling: `Entities`, `Fields`, `Views`,  `Plugins`
+2. Configuration Management / Schema handling
+3. ACL (roles / permissions)
+4. Web Services: `JSONAPI`, `GraphQL`
+5. Dev Tools: `Symfony`, `Console`, `Drush`, `Big Pipe`
+6. Templating: `Twig`, `REST`
+7. Progressive Enhancement: React.js, Vue.js
+
+# Accessibility
+
+&gt; **Drupal 8** is the most accessible `CMS/CMF` without exception. Notable improvements in core:
+
+- Improved Semantics
+- Tabbing Manager :bulb:
+- Forms / Form API
+- Tables and Views
+- Aural Alerts
+- CKEditor Accessibility
+
+# HTML5 / Mobile First
+
+- Every single core theme is responsive
+- Administration toolbar was build mobile first
+- Drupal Core provides convenient modules to assist:
+  - Breakpoint (toolbar)
+  - Responsive Image
+- Integration with: Bootstrap / WxT (WET-BOEW) Framework
+
+# Multilingual
+
+- Language Handling:
+  - Natively install in 94 languages
+  - Assign language to every context in system
+  - Admin interface language selection option per user
+
+- Interface Translation
+  - Automated downloads &amp; updates
+  - Protected local translations
+  - Plural version editable on integrated interface
+
+- Content Translation
+  - Field-level configurability
+  - Applies to all content
+  - Per-language content access
+
+- Configuration
+  - Everything in system is translatable
+  - Built-in responsive / translation interface
+  - Overview screen for translators, contextual translation tabs for site builders
+
+# Tour
+
+- Context-sensitive guided tour of the site interface via tooltips
+- Draw user&#39;s attention to critical components of interface
+- Guide a user through a workflow
+- Multilingual / Exportable
+- Easy to create Tours via API or interface
+
+# Content Workflow
+
+- All content entities:
+  - Built-in revision support
+  - Improved `moderation state` transition handling
+  - Rich UI configuration of base / custom fields
+- Views is now part of Core
+- CKEditor is wholly integrated by default
+- Quick Edit
+
+# Content Staging
+
+Thanks to the `Deploy` suite of modules:
+
+`Deploy`, `Multiversion`, `Replication`, `Workspace`, `RELAXed Web Services`, and `Trash`
+
+- Cross-site content staging
+- Content branching (ala `git`)
+- Preview your site
+- Offline browse / publish
+- Content recovery / Audit logs
+
+For more info: http://www.drupaldeploy.org
+
+# Data Modelling
+
+- Entity System :trophy:
+  - Configuration Entity
+  - Content Entity
+    - Revisions
+    - Translations
+    - Fields
+  - Entity Query
+  - Routing
+
+# Configuration Management
+
+- Configuration API provides central place to store configuration data
+- The Data consists of:
+  - Simple Configuration: Sitewide settings
+  - Complex Configuration: `Content Types` / `Views` / `Entity Reference`
+- All configuration data representing the whole state of the site can be easily exported.
+
+# Configuration Schema
+
+- Describes the structure of configuration files.
+  - Typecasts configuration for type consistency
+  - Automated persistence of configuration entity
+  - Automated generation of the configuration translation user interface
+- Easily sync between configuration from yaml to database
+
+# ACL
+
+* Accounts
+* Roles
+* Permissions
+
+# Web Services
+
+* Web Services directly in Drupal Core
+* `HAL`: Serializes entities using Hypertext Application Language
+* `HTTP Basic Authentication`: Provides the `HTTP Basic Authentication` provider
+* `RESTful Web Services`: Exposes entities in different defined endpoints
+* `Serialization`: allows to serialize entities in formats like `HAL&#43;JSON`, `XML`, `JSON`
+
+# Templating
+
+&gt; Twig: syntax originates from Jinja and Django templates
+
+* complex control flow
+* automatic escaping
+* template inheritance
+* variable filters
+* i18n support
+* macros
 
 ___
 
@@ -416,15 +571,18 @@ ___
 WxT D7 &lt;!-- .element: class=&#34;col-xs-3 col-sm-3 col-md-3 bg-primary&#34; --&gt;
 
 A installation profile which relies on and integrates extensively with the
-WxT jQuery Framework.&lt;!-- .element: class=&#34;col-xs-9 col-sm-9 col-md-9 text-left&#34; style=&#34;padding-left: 1em; padding-bottom: 1em;&#34; --&gt;
+WET-BOEW jQuery Framework.&lt;!-- .element: class=&#34;col-xs-9 col-sm-9 col-md-9 text-left&#34; style=&#34;padding-left: 1em; padding-bottom: 1em;&#34; --&gt;
 
 * 5&#43; years operational track record
 * 20&#43; departments leveraging
-* National collaboration provinces / municipalities
+* National collaboration with some provinces / municipalities
 * Incredibly stable platform for development
+* WET Implementation
 * A lot of lessons learned
 
 Note:
+
+&gt; WetKit: https://www.drupal.org/project/wetkit
 
 Departments:
 
@@ -453,6 +611,64 @@ Departments:
 
 ___
 
+&lt;!-- .slide: id=&#34;lightning&#34; data-transition=&#34;concave&#34; --&gt;
+
+Lightning&lt;!-- .element: class=&#34;col-xs-3 col-sm-3 col-md-3 bg-primary&#34; data-fragment-index=&#34;1&#34; --&gt; &lt;i class=&#34;fa fa-bolt&#34;&gt;&lt;/i&gt;
+
+Lightning&#39;s mission is to enable devs to create great authoring
+experiences and empower editorial teams.&lt;!-- .element: class=&#34;col-xs-9 col-sm-9 col-md-9 text-left&#34; data-fragment-index=&#34;2&#34; style=&#34;padding-left: 1em; padding-bottom: 0.25em;&#34; --&gt;
+
+- Minimal opt-in design
+- Extensively tested &#43; secured @ [Acquia](http://lightning.acquia.com/)
+- Targets several key functional areas:
+  * Media
+  * Layout
+  * Workflow
+  * API-First
+
+Note:
+
+&gt; WxT: https://www.drupal.org/project/wxt
+
+We had to learn and build alot in D7 to lesson our burden and increase the community collaboration
+
+Lightning is a top Distribution in Drupal 8 backed by Acquia allowing you to build experiences quickly using the best of Drupal 8 in a feature rich, extensively tested, and secure open source distribution. Lightning powers huge sites such as:
+
+* Princeton
+* Tesla
+* Pfizer
+* ToDo: Update this list
+
+4 key functional areas are targeted:
+
+* Drag and Drop Layouts: Configure page layouts with drag and drop tools. Of note transitioning to core&#39;s Layout Builder from Panels / Panelizer.
+
+* Media Management: Embed images, videos, instragram, twitter and more from Drupal or other sources into content and pages.
+
+* Workflows: Configure workflows that keep content moving through review and approval stages, easily. Also features improvements to the native panelizer experience.
+
+* API First: Lightning ships with several modules which, together, quickly set up Drupal to deliver data to decoupled applications via a standardized API. Toolkit for authentication, auth, and delivery of data to API consumers.
+
+* OpenAPI
+* JsonAPI
+* Simple OAuth
+
+Progressive Enhancements now that React.js is in core is also being added.
+
+* Scheduler
+
+___
+
+&lt;!-- .slide: id=&#34;lightning-layout-builder&#34; data-transition=&#34;concave&#34; --&gt;
+
+Layout Builder
+
+&lt;div class=&#34;stretch&#34;&gt;
+  &lt;iframe height=&#34;100%&#34; width=&#34;100%&#34; src=&#34;https://www.youtube.com/embed/gsRyGgZMWaw&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+___
+
 &lt;!-- .slide: id=&#34;wxt-d8&#34; data-transition=&#34;concave&#34; --&gt;
 
 WxT D8&lt;!-- .element: class=&#34;col-xs-3 col-sm-3 col-md-3 bg-primary&#34; --&gt;
@@ -474,7 +690,7 @@ Note:
 Built with lessons learned from Drupal 7 WetKit, in use by several departments,
 including the current Open Data portal. One of the biggest decisions was
 deciding to leverage Lightning as our base framework. This choice wasn&#39;t made
-carelessly but 6 months in I can say it has been an incredible time saver,
+carelessly but 1 year in I can say it has been an incredible time saver,
 allowing us to more readily focus on departmental customizations.
 
 ## Lightweight and extensible
@@ -510,52 +726,6 @@ A variety of WxT plugins have been ported.
 Drupal has added ReactJS to core which nicely aligns us with some of the WET5 work being done.
 
 We are actively working on ensuring when WET 5 launches we also provide full support.
-
-___
-
-&lt;!-- .slide: id=&#34;lightning&#34; data-transition=&#34;concave&#34; --&gt;
-
-Lightning&lt;!-- .element: class=&#34;col-xs-3 col-sm-3 col-md-3 bg-primary&#34; data-fragment-index=&#34;1&#34; --&gt; &lt;i class=&#34;fa fa-bolt&#34;&gt;&lt;/i&gt;
-
-Lightning&#39;s mission is to enable devs to create great authoring
-experiences and empower editorial teams.&lt;!-- .element: class=&#34;col-xs-9 col-sm-9 col-md-9 text-left&#34; data-fragment-index=&#34;2&#34; style=&#34;padding-left: 1em; padding-bottom: 0.25em;&#34; --&gt;
-
-- Minimal opt-in design
-- Extensively tested &#43; secured @ [Acquia](http://lightning.acquia.com/)
-- Targets several key functional areas:
-  * Media
-  * Layout
-  * Workflow
-  * API-First
-
-Note:
-
-We had to learn and build alot in D7 to lesson our burden and increase the community collaboration
-
-Lightning is a top Distribution in Drupal 8 backed by Acquia allowing you to build experiences quickly using the best of Drupal 8 in a feature rich, extensively tested, and secure open source distribution. Lightning powers huge sites such as:
-
-* Princeton
-* Tesla
-* Pfizer
-* ToDo: Update this list
-
-4 key functional areas are targeted:
-
-* Drag and Drop Layouts: Configure page layouts with drag and drop tools. Of note transitioning to core&#39;s Layout Builder from Panels / Panelizer.
-
-* Media Management: Embed images, videos, instragram, twitter and more from Drupal or other sources into content and pages.
-
-* Workflows: Configure workflows that keep content moving through review and approval stages, easily. Also features improvements to the native panelizer experience.
-
-* API First: Lightning ships with several modules which, together, quickly set up Drupal to deliver data to decoupled applications via a standardized API. Toolkit for authentication, auth, and delivery of data to API consumers.
-
-* OpenAPI
-* JsonAPI
-* Simple OAuth
-
-Progressive Enhancements now that React.js is in core is also being added.
-
-* Scheduler
 
 ___
 
@@ -1869,6 +2039,8 @@ ___
 * Kubernetes Universal Control Plane
 
 Note:
+
+* If you have a dog, make sure you go home and give a big hug.
 
 	</section>
 	</div>
