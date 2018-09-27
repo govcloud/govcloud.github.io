@@ -65,6 +65,8 @@ This is a fun presentation for me because I get to talk about some of the open s
 
 But more then that I get to talk about a philosophy that has been working its way in to the department and what appears to soon be the broader government as a whole.
 
+If any Open Government people are here your the best!
+
 ---
 
 &lt;!-- .slide: id=&#34;devs&#34; data-transition=&#34;concave&#34; --&gt;
@@ -123,11 +125,15 @@ ToDo: Add Laurent Introduction Text
 
 Note:
 
-Statistics Canada has been increasing in its use of Open Source technologies over the past few years and is poised to make bigger changes over the next several which I am very excited about.
+Statistics Canada has been increasing in its use of Open Source technologies over the past few years and is poised to make bigger changes over the next several which I am very excited about and will detail over the coming slides.
 
-Some of the more interesting things about this department is that at least in my experience it encourages Developers to contribute back to the community and has even permitted teams to develop completely in the open.
+One of the more interesting things about this department is that (at least in my experience) it encourages developers to contribute back to their respective community and has even permitted some teams to develop completely their software in the open on GitHub.
 
-This might seem counter-intuitive at first but it brings with it a distinct set of benefits.
+A very special team has been doing just that for over 5&#43; years.
+
+Some of you might find this to be a bit counter-intuitive at first I mean where is the direct benefit back to the department?
+
+Lets ponder that one for a moment while I continue onwards.
 
 ___
 
@@ -145,25 +151,39 @@ Note:
 
 ## Use of Open Source
 
-I&#39;m aware of quite a few teams leveraging frontend toolkits such as `Angular` / `React.JS` / `Vue.js` performing progressive enhancement on a variety of our web applications.
+I&#39;m aware of quite a few teams leveraging frontend toolkits such as `Angular` / `React.JS` / `Vue.js` / `d3.js` performing progressive enhancement on a variety of our web applications.
 
 * Angular.js leveraged for our upcoming search pages
 * React.JS used for our Cannabis Portal
 * Vue.js for generating SAS Code to the front-end user
+* D3.js for our Data Visualizations which you will in a moment hear about by the amazing Laurent Goderre
+  * Seriously this guy knows his stuff and has taught me so much
+  * We met through the wet-boew GitHub repository and he has taught me so much
+  * Incidentally without his help wet-boew integration with platforms such as Drupal would have been much harder
 
-Close to my heart is a stellar WCMS team and matainers that have been using `Drupal` for the past 5&#43; years and all of whom develop (for the most part) in the open.
+Close to my heart though is we have a stellar Web Content Management Systems team and maintainers that have been using `Drupal` for the past 5&#43; years and all of whom develop (for the most part) in the open.
 
-We also have a search team that uses `Apache Solr` for much of our search pages and product data pages.
+Next we have a search team that continues to use `Apache Solr` the open source enterpise search platform (built on Apache Lucene) for many of our search pages and product data pages.
 
-* ELK
+Though I should mention the search team and some other ones are also looking at ElasticSearch mostly from an `ELK` stack perspective.
 
-Really exciting to me is the amount of teams we have that are moving toward microservices by containerizing their applications.
+* ElasticSearch
+* Logstash
+* Kibana (D3.js)
 
-* C#, .NET
-* JS
+What is perhaps the most exciting is the amount of teams we as the Cloud Operations team deal with that are moving toward microservices by first containerizing their applications.
+
+We have various teams so rather then mention them all I will just mention the programming language which is perhaps the most relevant.
+
+* C#, .NET (windows)
+* JS / Node.js
+* Java (set your memory limits)
+* Python
 * PHP
+* SAS
+* Stata
 
-Finally we are taking quite a thorough look at Kubernetes which makes me pretty happy most days.
+Finally we are taking quite a thorough look at what a pretty amazing person says is the operating system of the cloud. Kubernetes which makes me pretty happy most days.
 
 ___
 
@@ -180,6 +200,8 @@ ___
 
 Note:
 
+So Open Source doesn&#39;t exist without a community and contributions to sustain it.
+
 Interestingly as once you start using Open Source as a agency you realize in order to maximize your benefits you often need to contribute back.
 
 The following are a list of examples I am at least aware of:
@@ -190,12 +212,17 @@ The following are a list of examples I am at least aware of:
 
 Developed a `Drupal WxT` platform that has been shared and leveraged by many other government departments even provincial ones.
 
-* Numerous Patches against Drupal Core / Contributed modules
+* 5&#43; years providing security updates to downstream 20&#43; departments
+* 5&#43; years offering support and help in our issues queues to everyone
+* 5&#43; years showing the value of what proper content architecture can do
+* Numerous patches provided against Drupal Core / and countless contributed modules helping the community as a whole
 
 Played a significant role in the development of the Open Data / Open Government initiative which saw improvements being made to both `CKAN` and `Drupal` upstream.
 
 * Public Service Excellence Awards
 * Open Data won UK Award 2018
+
+Providing support to countless other departments but now assisting NRCAN with their FRP Initiative.
 
 ### Docker
 
@@ -205,6 +232,13 @@ Played a significant role in the development of the Open Data / Open Government 
 ### Kubernetes
 
 * Improvements and additions to Official Kubernetes Helm Charts
+  * Artifactory
+  * Octopus
+  * Hadoop w/Hive
+  * NiFi
+  * Kylo
+  * JupyterHub
+  * GitLab
 * Sharing our approach to Kubernetes (Linux, Windows) with other departments
 
 ### Data Visualizations
@@ -214,9 +248,13 @@ Played a significant role in the development of the Open Data / Open Government 
 
 ### CNCF Meetup
 
-* Work with CDS hosting Monthly Cloud Native Meetups
+* Work with the amazing people at CDS (seriously know joke those are some of the most knowledgeable people you could ever meet) hosting the monthly Cloud Native Meetups
+
+### Personally
 
 Personally I have been encouraged by my department as it is seen as a net benefit to contribute back to the Open Source community.
+
+### Developer Talent
 
 &gt; This might be a useful point to mention here that the agency actively seeks out Open Source developer talent.
 
@@ -240,7 +278,15 @@ For instance when you develop in the open:
 * Your code is of higher quality and usually goes through some sort of linting, building through CI (circle, travis, etc)
 * More focus is placed on security and abstraction
 * Ability for others to peer review and improve your code (Personally this has been really valuable to me)
-* Attract developer talent (ToDo: Write out personal anectode)
+* Attract developer talent
+
+  Open Source Developers have options and a range of choices and the first thing they do will be to looks at some of your public repos.
+
+  For instance, thanks to Laurent&#39;s d3.js work we are getting an exceptional data visualization expert that has studied at MIT.
+
+  For myself, thanks to some of the Drupal&#39;s team open source work, we managed to snag a brilliant developer straight out of Waterloo (screw you private companies) who is personally the most knowledgeable developer I have ever worked with.
+
+  These type of talent drive new energy and innovation into your department.
 
 When you leverage high quality Open Source projects **with thriving communities**:
 
@@ -253,7 +299,7 @@ I think Statistics Canada is heading in the right direction but there is still a
 * Open Source our Cannabis Platform and make available for P.R. (ToDo: Ask if we can do this)
 * More consolidation of our disparate open source repositories work under official repository (ToDo: List examples)
 * Showcasing of our new API (jsonAPI) which Laurent will soon be talking about
-* A few examples of our internal golang applications being created (ToDo: Bug Chris M)
+* A few of our internal golang applications created to solve specific problems with data holdings
 
 ---
 
