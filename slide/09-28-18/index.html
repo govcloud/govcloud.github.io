@@ -407,7 +407,7 @@ So there is a quote I like from the creator of Drupal: Dries Buytaert
 
 This is because the Drupal community has perhaps the most passionate userbase around which constantly helps to develop, maintain and create new Drupal functionality. While adhering to high technical standards of UX, architecture, and accessibility.
 
-It should also be reminded that Drupal is and always be free and that the platform will alwaus be available at no cost and one need only compare this with other content management system that can cost hundreds and thousands of dollars to purchase and license. While still only having a fraction of the functionality that is in Drupal 8.
+It should also be reminded that Drupal is and always be free and that the platform will always be available at no cost and one need only compare this with other content management system that can cost hundreds and thousands of dollars to purchase and license. While still only having a fraction of the functionality that is in Drupal 8.
 
 Finally If you look back at Drupal’s history, the platform alao does a great job of addressing security issues. A bulletin is released to Drupal users whenever there is an issue with the platform or when and there are updates to fix the problem.
 
@@ -501,6 +501,10 @@ Content Staging
   &lt;iframe height=&#34;100%&#34; width=&#34;100%&#34; src=&#34;https://www.youtube.com/embed/3JwkLA--Ciw&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
+Note:
+
+&gt; Demo: Content Staging
+
 ___
 
 &lt;!-- .slide: id=&#34;drupal-developers&#34; data-transition=&#34;concave&#34; --&gt;
@@ -571,7 +575,7 @@ ___
 
 &lt;!-- .slide: id=&#34;wxt-d7-success&#34; data-transition=&#34;concave&#34; --&gt;
 
-# WxT D7: Success?
+# WxT D7: Success Story?
 
 &lt;div class=&#34;col-xs-4 col-sm-4 col-md-4&#34;&gt;
 &lt;ul class=&#34;list-unstyled&#34;&gt;
@@ -719,6 +723,10 @@ Note:
 This now brings us to our Open Data sub-profile of WxT which is the first to run the Drupal 8 version of the Web Experience Toolkit in production.
 
 &gt; Demo: http://open.canada.ca
+&gt; Demo: Home Page where you can easily change the layout via the UI: https://open.canada.ca/en
+&gt; Demo: Blog functionality that was ported back to WxT: https://open.canada.ca/en/blog
+&gt; Demo: Apps rating and faceted support via Solr: https://open.canada.ca/en/apps
+&gt; Demo: One of 20&#43; search pages presented data from backend solr, but is special as sends data straight to a webform about the record https://open.canada.ca/en/search/ati
 
 I&#39;m really proud of this site for a few reasons:
 
@@ -727,11 +735,6 @@ I&#39;m really proud of this site for a few reasons:
   * Leveraging jsonAPI so that CKAN can natively use Drupal&#39;s commenting, voting, and interactive features
   * Search pages that are incredibly easy to create, with faceted supported and great customization
 * Was delivered between 6-9 months with 2 developers working mostly full time on it.
-
-&gt; Demo: Home Page where you can easily change the layout via the UI: https://open.canada.ca/en
-&gt; Demo: Blog functionality that was ported back to WxT: https://open.canada.ca/en/blog
-&gt; Demo: Apps rating and faceted support via Solr: https://open.canada.ca/en/apps
-&gt; Demo: One of 20&#43; search pages presented data from backend solr, but is special as sends data straight to a webform about the record https://open.canada.ca/en/search/ati
 
 ___
 
@@ -750,6 +753,11 @@ Statistics Canada&lt;!-- .element: class=&#34;col-xs-9 col-sm-9 col-md-9 text-le
 
 Note:
 
+&gt; Demo: Home Page where you can easily change the layout via the UI: https://www.statcan.gc.ca/eng/start
+&gt; Demo: Blog functionality: https://www.statcan.gc.ca/eng/blog
+&gt; Search Data Pages: https://www150.statcan.gc.ca/n1/en/type/data?MM=1
+&gt; Geography: https://www150.statcan.gc.ca/n1/en/geo?MM=1
+
 Finally to close off the Drupal section thought I would just mention that Statistics Canada has used Drupal to great effect:
 
 * Search Data Pages: Rendering data from multiple backend systems such as Solr / Oracle
@@ -758,11 +766,6 @@ Finally to close off the Drupal section thought I would just mention that Statis
   * Content team can author content in a staging environment, get their verifications and approvals, then publish to a production environment
   * Content abstractions to make editing and validation easier
 * Theme updates and switches from previous versions of WET are relatively painless thanks to the decoupled presentation layer
-
-&gt; Demo: Home Page where you can easily change the layout via the UI: https://www.statcan.gc.ca/eng/start
-&gt; Demo: Blog functionality: https://www.statcan.gc.ca/eng/blog
-&gt; Search Data Pages: https://www150.statcan.gc.ca/n1/en/type/data?MM=1
-&gt; Geography: https://www150.statcan.gc.ca/n1/en/geo?MM=1
 
 ___
 
@@ -799,7 +802,7 @@ ___
 * Language of the cloud
 * Efficient and easy to learn
 * Multi Platform
-* Follow the best laid path
+* Follows the best laid path
 
 Note:
 
@@ -849,7 +852,7 @@ Note:
 
 While not an exhaustive list these are a few of the projects we are actively using and taking into Production that are written in Go.
 
-Just wanted to mention we will go over Docker and Kubernetes later in the presentation.
+Just wanted to mention we will go over Docker and Kubernetes specificaly later in the presentation.
 
 ___
 
@@ -932,19 +935,13 @@ The following represents a list of some common scenarios that we have been using
 
 ## Scenarios
 
-### Custom DNS:
-
-When there are custom dns servers k8s needs the custom dns to handle the routing and as a result /etc/resolv.conf isn&#39;t correct.
-
-https://github.com/Azure/acs-engine/issues/1603
-
-### Custom VNET
+Custom DNS &#43; Custom VNET
 
 https://github.com/Azure/acs-engine/blob/master/examples/vnet/kubernetesvnet.json
 
 Very important to specify the vnetSubnetId and firstConsecutiveStaticIp.
 
-### Linux / Windows node pool
+Linux / Windows node pool
 
 Adding a node pool
 
@@ -1025,7 +1022,7 @@ ___
 
 Note:
 
-&gt; Demo: Lets quickly look at how acs-engine is leverage for deploying clusters
+&gt; Demo: Lets quickly look at how acs-engine is leveraged for deploying clusters
 
 ___
 
@@ -1202,6 +1199,7 @@ ___
 Note:
 
 &gt; Demo: [wet-boew/wet-boew-hugo](http://github.com/wet-boew/wet-boew-hugo)
+&gt; Demo: [govcloud/website](http://github.com/govcloud/website)
 
 Also will quickly demo and do a brief tour of the govcloud Hugo site.
 
@@ -1492,12 +1490,12 @@ Note:
 
 The following cncf projects are some of the ones we use internally at StatsCan.
 
-Kubernetes: World’s most popular container-orchestration platform and future serverless benefactor
-Prometheus: Delivers real-time monitoring, alerting and time-series database capabilities
-Helm: Helm is a package manager that provides an easy way to find, share, and use software built for Kubernetes
-CNI: Container Networking Interface project was created by a collection of industry organizations in order to standardize the basic network interface for containers
-GRPC: gRPC is a high-performance RPC framework developed by Google and optimized for the large-scale, multi-platform nature of cloud native computing environments
-Rook: File, Block, and Object Storage Services for your Cloud-Native Environments
+* Kubernetes: World’s most popular container-orchestration platform and future serverless benefactor
+* Prometheus: Delivers real-time monitoring, alerting and time-series database capabilities
+* Helm: Helm is a package manager that provides an easy way to find, share, and use software built for Kubernetes
+* CNI: Container Networking Interface project was created by a collection of industry organizations in order to standardize the basic network interface for containers
+* GRPC: gRPC is a high-performance RPC framework developed by Google and optimized for the large-scale, multi-platform nature of cloud native computing environments
+* Rook: File, Block, and Object Storage Services for your Cloud-Native Environments
 
 ___
 
@@ -1511,6 +1509,25 @@ ___
 * Usually 2 x 45 minute sessions
 
 Note:
+
+At this point I thought I would just quickly mention our monthly Cloud Native Meetups for the GoC
+
+This meetup consists of a group of people interested in improving government digital services through Cloud Native design.
+
+For our purposes Cloud Native design refers to the architectural design, deployment, and operation of applications.
+
+We try to learn and share our experiences of building highly distributed applications via a micro-services approach that can scale on demand.
+
+This is facilitated through the use of Containers (Docker) which helps you build, ship and run applications anytime and anywhere. Containers ensures agility, portability and control for all your distributed apps.
+
+Additionally we will discuss how to orchestrate Containers via Kubernetes which has become the standard for scheduling and orchestrating containers at scale with an immense community behind it.
+
+Any skill level is welcome and every month encourage people to submit their own demos and host the meetup!
+
+&gt; Demo: http://govcloud.ca
+&gt; Meetup: https://www.meetup.com/goc-cloud-native/
+&gt; Youtube: https://www.youtube.com/channel/UC00nN9hhb4q6IChP8yEIzGA/playlists
+&gt; Video: Example of video we upload gRPC
 
 ___
 
@@ -1537,6 +1554,8 @@ ___
 
 Note:
 
+If you are interested here is a list of some of the past sessions we have had at our meetups.
+
 ___
 
 &lt;!-- .slide: id=&#34;cloudnative-cncf-meetups-future&#34; data-transition=&#34;concave&#34; --&gt;
@@ -1560,6 +1579,8 @@ ___
 &lt;/div&gt;
 
 Note:
+
+The following represents a list of future upcoming presentations we are hoping to have:
 
 * GCTools is willing to do a demo and show off their CI/CD process
 * OpenShift demo by both CDS and RedHat
@@ -1599,6 +1620,8 @@ ___
 &lt;/div&gt;
 
 Note:
+
+&gt; Demo: https://www.cncf.io/blog/2018/08/29/cncf-survey-use-of-cloud-native-technologies-in-production-has-grown-over-200-percent/
 
 Everyone that learns about containers and their server immutability concept invariably loves them, because of the power they give, both on the development and in the deployment sides.
 
@@ -1652,6 +1675,8 @@ ___
 
 Note:
 
+&gt; Demo: Docker for Mac
+
 ___
 
 &lt;!-- .slide: id=&#34;containers-vscode&#34; data-transition=&#34;concave&#34; --&gt;
@@ -1666,7 +1691,7 @@ ___
 
 Note:
 
-https://code.visualstudio.com/docs/azure/docker
+&gt; Demo: Some Dockerfiles in VSCode
 
 ___
 
@@ -1678,6 +1703,9 @@ ___
 
 Note:
 
+&gt; Demo: https://www.microsoft.com/en-ca/cloud-platform/containers
+&gt; Whitepaper: http://download.microsoft.com/download/7/6/8/768E8E11-1C4B-4C5C-9211-96918C324722/Containerized%20Docker%20Application%20Lifecycle%20with%20Microsoft%20Platform%20and%20Tools%20(eBook).pdf
+
 Microsoft is doing a lot of great things in the Container space and honestly this is coming from a Linux developer.
 
 * VSCode works on Windows
@@ -1686,8 +1714,6 @@ Microsoft is doing a lot of great things in the Container space and honestly thi
   * Multi-container Support via Docker-Compose
   * Support orchestrators like Kubernetes
 * Porting MSSQL Server to Linux
-
-Whitepaper: https://www.microsoft.com/en-ca/cloud-platform/containers
 
 ___
 
@@ -1900,7 +1926,58 @@ ___
 
 Note:
 
-ToDo
+Helm uses a packaging format called charts. A chart is a collection of files that describe a related set of Kubernetes resources. A single chart might be used to deploy something simple, like a memcached pod, or something complex, like a full web app stack with HTTP servers, databases, caches, and so on.
+
+Charts are created as files laid out in a particular directory tree, then they can be packaged into versioned archives to be deployed.
+
+___
+
+&lt;!-- .slide: id=&#34;chart-inuse&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Charts: In Use
+
+&lt;div class=&#34;col-xs-4 col-sm-4 col-md-4&#34;&gt;
+&lt;ul class=&#34;list-unstyled&#34;&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Artifactory/X-Ray&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Autoscaler&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Drupal&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Elasticsearch&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;GitLab&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;GitLab Runner&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Grafana&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Hadoop&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-4 col-sm-4 col-md-4&#34;&gt;
+&lt;ul class=&#34;list-unstyled&#34;&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Jenkins&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;JypyterHub&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Kylo&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Minio&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Nifi&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Octopus&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;OMR&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Pachyderm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-4 col-sm-4 col-md-4&#34;&gt;
+&lt;ul class=&#34;list-unstyled&#34;&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Prometheus&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;SAS4C&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Sentry&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;SonarQube&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Spark&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Traefik&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Zeppelin&lt;/li&gt;
+&lt;li class=&#34;list-unstyled&#34;&gt;Zookeeper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+Note:
+
+Some of the charts we either created or leverage as Stats Can are given in this slide.
 
 ___
 
@@ -1912,7 +1989,21 @@ ___
 
 Note:
 
-ToDo
+Tiller removed in Helm 3, and Lua scripting engine will be added.
+
+___
+
+&lt;!-- .slide: id=&#34;chart-app-delivery&#34; data-transition=&#34;concave&#34; --&gt;
+
+# App Delivery
+
+&lt;div class=&#34;stretch&#34;&gt;
+  &lt;iframe height=&#34;100%&#34; width=&#34;100%&#34; src=&#34;https://www.youtube.com/embed/tE3k-pOJdTc&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+Note:
+
+The following illustrates an example of using charts via the optional UI rather then the command line.
 
 ___
 
@@ -1924,13 +2015,16 @@ ___
 
 Note:
 
+We use Jenkins to deploy much of our architecture through a Infrastructure as Code approach.
+
+Jenkins is great because of its:
+
 * Plugin Architecture
   * Azure Plugins
   * Artifactory
-* Building and Deploying to multiple Kubernetes Clusters
+* Ability to build and deploy applications to multiple Kubernetes Clusters
 * .NET application running on Linux frontend and VM backend for Databases (90%)
 * Moving Jenkins agent pool to Kubernetes cluster
-* Application itself is build with container and Kubernetes deploy
 
 ___
 
@@ -1994,6 +2088,31 @@ There are a few key important points I would like to talk about in order to show
 
 ___
 
+&lt;!-- .slide: id=&#34;chart-gitlab-cicd&#34; data-transition=&#34;concave&#34; --&gt;
+
+# GitLab CI/CD
+
+&lt;div class=&#34;stretch&#34;&gt;
+  &lt;iframe height=&#34;100%&#34; width=&#34;100%&#34; src=&#34;https://www.youtube.com/embed/Nj6dqU7u0CI&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+Note:
+
+The following video which I will have to fast forward to different key points shows a complete CI/CD lifecycle of a Drupal.
+
+Of interest you will notice that we are using a Pull Request which will:
+
+* Get packaged into a Drupal Container
+* Launched as part of a series of containers using Helm
+  * Drupal
+  * MySQL
+  * PHP-FPM
+  * Nginx
+  * Minio for Stateless which backs file in Azure blob storage
+* An ingress will be leveraged using the git sha and branch name for a unique individual environment
+
+___
+
 &lt;!-- .slide: id=&#34;chart-jfrog-workflow&#34; data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34; --&gt;
 
 # jFrog
@@ -2031,6 +2150,20 @@ ___
 
 Note:
 
+&gt; Demo: https://www.youtube.com/watch?v=r2_A5CPo43U
+
+As a universal repository manager, Artifactory integrates with your existing ecosystem supporting end-to-end binary management that overcomes the complexity of working with different software package management systems, and provides consistency to your CI/CD workflow.
+
+At Statistics Canada we are trying to ensure that all of our packages are proxied through Artifactory.
+
+* R
+* CRAN
+* C&#43;&#43; / C# / .NET
+* Python
+* PHP
+* NodeJS
+* containers
+
 ___
 
 &lt;!-- .slide: id=&#34;chart-xray&#34; data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34;  --&gt;
@@ -2043,6 +2176,13 @@ ___
 
 Note:
 
+XRay scans for all software packages in artifactory and then will provide multilayer analysis of your containers and
+software artifacts for all sorts of vulnerabilities, license compliance and quality assurance.
+
+In terms of vulnerabilities XRay will scan all of your artifacts against all known CVE&#39;s to see if there is a security risk. But what I find most need is how XRay can perform deep recursive scans of Docker container down to each individual layer.
+
+With Artifactory &#43; XRay you can continuously govern and audit all artifacts consumed and produced in your CI/CD pipeline.
+
 ___
 
 &lt;!-- .slide: id=&#34;chart-jfrog-octopus&#34; data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34; --&gt;
@@ -2054,6 +2194,37 @@ ___
 Note:
 
 Octopus takes over where your Continuous Integration server ends, enabling you to easily automate even the most complicated application deployments, whether on-premises or in the cloud.
+
+___
+
+&lt;!-- .slide: id=&#34;chart-jfrog-octopus-overview&#34; data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34; --&gt;
+
+# Octopus
+
+* Chart built by Statistics Canada
+* Will be taken upstream by official project
+* Leverages both Linux &#43; Windows Nodes
+* Recently added Kubernetes &#43; Helm support
+
+Note:
+
+&gt; Demo: https://github.com/helm/charts/pull/7769
+
+___
+
+&lt;!-- .slide: id=&#34;chart-omr data-transition=&#34;concave&#34; data-background=&#34;#FFFFFF&#34; --&gt;
+
+# OMR
+
+* Chart built by Statistics Canada
+* Leverages both Linux &#43; Windows Nodes
+* .NET deployment of about 13 different components
+* Front-end components in Kubernetes
+* Database back-end (oracle) still in IaaS
+
+Note:
+
+&gt; Demo: Deploying the OMR chart and show what happens
 
 ---
 
@@ -2118,7 +2289,7 @@ In short, whatever you already use traditional servers for would be a great cand
 
 # Serverless
 
-Serverless is often assumed to be Function as a Service (FaaS). That&#39;s not entirely true. Serverless is so much more. It should be viewed as an event based system for running code. Meaning, you use various services to create business logic without caring about any servers. You&#39;re abstracting away the infrastructure altogether.
+Serverless is often assumed to be Function as a Service (FaaS). That&#39;s not entirely true. Serverless is so much more. It should be viewed as an event based system for running code. Meaning, you use various services to create business logic without caring about any servers. You&#39;re abstracting away the infrastructure altogether. I should mention that some people refuse to call it serverless and rather just a managed server that you don&#39;t deal with but I won&#39;t wade too far into that.
 
 Perfect examples can be:
 
@@ -2144,6 +2315,9 @@ Serverless is great if you have sudden traffic spikes which need to be detected 
 * Pushes you to write more efficient code because of the risk to overload your functions
 * If grow too large can cause the dreaded &#34;latency&#34; issue
 * FaaS suffers from what are called cold starts where initial invocation of a function may take a second or two for the container to spin up
+* Weigh the risk vs reward, is it better to worry less about server but then having less control
+  * Recover in an error situation
+  * Beholden to an external entity to fix it
 
 # Use Cases
 
@@ -2159,13 +2333,12 @@ ___
 
 &lt;!-- .slide: id=&#34;kubernetes-serverless&#34; data-transition=&#34;concave&#34; --&gt;
 
-# KNative
+# KNative / Istio
 
 ![KNative](/img/architecture/openfirst/knative.png)
 
 * Will be promoted to CNCF incubating status soon
 * Build, Serving, and Eventing
-* Istio
 * Kubernetes Universal Control Plane
 
 Note:
