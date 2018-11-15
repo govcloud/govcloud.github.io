@@ -240,6 +240,11 @@
 <li>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
+<li><a href="#planning-items">Planning Items</a></li>
+<li><a href="#minutes">Minutes</a></li>
+<li><a href="#questions">Questions</a></li>
+<li><a href="#nodejs-multi-stage-builds">NodeJS Multi Stage Builds</a></li>
+<li><a href="#gitlab-ci-cd">GitLab CI / CD</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -258,7 +263,103 @@
 
 <h2 id="introduction">Introduction</h2>
 
-<p>n/a</p>
+<p>Brief Introduction of new members</p>
+
+<h2 id="planning-items">Planning Items</h2>
+
+<p>Starting to hit our stride now and meetings for next 2 months are planned.</p>
+
+<p>As mentioned we are always looking for constructive criticism and are currently enacted the two we have already recieved:</p>
+
+<ul>
+<li>More focused on specific topics</li>
+<li>Don&rsquo;t assume users are familiar with fundamentals</li>
+</ul>
+
+<p>We did also get some positive feedback:</p>
+
+<ul>
+<li>Videos are great and want more like it</li>
+<li>Appreciate the open source repo examples</li>
+</ul>
+
+<p>Important: A lot of us are on the #cloudnative channel if ever need assistance!</p>
+
+<h2 id="minutes">Minutes</h2>
+
+<p>But first we need to quickly go over some highlight from the minutes during the last meetup.</p>
+
+<ul>
+<li>Review of planning decisions from last meeting</li>
+<li>Website govcloud.ca</li>
+<li>More documentation being pushed to YouTube</li>
+<li>Will cut out planning discussion from video minutes</li>
+<li>Will upload 1.5hrs in chunks</li>
+<li>AKS / ACS (Benefits / Comparisons)</li>
+<li>ACS Engine
+
+<ul>
+<li>Take bare minimum cluster definition (small JSON) which then generates ARM templates</li>
+<li>For operators that need complete control and customizability</li>
+<li>Deploys cluster on Ubuntu</li>
+<li>OpenShift support also being added</li>
+<li>Can add custom extensions (e.g., choco)</li>
+</ul></li>
+<li>Autoscaler</li>
+<li>Heptio Ark: Must have for any cluster</li>
+<li>VS Code: Many Kubernetes / Helm integration</li>
+<li>JupyterHub and custom developer environments</li>
+<li>Distributed Logging with EFK</li>
+<li>Pachyderm</li>
+</ul>
+
+<h2 id="questions">Questions</h2>
+
+<p>What kind of applications are people consider containerizing?</p>
+
+<ul>
+<li>Identity management platform (6 services together) - Pat, Public Works
+
+<ul>
+<li>Working locally, automated pipeline, test</li>
+<li>Alpine Linux, a few that are Ubuntu (more for COTS)</li>
+<li>GitLab CI</li>
+</ul></li>
+<li>Data science framework (spark, Hadoop, Drupal, etc.) - Will, Statistics Canada
+
+<ul>
+<li>Horizontal services that devops can deploy and maintain to support dev groups</li>
+<li>Private NuGet repo, Jenkins, GitLab, etc.</li>
+<li>Windows 17.09 or higher (Azure, Kubernetes) due to networking issues</li>
+<li>Build containers for non-core applications of .NET</li>
+</ul></li>
+<li>Best ways to set up local:
+
+<ul>
+<li>Easiest: Docker for Mac / Windows (currently in edge)</li>
+<li>Hyperkube, Kubespray</li>
+</ul></li>
+</ul>
+
+<h2 id="nodejs-multi-stage-builds">NodeJS Multi Stage Builds</h2>
+
+<ul>
+<li>NodeJS Docker Core Maintainer</li>
+<li>Introduced Alpine build</li>
+<li>Multi Stage Builds</li>
+<li>Many improvements towards speed / performance</li>
+<li>New Windows branch</li>
+</ul>
+
+<h2 id="gitlab-ci-cd">GitLab CI / CD</h2>
+
+<ul>
+<li>GitLab CI / CD</li>
+<li>Auto Devops</li>
+<li>Integration with Kubernetes</li>
+<li>Pipelines</li>
+<li>Demo</li>
+</ul>
 
                     </div>
                     <aside>
@@ -291,7 +392,7 @@
         <li class="previous"><a href="https://govcloud.github.io/sitemap/meetup/04-24-18/"><span aria-hidden="true">&larr;</span> Older</a></li>
         
         
-        <li class="next"><a href="https://govcloud.github.io/sitemap/meetup/06-26-18/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+        <li class="next"><a href="https://govcloud.github.io/sitemap/meetup/06-26-19/">Newer <span aria-hidden="true">&rarr;</span></a></li>
         
     </ul>
 </nav>
@@ -346,13 +447,25 @@
                             
                             
                                 <li>
-                                    <a href="../../../sitemap/meetup/06-26-18/" class="list-group-item">Minutes for 2018-06-26</a>
+                                    <a href="../../../sitemap/meetup/06-26-19/" class="list-group-item">Minutes for 2018-06-26</a>
                                 </li>
                                 
                             
                             
                                 <li>
                                     <a href="../../../sitemap/meetup/08-26-18/" class="list-group-item">Minutes for 2018-08-26</a>
+                                </li>
+                                
+                            
+                            
+                                <li>
+                                    <a href="../../../sitemap/meetup/09-28-18/" class="list-group-item">Minutes for 2018-09-28</a>
+                                </li>
+                                
+                            
+                            
+                                <li>
+                                    <a href="../../../sitemap/meetup/10-12-18/" class="list-group-item">Minutes for 2018-10-12</a>
                                 </li>
                                 
                             

@@ -13,6 +13,16 @@
   </url>
   
   <url>
+    <loc>https://govcloud.github.io/slide/09-28-18/</loc>
+    <lastmod>2018-08-22T13:10:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://govcloud.github.io/slide/10-12-18/</loc>
+    <lastmod>2018-08-22T13:10:52-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://govcloud.github.io/slide/05-29-18/</loc>
     <lastmod>2018-05-29T13:10:52-05:00</lastmod>
   </url>
@@ -33,12 +43,22 @@
   </url>
   
   <url>
-    <loc>https://govcloud.github.io/sitemap/meetup/06-26-18/</loc>
+    <loc>https://govcloud.github.io/sitemap/meetup/06-26-19/</loc>
     <lastmod>2018-04-24T13:10:52-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://govcloud.github.io/sitemap/meetup/08-26-18/</loc>
+    <lastmod>2018-04-24T13:10:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://govcloud.github.io/sitemap/meetup/09-28-18/</loc>
+    <lastmod>2018-04-24T13:10:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://govcloud.github.io/sitemap/meetup/10-12-18/</loc>
     <lastmod>2018-04-24T13:10:52-05:00</lastmod>
   </url>
   
@@ -73,13 +93,14 @@
   </url>
   
   <url>
-    <loc>https://govcloud.github.io/slide/09-28-18/</loc>
+    <loc>https://govcloud.github.io/sitemap/slides/</loc>
     <lastmod>2018-03-22T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://govcloud.github.io/sitemap/slides/</loc>
-    <lastmod>2018-03-22T13:10:52-05:00</lastmod>
+    <loc>https://govcloud.github.io/tags/aqua/</loc>
+    <lastmod>2018-08-22T13:10:52-05:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -143,8 +164,8 @@
   </url>
   
   <url>
-    <loc>https://govcloud.github.io/tags/open-first/</loc>
-    <lastmod>2018-03-22T13:10:52-05:00</lastmod>
+    <loc>https://govcloud.github.io/tags/mongodb/</loc>
+    <lastmod>2018-08-22T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -186,12 +207,6 @@
   
   <url>
     <loc>https://govcloud.github.io/tags/slides/</loc>
-    <lastmod>2018-03-22T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://govcloud.github.io/tags/statistics-canada/</loc>
     <lastmod>2018-03-22T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>

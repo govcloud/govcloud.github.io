@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Aqua</title>
+      <link>https://govcloud.github.io/tags/aqua/</link>
+      <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/tags/aqua/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Artifactory</title>
       <link>https://govcloud.github.io/tags/artifactory/</link>
       <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
@@ -102,11 +111,11 @@
     </item>
     
     <item>
-      <title>Open First</title>
-      <link>https://govcloud.github.io/tags/open-first/</link>
-      <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
+      <title>Mongodb</title>
+      <link>https://govcloud.github.io/tags/mongodb/</link>
+      <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/tags/open-first/</guid>
+      <guid>https://govcloud.github.io/tags/mongodb/</guid>
       <description></description>
     </item>
     
@@ -152,15 +161,6 @@
       <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
       
       <guid>https://govcloud.github.io/tags/slides/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Statistics Canada</title>
-      <link>https://govcloud.github.io/tags/statistics-canada/</link>
-      <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
-      
-      <guid>https://govcloud.github.io/tags/statistics-canada/</guid>
       <description></description>
     </item>
     

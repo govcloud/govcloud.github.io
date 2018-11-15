@@ -30,17 +30,24 @@
       
       <guid>https://govcloud.github.io/sitemap/meetup/05-29-18/</guid>
       <description>Minutes taken by: Zachary Seguin
- Introduction n/a</description>
+ Introduction Brief Introduction of new members
+Planning Items Starting to hit our stride now and meetings for next 2 months are planned.
+As mentioned we are always looking for constructive criticism and are currently enacted the two we have already recieved:
+ More focused on specific topics Don&amp;rsquo;t assume users are familiar with fundamentals  We did also get some positive feedback:</description>
     </item>
     
     <item>
       <title>Minutes for 2018-06-26</title>
-      <link>https://govcloud.github.io/sitemap/meetup/06-26-18/</link>
+      <link>https://govcloud.github.io/sitemap/meetup/06-26-19/</link>
       <pubDate>Tue, 24 Apr 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/sitemap/meetup/06-26-18/</guid>
-      <description>Minutes taken by: Zachary Seguin
- Introduction n/a</description>
+      <guid>https://govcloud.github.io/sitemap/meetup/06-26-19/</guid>
+      <description>  Minutes taken by: Zachary Seguin
+ Introduction Brief introduction of new members
+Planning Items Meeting ran late so no new planning items so can get right into presentation.
+Minutes Meeting ran late so no reading of minutes so can get right into presentation.
+Presentation Ross Clarke of Statistics Canada gave a thorough presentation of Terraform.
+ Benefits of Terraform for Hybrid Cloud Terraform Demo Terraform integration with Azure  </description>
     </item>
     
     <item>
@@ -51,6 +58,29 @@
       <guid>https://govcloud.github.io/sitemap/meetup/08-26-18/</guid>
       <description>Minutes taken by: Zachary Seguin
  Post Discussion  More flexibility with some of the timing Procurement people are allowed to come into presentations Full remote meetings would be a big plus  Still have issues with some departments blocking access Face to Face is of course important though and will be main type of meetup  Interest in talking to people who have taken Kubernetes all the way into production Request to ask if we can get Jonathan Pulcifier (Security) at Shopify Interest in hosting a Kubernetes Basics Course Serverless talks on:  Lambda When to use versus containers KNative  GCTools is willing to do a demo Chris Allison wants to help and better support communities that to exist We can apparently get translation and transcription Desire for focused problem sets and interactive demos Mentioned dev.</description>
+    </item>
+    
+    <item>
+      <title>Minutes for 2018-09-28</title>
+      <link>https://govcloud.github.io/sitemap/meetup/09-28-18/</link>
+      <pubDate>Tue, 24 Apr 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/sitemap/meetup/09-28-18/</guid>
+      <description>Minutes taken by: Zachary Seguin
+ Presentation Presentation was given by Liz Rice Co-Chair of many KubeCons and maintainer of various security oriented applications around Kubernetes.
+ Kube-Hunter Kube-Bench  The complete video has been updated to our youtube channel and the slide deck can be found below.</description>
+    </item>
+    
+    <item>
+      <title>Minutes for 2018-10-12</title>
+      <link>https://govcloud.github.io/sitemap/meetup/10-12-18/</link>
+      <pubDate>Tue, 24 Apr 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/sitemap/meetup/10-12-18/</guid>
+      <description>  Minutes taken by: Zachary Seguin
+ Presentation Presentation was given by Sani Chabi Yo senior solution architect at MongoDB and one of the maintainers of the MongoDB Operator.
+ MongoDB Operator Atlas Stitch  The complete video has been updated to our youtube channel and the slide deck can be found below.
+ MongoDB Slides  </description>
     </item>
     
     <item>
