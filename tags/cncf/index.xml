@@ -42,10 +42,10 @@ I thought I would kick this off by talking about the upcoming presenters for tho
     
     <item>
       <title>GoC Cloud Native</title>
-      <link>https://govcloud.github.io/slide/09-28-18/</link>
+      <link>https://govcloud.github.io/slide/10-12-18/</link>
       <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/slide/09-28-18/</guid>
+      <guid>https://govcloud.github.io/slide/10-12-18/</guid>
       <description>Cloud Native Meetup github.com/govcloud 
 Note:
 Presenter(s)  Modernizing app delivery for Canadians
@@ -55,15 +55,29 @@ Agenda  Minutes New Items Aqua Presentation  Note:</description>
     
     <item>
       <title>GoC Cloud Native</title>
-      <link>https://govcloud.github.io/slide/10-12-18/</link>
+      <link>https://govcloud.github.io/slide/11-15-18/</link>
       <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/slide/10-12-18/</guid>
+      <guid>https://govcloud.github.io/slide/11-15-18/</guid>
       <description>Cloud Native Meetup github.com/govcloud 
 Note:
 Presenter(s)  Modernizing app delivery for Canadians
  William Hearn @sylus   Zachary Seguin @zachomedia   Note:
 Agenda  Minutes New Items MongoDB Presentation  Note:</description>
+    </item>
+    
+    <item>
+      <title>Open First Day</title>
+      <link>https://govcloud.github.io/slide/09-28-18/</link>
+      <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/slide/09-28-18/</guid>
+      <description>Open First Day github.com/statcan 
+Note:
+Hi there!
+This is a fun presentation for me because I get to talk about some of the open source work being done at Statistics Canada.
+But more then that I get to talk about a philosophy that has been working its way in to the department and what appears to soon be the broader government as a whole.
+If any Open Government people are here I just wanted to quickly say you are the best!</description>
     </item>
     
   </channel>
