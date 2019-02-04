@@ -6,10 +6,46 @@
     <description>Recent content in Tags on GoC Cloud Native</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Mar 2018 13:10:52 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 22 Aug 2018 13:10:52 -0500</lastBuildDate>
     
 	<atom:link href="https://govcloud.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Aqua</title>
+      <link>https://govcloud.github.io/tags/aqua/</link>
+      <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/tags/aqua/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Artifactory</title>
+      <link>https://govcloud.github.io/tags/artifactory/</link>
+      <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/tags/artifactory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Ops</title>
+      <link>https://govcloud.github.io/tags/cloud-ops/</link>
+      <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/tags/cloud-ops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cncf</title>
+      <link>https://govcloud.github.io/tags/cncf/</link>
+      <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/tags/cncf/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Feedback</title>
@@ -17,6 +53,15 @@
       <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
       
       <guid>https://govcloud.github.io/tags/feedback/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grpc</title>
+      <link>https://govcloud.github.io/tags/grpc/</link>
+      <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/tags/grpc/</guid>
       <description></description>
     </item>
     
@@ -30,9 +75,18 @@
     </item>
     
     <item>
+      <title>Jfrog</title>
+      <link>https://govcloud.github.io/tags/jfrog/</link>
+      <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/tags/jfrog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Kubernetes</title>
       <link>https://govcloud.github.io/tags/kubernetes/</link>
-      <pubDate>Fri, 19 Oct 2018 13:10:52 -0500</pubDate>
+      <pubDate>Thu, 24 Jan 2019 13:10:52 -0500</pubDate>
       
       <guid>https://govcloud.github.io/tags/kubernetes/</guid>
       <description></description>
@@ -41,9 +95,45 @@
     <item>
       <title>Meetups</title>
       <link>https://govcloud.github.io/tags/meetups/</link>
-      <pubDate>Fri, 19 Oct 2018 13:10:52 -0500</pubDate>
+      <pubDate>Thu, 24 Jan 2019 13:10:52 -0500</pubDate>
       
       <guid>https://govcloud.github.io/tags/meetups/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mongodb</title>
+      <link>https://govcloud.github.io/tags/mongodb/</link>
+      <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/tags/mongodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Open First</title>
+      <link>https://govcloud.github.io/tags/open-first/</link>
+      <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/tags/open-first/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Protoc</title>
+      <link>https://govcloud.github.io/tags/protoc/</link>
+      <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/tags/protoc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Protocol Buffers</title>
+      <link>https://govcloud.github.io/tags/protocol-buffers/</link>
+      <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/tags/protocol-buffers/</guid>
       <description></description>
     </item>
     
@@ -57,11 +147,11 @@
     </item>
     
     <item>
-      <title>Sitemap</title>
-      <link>https://govcloud.github.io/tags/sitemap/</link>
-      <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
+      <title>Slide</title>
+      <link>https://govcloud.github.io/tags/slide/</link>
+      <pubDate>Tue, 29 May 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/tags/sitemap/</guid>
+      <guid>https://govcloud.github.io/tags/slide/</guid>
       <description></description>
     </item>
     
@@ -71,6 +161,24 @@
       <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
       
       <guid>https://govcloud.github.io/tags/slides/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics Canada</title>
+      <link>https://govcloud.github.io/tags/statistics-canada/</link>
+      <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/tags/statistics-canada/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terraform</title>
+      <link>https://govcloud.github.io/tags/terraform/</link>
+      <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/tags/terraform/</guid>
       <description></description>
     </item>
     

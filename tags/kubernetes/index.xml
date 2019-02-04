@@ -6,17 +6,29 @@
     <description>Recent content in Kubernetes on GoC Cloud Native</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Oct 2018 13:10:52 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jan 2019 13:10:52 -0500</lastBuildDate>
     
 	<atom:link href="https://govcloud.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Minutes for 2019-01-24</title>
+      <link>https://govcloud.github.io/meetup/2019-01-24/</link>
+      <pubDate>Thu, 24 Jan 2019 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/meetup/2019-01-24/</guid>
+      <description>  Minutes taken by: Zachary Seguin
+ Presentation Presentation was given by Aidan Feldman formerly of @18F and now working for the US Census Bureau.
+ Twitter  The complete video has been updated to our youtube channel:
+ YouTube  </description>
+    </item>
+    
+    <item>
       <title>Minutes for 2018-11-19</title>
-      <link>https://govcloud.github.io/meetup/11-15-18/</link>
+      <link>https://govcloud.github.io/meetup/2018-11-15/</link>
       <pubDate>Fri, 19 Oct 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/meetup/11-15-18/</guid>
+      <guid>https://govcloud.github.io/meetup/2018-11-15/</guid>
       <description>  Minutes taken by: Zachary Seguin
  Presentation Presentation was given by Sani Chabi Yo senior solution architect at MongoDB and one of the maintainers of the MongoDB Operator.
  MongoDB Operator Atlas Stitch  The complete video has been updated to our youtube channel and the slide deck can be found below.
@@ -25,10 +37,10 @@
     
     <item>
       <title>Minutes for 2018-10-12</title>
-      <link>https://govcloud.github.io/meetup/10-12-18/</link>
+      <link>https://govcloud.github.io/meetup/2018-10-12/</link>
       <pubDate>Fri, 12 Oct 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/meetup/10-12-18/</guid>
+      <guid>https://govcloud.github.io/meetup/2018-10-12/</guid>
       <description>  Minutes taken by: Zachary Seguin
  Presentation Presentation was given by Liz Rice Co-Chair of many KubeCons and maintainer of various security oriented applications around Kubernetes.
  Kube-Hunter Kube-Bench  The complete video has been updated to our youtube channel and the slide deck can be found below.
@@ -37,29 +49,29 @@
     
     <item>
       <title>Minutes for 2018-09-28</title>
-      <link>https://govcloud.github.io/meetup/09-28-18/</link>
+      <link>https://govcloud.github.io/meetup/2018-09-28/</link>
       <pubDate>Fri, 28 Sep 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/meetup/09-28-18/</guid>
+      <guid>https://govcloud.github.io/meetup/2018-09-28/</guid>
       <description>Presentation Presentation was given for Open First Day</description>
     </item>
     
     <item>
       <title>Minutes for 2018-08-26</title>
-      <link>https://govcloud.github.io/meetup/08-26-18/</link>
+      <link>https://govcloud.github.io/meetup/2018-08-26/</link>
       <pubDate>Sun, 26 Aug 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/meetup/08-26-18/</guid>
+      <guid>https://govcloud.github.io/meetup/2018-08-26/</guid>
       <description>Minutes taken by: Zachary Seguin
  Post Discussion  More flexibility with some of the timing Procurement people are allowed to come into presentations Full remote meetings would be a big plus  Still have issues with some departments blocking access Face to Face is of course important though and will be main type of meetup  Interest in talking to people who have taken Kubernetes all the way into production Request to ask if we can get Jonathan Pulcifier (Security) at Shopify Interest in hosting a Kubernetes Basics Course Serverless talks on:  Lambda When to use versus containers KNative  GCTools is willing to do a demo Chris Allison wants to help and better support communities that to exist We can apparently get translation and transcription Desire for focused problem sets and interactive demos Mentioned dev.</description>
     </item>
     
     <item>
       <title>Minutes for 2018-06-26</title>
-      <link>https://govcloud.github.io/meetup/06-26-19/</link>
+      <link>https://govcloud.github.io/meetup/2018-06-26/</link>
       <pubDate>Tue, 26 Jun 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/meetup/06-26-19/</guid>
+      <guid>https://govcloud.github.io/meetup/2018-06-26/</guid>
       <description>  Minutes taken by: Zachary Seguin
  Introduction Brief introduction of new members
 Planning Items Meeting ran late so no new planning items so can get right into presentation.
@@ -69,11 +81,25 @@ Presentation Ross Clarke of Statistics Canada gave a thorough presentation of Te
     </item>
     
     <item>
-      <title>Minutes for 2018-05-29</title>
-      <link>https://govcloud.github.io/meetup/05-29-18/</link>
+      <title>GoC Cloud Native</title>
+      <link>https://govcloud.github.io/slide/2018-05-29/</link>
       <pubDate>Tue, 29 May 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/meetup/05-29-18/</guid>
+      <guid>https://govcloud.github.io/slide/2018-05-29/</guid>
+      <description>Cloud Native govcloud/charts 
+Note:
+This is a presentation created in conjunction with the Canadian Digital Services and Cloud Operations team at Statistics Canada.
+Agenda  Planning Items NodeJS Multi Stage Builds NodeJS Developer Improvements GitLab CI / CD w/Kubernetes  Note:
+Starting to hit our stride now and meetings for next 2 months are planned.
+As mentioned we are always looking for constructive criticism and are currently enacted the two we have already recieved:</description>
+    </item>
+    
+    <item>
+      <title>Minutes for 2018-05-29</title>
+      <link>https://govcloud.github.io/meetup/2018-05-29/</link>
+      <pubDate>Tue, 29 May 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/meetup/2018-05-29/</guid>
       <description>Minutes taken by: Zachary Seguin
  Introduction Brief Introduction of new members
 Planning Items Starting to hit our stride now and meetings for next 2 months are planned.
@@ -82,15 +108,42 @@ As mentioned we are always looking for constructive criticism and are currently 
     </item>
     
     <item>
-      <title>Minutes for 2018-04-24</title>
-      <link>https://govcloud.github.io/meetup/04-24-18/</link>
+      <title>GoC Cloud Native</title>
+      <link>https://govcloud.github.io/slide/2018-04-24/</link>
       <pubDate>Tue, 24 Apr 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/meetup/04-24-18/</guid>
+      <guid>https://govcloud.github.io/slide/2018-04-24/</guid>
+      <description>Cloud Native Meetup github.com/govcloud 
+Note:
+This is a presentation created in conjunction with the Canadian Digital Services and Cloud Operations team at Statistics Canada.
+Agenda  Planning Items Azure AKS / ACS Engine Auto Scaler ARK Disaster Recovery Distributed Logging Securing Helm  Note:
+The agenda for today is to keep things a bit more straightforward (even though I said that last week).
+Some constructive criticism already recieved was jumping around topics a bit which for the first meeting to form a broad base is fine but less ideal for meetings going onwards.</description>
+    </item>
+    
+    <item>
+      <title>Minutes for 2018-04-24</title>
+      <link>https://govcloud.github.io/meetup/2018-04-24/</link>
+      <pubDate>Tue, 24 Apr 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/meetup/2018-04-24/</guid>
       <description>Minutes taken by: Zachary Seguin
  Introduction Canadian Digital Services - Collaboration Room
  Canadian Digital Services / Statistics Canada organized Importance of Cloud native As Developers our view points aren&amp;rsquo;t always appreciated Policy makers make decisions and we enact it  Minutes But first we need to quickly go over some highlight from the minutes during the last meetup.
  Review of planning decisions from last meeting Website govcloud.</description>
+    </item>
+    
+    <item>
+      <title>GoC Cloud Native</title>
+      <link>https://govcloud.github.io/slide/2018-03-22/</link>
+      <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://govcloud.github.io/slide/2018-03-22/</guid>
+      <description>Cloud Native Meetups github.com/govcloud 
+Note:
+This is a presentation created in conjunction with the Canadian Digital Services and Cloud Operations team at Statistics Canada.
+Agenda  Planning Items Containers Kubernetes CNCF Azure AKS and ACS Workflows  Note:
+The agenda for today is fairly straightforward though I would like to apologize in advance for any minor foibles as this is our first meeting and honestly we are just trying to get off the ground.</description>
     </item>
     
     <item>
@@ -109,10 +162,10 @@ Room 14003 on the 14th floor</description>
     
     <item>
       <title>Minutes for 2018-03-22</title>
-      <link>https://govcloud.github.io/meetup/03-22-18/</link>
+      <link>https://govcloud.github.io/meetup/2018-03-22/</link>
       <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/meetup/03-22-18/</guid>
+      <guid>https://govcloud.github.io/meetup/2018-03-22/</guid>
       <description>Minutes taken by: Zachary Seguin
  Introduction Canadian Digital Services - Collaboration Room
  Canadian Digital Services / Statistics Canada organized Importance of Cloud native As Developers our view points aren&amp;rsquo;t always appreciated Policy makers make decisions and we enact it  Vision  Long road, not everything can be done by cloud native IaaS formulas, Amazon, Azure, etc. is not cloud native Should focus on purely cloud native, can go any cloud If it&amp;rsquo;s been solved in cloud native, we should take and learn.</description>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Slide on GovCloud</title>
+    <title>Slide on GoC Cloud Native</title>
     <link>https://govcloud.github.io/tags/slide/</link>
-    <description>Recent content in Slide on GovCloud</description>
+    <description>Recent content in Slide on GoC Cloud Native</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 29 May 2018 13:10:52 -0500</lastBuildDate>
@@ -13,10 +13,10 @@
     
     <item>
       <title>GoC Cloud Native</title>
-      <link>https://govcloud.github.io/slide/05-29-18/</link>
+      <link>https://govcloud.github.io/slide/2018-05-29/</link>
       <pubDate>Tue, 29 May 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/slide/05-29-18/</guid>
+      <guid>https://govcloud.github.io/slide/2018-05-29/</guid>
       <description>Cloud Native govcloud/charts 
 Note:
 This is a presentation created in conjunction with the Canadian Digital Services and Cloud Operations team at Statistics Canada.
@@ -27,10 +27,10 @@ As mentioned we are always looking for constructive criticism and are currently 
     
     <item>
       <title>GoC Cloud Native</title>
-      <link>https://govcloud.github.io/slide/04-24-18/</link>
+      <link>https://govcloud.github.io/slide/2018-04-24/</link>
       <pubDate>Tue, 24 Apr 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/slide/04-24-18/</guid>
+      <guid>https://govcloud.github.io/slide/2018-04-24/</guid>
       <description>Cloud Native Meetup github.com/govcloud 
 Note:
 This is a presentation created in conjunction with the Canadian Digital Services and Cloud Operations team at Statistics Canada.
@@ -41,10 +41,10 @@ Some constructive criticism already recieved was jumping around topics a bit whi
     
     <item>
       <title>GoC Cloud Native</title>
-      <link>https://govcloud.github.io/slide/03-22-18/</link>
+      <link>https://govcloud.github.io/slide/2018-03-22/</link>
       <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/slide/03-22-18/</guid>
+      <guid>https://govcloud.github.io/slide/2018-03-22/</guid>
       <description>Cloud Native Meetups github.com/govcloud 
 Note:
 This is a presentation created in conjunction with the Canadian Digital Services and Cloud Operations team at Statistics Canada.

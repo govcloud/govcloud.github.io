@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Protoc on GovCloud</title>
+    <title>Protoc on GoC Cloud Native</title>
     <link>https://govcloud.github.io/tags/protoc/</link>
-    <description>Recent content in Protoc on GovCloud</description>
+    <description>Recent content in Protoc on GoC Cloud Native</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Aug 2018 13:10:52 -0500</lastBuildDate>
@@ -13,10 +13,10 @@
     
     <item>
       <title>GoC Cloud Native</title>
-      <link>https://govcloud.github.io/slide/08-26-18/</link>
+      <link>https://govcloud.github.io/slide/2018-08-26/</link>
       <pubDate>Wed, 22 Aug 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/slide/08-26-18/</guid>
+      <guid>https://govcloud.github.io/slide/2018-08-26/</guid>
       <description>Cloud Native Meetup github.com/govcloud 
 Note:
 Hi there!

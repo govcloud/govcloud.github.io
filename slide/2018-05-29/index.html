@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>
+<html class="no-js lt-ie9" lang="en" dir="ltr">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>
+        
+        GoC Cloud Native
+        
+    </title>
+    <!--[if gte IE 9 | !IE ]><!-->
+    <link href="https://govcloud.github.io/lib/wet-boew/assets/images/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://govcloud.github.io/lib/theme-gcweb/css/theme.min.css" />
+<!--<![endif]-->
+<!--[if lt IE 9]>
+	<link href="https://govcloud.github.io/lib/theme-gcweb/assets/images/favicon.ico" rel="shortcut icon" />
+	<link rel="stylesheet" href="https://govcloud.github.io/lib/theme-gcweb/css/ie8-theme.min.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://govcloud.github.io/lib/wet-boew/js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/monokai.min.css">
+<noscript><link rel="stylesheet" href="https://govcloud.github.io/lib/wet-boew/css/noscript.min.css" /></noscript>
+<link rel="stylesheet" href="https://govcloud.github.io/css/styles.css">
+<link rel="stylesheet" href="https://govcloud.github.io/css/custom.css">
+
+<link rel="shortcut icon" href="https://govcloud.github.io/assets/images/favicon.ico">
+
+	<link rel="stylesheet" href="https://govcloud.github.io/lib/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="https://govcloud.github.io/lib/reveal.js/css/theme/black.css" id="theme">
+	<link rel="stylesheet" href="https://govcloud.github.io/lib/reveal.js/lib/css/zenburn.css">
+    
+<link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/monokai.min.css">
+<link rel="stylesheet" href="https://govcloud.github.io/css/styles.css">
+<link rel="stylesheet" href="https://govcloud.github.io/css/custom.css">
+
+<link rel="shortcut icon" href="https://govcloud.github.io/assets/images/favicon.ico">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://govcloud.github.io/index.xml">
+
+</head>
+<body vocab="http://schema.org/" typeof="WebPage">
+	<div class="reveal">
+	<div class="slides">
+	<section data-markdown
+	         data-separator="^---"
+		 data-separator-vertical="^___"
+		 data-separator-notes="^Note:"
+		data-charset="utf8">
+	
+&lt;!-- .slide: id=&#34;ops&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Cloud Native
+
+[govcloud/charts](http://github.com/govcloud/charts) &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+
+Note:
+
+This is a presentation created in conjunction with the Canadian Digital Services and Cloud Operations team at Statistics Canada.
+
+---
+
+&lt;!-- .slide: id=&#34;agenda&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Agenda
+
+* Planning Items
+* NodeJS Multi Stage Builds
+* NodeJS Developer Improvements
+* GitLab CI / CD w/Kubernetes
+
+Note:
+
+Starting to hit our stride now and meetings for next 2 months are planned.
+
+As mentioned we are always looking for constructive criticism and are currently enacted the two we have already recieved:
+
+* More focused on specific topics
+* Don&#39;t assume users are familiar with fundamentals
+
+We did also get some positive feedback:
+
+* Videos are great and want more like it
+* Appreciate the open source repo examples
+
+Important: A lot of us are on the #cloudnative channel if ever need assistance!
+
+---
+
+&lt;!-- .slide: id=&#34;planning&#34; data-transition=&#34;concave&#34; --&gt;
+
+# Planning Items
+
+* Minutes
+* Miscellaneous / Questions
+* Future presentations
+
+Note:
+
+## Minutes
+
+But first we need to quickly go over some highlight from the minutes during the last meetup.
+
+* Review of planning decisions from last meeting
+* Website govcloud.ca
+* More documentation being pushed to YouTube
+* Will cut out planning discussion from video minutes
+* Will upload 1.5hrs in chunks
+* AKS / ACS (Benefits / Comparisons)
+* ACS Engine
+  * Take bare minimum cluster definition (small JSON) which then generates ARM templates
+  * For operators that need complete control and customizability
+  * Deploys cluster on Ubuntu
+  * OpenShift support also being added
+  * Can add custom extensions (e.g., choco)
+* Autoscaler
+* Heptio Ark: Must have for any cluster
+* VS Code: Many Kubernetes / Helm integration
+* JupyterHub and custom developer environments
+* Distributed Logging with EFK
+* Pachyderm
+
+## Miscellaneous / Questions
+
+What kind of applications are people consider containerizing?
+
+* Identity management platform (6 services together) - Pat, Public Works
+  * Working locally, automated pipeline, test
+  * Alpine Linux, a few that are Ubuntu (more for COTS)
+  * GitLab CI
+* Data science framework (spark, Hadoop, Drupal, etc.) - Will, Statistics Canada
+  * Horizontal services that devops can deploy and maintain to support dev groups
+  * Private NuGet repo, Jenkins, GitLab, etc.
+  * Windows 17.09 or higher (Azure, Kubernetes) due to networking issues
+  * Build containers for non-core applications of .NET
+* Best ways to set up local:
+  * Easiest: Docker for Mac / Windows (currently in edge)
+  * Hyperkube, Kubespray
+
+## Future Presentations
+
+* Zachary Seguin: Will be talking about his work with OpenFaaS, Serverless Functions Made Simple for Docker and Kubernetes and how he leveraged react
+* Marc Tessier: Will be showing the great work done with Windows container development in the .NET / Nuget space. As well as refined CI/CD workflow from local dev -&gt; prod
+* Ross Clarke: Will be showcasing his work with Terraform and how it facilitates hybrid cloud development
+
+___
+
+&lt;!-- .slide: id=&#34;nodejs&#34; data-transition=&#34;concave&#34; --&gt;
+
+# NodeJS Multi Stage Builds
+
+* NodeJS Docker Core Maintainer
+* Introduced Alpine build
+* Multi Stage Builds
+* Many improvements towards speed / performance
+* New Windows branch
+
+Note:
+
+Introduce Laurent Goderre one of the Core Maintainer on NodeJS Docker image.
+
+___
+
+&lt;!-- .slide: id=&#34;gitlab&#34; data-transition=&#34;concave&#34; --&gt;
+
+# GitLab CI / CD
+
+* GitLab CI / CD
+* Auto Devops
+* Integration with Kubernetes
+* Pipelines
+* Demo
+
+Note:
+
+Demo a full GitLab workflow for development all the way through to production.
+
+___
+
+	</section>
+	</div>
+	</div>
+<script src="https://govcloud.github.io/lib/reveal.js/lib/js/head.min.js"></script>
+	<script src="https://govcloud.github.io/lib/reveal.js/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+		      	embedded : true,
+				history: true,
+		        
+		        
+		        
+		        dependencies: [
+		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/lib\/js\/classList.js"', condition: function() { return !document.body.classList; } },
+		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/plugin\/markdown\/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/plugin\/markdown\/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/plugin\/zoom-js\/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/plugin\/notes\/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		        ]
+		      });
+	</script>
+	
+  <footer role="contentinfo" id="wb-info">
+    <nav role="navigation" class="container wb-navcurr">
+        <h2>About this site</h2>
+        <section class="col-sm-3">
+            <h3>Contact us</h3>
+            <ul class="list-unstyled">
+                <li><a href="https://github.com/govcloud/govcloud.github.io/issues/new">Questions or comments?</a></li>
+            </ul>
+        </section>
+        <section class="col-sm-3">
+            <h3>About</h3>
+            <ul class="list-unstyled">
+                <li><a href="http://wet-boew.github.io/wet-boew/index-en.html#about">About the Web Experience Toolkit</a></li>
+                <li><a href="http://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a>
+                </li>
+            </ul>
+        </section>
+        <section class="col-sm-3">
+            <h3>News</h3>
+            <ul class="list-unstyled">
+                <li><a href="https://github.com/govcloud/govcloud.github.io/pulse">Recent project activity</a></li>
+                <li><a href="https://github.com/govcloud/govcloud.github.io/graphs">Project statistics</a></li>
+            </ul>
+        </section>
+        <section class="col-sm-3">
+            <h3>Stay connected</h3>
+            <ul class="list-unstyled">
+                <li><a href="https://twitter.com/statcan_eng">Twitter</a></li>
+            </ul>
+        </section>
+    </nav>
+    <div class="brand">
+        <div class="container">
+            <div class="row">
+                <nav class="col-md-10 ftr-urlt-lnk">
+                    <h2 class="wb-inv">About this site</h2>
+                    <ul>
+                        <li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+                        <li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+                        <li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+                        <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+                        <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+                    </ul>
+                </nav>
+                <div class="col-xs-6 visible-sm visible-xs tofpg">
+                    <a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+                </div>
+                <div class="col-xs-6 col-md-2 text-right">
+                    <object type="image/svg+xml" tabindex="-1" role="img" data="https://govcloud.github.io/lib/theme-gcweb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!--[if gte IE 9 | !IE ]><!-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://govcloud.github.io/lib/wet-boew/js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+    <script src="https://govcloud.github.io/lib/wet-boew/js/ie8-wet-boew2.min.js"></script>
+<![endif]-->
+<script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'XXXX-XXXX-XXXX', 'auto');
+    ga('send', 'pageview');
+</script>
+<script src="https://govcloud.github.io/js/collapse.js"></script>
+<script src="https://govcloud.github.io/js/d3.v4.min.js"></script>
+<script src="https://govcloud.github.io/js/d3.dependencyWheel.js"></script>
+<script src="https://govcloud.github.io/js/composerBuilder.js"></script>
+<script>
+  $('.docmenu li').each(function() {
+    if ($(this).hasClass('current_page')) {
+      $(this).closest('.menu').collapse();
+    }
+  });
+  $(function() { $('table').addClass('wb-tables table table-striped table-hover').attr('data-wb-tables', '{ "bFilter" : 1, "bInfo" : 0, "bPaginate" : false }'); })
+</script>
+
+
+</body>
+</html>

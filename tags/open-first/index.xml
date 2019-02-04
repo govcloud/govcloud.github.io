@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Open First on GovCloud</title>
+    <title>Open First on GoC Cloud Native</title>
     <link>https://govcloud.github.io/tags/open-first/</link>
-    <description>Recent content in Open First on GovCloud</description>
+    <description>Recent content in Open First on GoC Cloud Native</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 22 Mar 2018 13:10:52 -0500</lastBuildDate>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Open First Day</title>
-      <link>https://govcloud.github.io/slide/09-28-18/</link>
+      <link>https://govcloud.github.io/slide/2018-09-28/</link>
       <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/slide/09-28-18/</guid>
+      <guid>https://govcloud.github.io/slide/2018-09-28/</guid>
       <description>Open First Day github.com/statcan 
 Note:
 Hi there!
