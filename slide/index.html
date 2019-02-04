@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>
         
-        Statistics Canada Presentation
+        Slides
         
     </title>
     <!--[if gte IE 9 | !IE ]><!-->
@@ -32,9 +32,6 @@
 
 <link rel="shortcut icon" href="https://govcloud.github.io/assets/images/favicon.ico">
 
-	<link rel="stylesheet" href="https://govcloud.github.io/lib/reveal.js/css/reveal.css">
-	<link rel="stylesheet" href="https://govcloud.github.io/lib/reveal.js/css/theme/black.css" id="theme">
-	<link rel="stylesheet" href="https://govcloud.github.io/lib/reveal.js/lib/css/zenburn.css">
     
 <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/monokai.min.css">
 <link rel="stylesheet" href="https://govcloud.github.io/css/styles.css">
@@ -45,178 +42,338 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="https://govcloud.github.io/index.xml">
 
 </head>
-<body vocab="http://schema.org/" typeof="WebPage">
-	<div class="reveal">
-	<div class="slides">
-	<section data-markdown
-	         data-separator="^---"
-		 data-separator-vertical="^___"
-		 data-separator-notes="^Note:"
-		data-charset="utf8">
-	&lt;!-- .slide: id=&#34;hadoop&#34; data-transition=&#34;concave&#34; --&gt;
+<body vocab="http://schema.org/" typeof="WebPage" class="theme-gcweb">
+    <ul id="wb-tphp">
+    <li class="wb-slc">
+        <a class="wb-sl" href="#wb-cont">Skip to main content</a>
+    </li>
+    <li class="wb-slc visible-sm visible-md visible-lg">
+        <a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+    </li>
+</ul>
 
-# Hadoop
+    <header role="banner">
+    
+        <div id="wb-bnr" class="container">
+    <section id="wb-lng" class="visible-md visible-lg text-right">
+    
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="list-inline margin-bottom-none">
+                <li class="curr">English</li>
+            </ul>
+        </div>
+    </div>
+    
+</section>
 
-[govcloud/charts](http://github.com/govcloud/charts) &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+    <div class="row">
+        <div class="brand col-xs-8 col-sm-9 col-md-6">
+            <a href="https://govcloud.github.io">
+                <object type="image/svg+xml" tabindex="-1" data="https://govcloud.github.io/lib/theme-gcweb/assets/sig-blk-en.svg"></object>
+                <span class="wb-inv"> Government of Canada</span>
+            </a>
+        </div>
+        <section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+            <h2>Search and menus</h2>
+            <ul class="list-inline text-right chvrn">
+                <li>
+                    <a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button">
+                    <span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list">
+                        <span class="wb-inv">Search and menus</span>
+                        </span>
+                    </span>
+                    </a>
+                </li>
+            </ul>
+            <div id="mb-pnl"></div>
+        </section>
+        <section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+            <h2>Search</h2>
+            <form action="https://google.ca/search" method="get" name="search" role="search" class="form-inline">
+                <div class="form-group">
+                    <label for="wb-srch-q" class="wb-inv">Search website</label>
+                    <input id="wb-srch-q" class="form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search GoC Cloud Native">
+                    <input type="hidden" name="q" value="site:govcloud.ca OR site:github.com/govcloud/govcloud.github.io">
+                </div>
+                <div class="form-group submit">
+                    <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
+                        <span class="glyphicon-search glyphicon"></span>
+                        <span class="wb-inv">Search</span>
+                    </button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
 
-Note:
+    
+    <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+    <div class="container nvbar">
+        <h2>Topics menu</h2>
+        <div class="row">
+            <ul class="list-inline menu">
+                
+                
+                
+                <li>
+                <a class="" href="https://www.youtube.com/channel/UC00nN9hhb4q6IChP8yEIzGA/playlists">
+                    <i class='fa fa-youtube'></i>
+                    <span>Youtube</span>
+                </a>
+                
+                </li>
+                
+                
+                <li>
+                <a class="" href="http://github.com/govcloud">
+                    <i class='fa fa-github'></i>
+                    <span>GitHub</span>
+                </a>
+                
+                </li>
+                
+                
+                <li>
+                <a class="" href="../slide/">
+                    
+                    <span>Slides</span>
+                </a>
+                
+                </li>
+                
+                
+                <li>
+                <a class="" href="../meetups/">
+                    
+                    <span>Meetups</span>
+                </a>
+                
+                </li>
+                
+                
+                <li>
+                <a class="" href="../feedback/">
+                    
+                    <span>Feedback</span>
+                </a>
+                
+                </li>
+                
+                
+                
+                
+            </ul>
+        </div>
+    </div>
+</nav>
 
----
+    <nav role="navigation" id="wb-bc" property="breadcrumb">
+    <h2>You are here:</h2>
+    <div class="container">
+        <div class="row">
+            
+            
+            <ol class="breadcrumb">
+                <li><a href="https://govcloud.github.io">Home</a></li>
+                  
+                    
+                      
+                  
+                    
+                      
+                        
+                      
+                      
+                  
+                    
+                      
+                  
+                <li>Slides</li>
+            </ol>
+        </div>
+    </div>
+</nav>
 
-&lt;!-- .slide: id=&#34;intro&#34; data-transition=&#34;concave&#34; --&gt;
+</header>
 
-# Agenda
+    <main role="main" property="mainContentOfPage" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <article class="post">
+                <header>
+                    <h1 id="wb-cont" property="name">
+                        Slides
+                    </h1>
+                    <div class="post-date mrgn-bttm-md text-muted text-right small">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        <time datetime="2018-03-22">
+                            2018-03-22
+                        </time>
+                    </div>
+                </header>
+                <div class="post-content">
+                    <p>Slidedecks for presentations given during the recurring monthly Cloud Native @ Government of Canada meetup:</p>
 
-1. Containers
-2. Kubernetes
-3. Charts
+<ul>
+  <li><a href="{{ relref "03-22-18.md" }}">2018-03-22</a></li>
+  <li><a href="{{ relref "04-24-18.md" }}">2018-04-24</a></li>
+  <li><a href="{{ relref "05-29-18.md" }}">2018-05-29</a></li>
+  <li><a href="{{ relref "06-26-18.md" }}">2018-06-26</a></li>
+  <li><a href="{{ relref "08-26-18.md" }}">2018-08-26</a></li>
+  <li><a href="{{ relref "09-28-18.md" }}">2018-09-28</a></li>
+  <li><a href="../docs/aqua.pdf">2018-10-12</a></li>
+  <li><a href="../docs/mongodb.pptx">2018-11-15</a></li>
+</ul>
 
-Note:
+<p>Special Presentations:</p>
 
----
+<ul>
+  <li><a href="{{ relref "09-28-18.md" }}">Open First Day</a></li>
+  <li><a href="https://www.youtube.com/watch?v=foDJfHoW1HQ&list=PL00ZCNsWlHf4bf1Zw0NqSwcWko-vlb_Rz&index=3">Containers and Governance</a></li>
+</ul>
 
-&lt;!-- .slide: id=&#34;containers&#34; data-transition=&#34;concave&#34; --&gt;
+                </div>
+                <aside>
+                    
+                    <ul class="list-inline post-tags">
+                        
+                        <li>
+                            <a href="https://govcloud.github.io/tags/slides">
+                                <i class="fa fa-tags"></i>
+                                slides
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    
+                    <h3>Related Post</h3>
+                    <ul class="post-rels">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </ul>
+                    
+                </aside>
+                <footer>
+                    <div class="wb-share text-right" data-wb-share='{"pnlId": "pnl6", "lnkClass": "btn btn-default"}'></div>
 
-# Containers
+                    <nav>
+    <ul class="pager">
+        
+        <li class="previous"><a href="https://govcloud.github.io/sitemap/"><span aria-hidden="true">&larr;</span> Older</a></li>
+        
+        
+        <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+        
+    </ul>
+</nav>
 
-&gt; Containers will yield the following benefits to Government:
+                    
 
-&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
-  &lt;ul class=&#34;list-unstyled&#34;&gt;
-    &lt;li&gt;Platform independence&lt;/li&gt;
-    &lt;li&gt;Resource efficiency and density&lt;/li&gt;
-    &lt;li&gt;Effective isolation and resource sharing&lt;/li&gt;
-    &lt;li&gt;Speed&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
+                </footer>
+            </article>
+        </div>
+    </div>
+    
+<dl id="wb-dtmd">
+    <dt>Date modified:&#32;</dt>
+    <dd>
+        <time property="dateModified">2018-03-22</time>
+    </dd>
+</dl>
 
-&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
-  &lt;ul class=&#34;list-unstyled&#34;&gt;
-    &lt;li&gt;Immense and smooth scaling&lt;/li&gt;
-    &lt;li&gt;Operational simplicity&lt;/li&gt;
-    &lt;li&gt;Developer productivity&lt;/li&gt;
-    &lt;li&gt;Development pipeline&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
 
-Note:
-
-**Platform independence: Build it once, run it anywhere**
-
-A major benefit of containers is their portability. In particular containers help to facilitate a cloud native approach via a microservices architectural design pattern.
-
-A container wraps up an application with everything it needs to run, like configuration files and dependencies. This enables you to easily and reliably run applications on different environments such as your local desktop, physical servers virtual servers, testing, staging, production environments and public or private clouds.
-
-This portability grants organisations a great amount of flexibility, speeds up the development process and makes it easier to switch to another cloud environment or provider, if need be.
-
-**Resource efficiency and density**
-
-Since containers do not require a separate operating system, they use up less resources. While a VM often measures several gigabytes in size, a container usually measures only a few dozen megabytes, making it possible to run many more containers than VMs on a single server.
-
-Since containers have a higher utilisation level with regard to the underlying hardware, you require less hardware, resulting in a reduction of bare metal costs as well as datacentre costs.
-
-**Effective isolation and resource sharing**
-
-Although containers run on the same server and use the same resources, they do not interact with each other. If one application crashes, other containers with the same application will keep running flawlessly and won’t experience any technical problems. This isolation also decreases security risks: If one application should be hacked or breached by malware, any resulting negative effects won’t spread to the other running containers.
-
-**Speed: Start, create, replicate or destroy containers in seconds**
-
-As mentioned before, containers are lightweight and start in less than a second since they do not require an operating system boot. Creating, replicating or destroying containers is also just a matter of seconds, thus greatly speeding up the development process, the time to market and the operational speed. Releasing new software or versions has never been so easy and quick. But the increased speed also offers great opportunities for improving customer experience, since it enables organisations and developers to act quickly, for example when it comes to fixing bugs or adding new features.
-
-**Immense and smooth scaling**
-
-A major benefit of containers is that they offer the possibility of horizontal scaling, meaning you add more identical containers within a cluster to scale out. With smart scaling, where you only run the containers needed in real time, you can reduce your resource costs drastically and accelerate your return on investment. Container technology and horizontal scaling has been used by major vendors like Google and Twitter for years now.
-
-**Operational simplicity**
-
-Contrary to traditional virtualisation, where each VM has its own OS, containers execute application processes in isolation from the underlying host OS. This means that your host OS doesn’t need specific software to run applications, which makes it simpler to manage your host system and quickly apply updates and security patches.
-
-**Improved developer productivity and development pipeline**
-
-A container-based infrastructure offers many advantages, promoting an effective development pipeline. Let’s start with one of the most well-known benefits. As mentioned before, containers ensure that applications run and work as designed locally. This elimination of environmental inconsistencies makes testing and debugging less complicated and less time-consuming since there are fewer differences between running your application on your workstation, test server or in production environment. The same goes for updating your applications: you simply modify the configuration file, create new containers and destroy the old ones, a process which can be executed in seconds. In addition to these well-known benefits, container tools like Docker offer many other advantages. One of these is version control, making it possible for you to roll-out or roll-back with zero downtime. The possibility to use a remote repository is also a major benefit when working in a project-team, since it enables you to share your container with others.
-
-## Data Points
-
-* 71% of Fortune 100 companies are running containers
-
----
-
-&lt;!-- .slide: id=&#34;kubernetes&#34; data-transition=&#34;concave&#34; --&gt;
-
-# Kubernetes
-
-&gt; Kubernetes will yield the following benefits to Government:
-
-&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
-  &lt;ul class=&#34;list-unstyled&#34;&gt;
-    &lt;li&gt;Managed complexity&lt;/li&gt;
-    &lt;li&gt;Vendor lock-in&lt;/li&gt;
-    &lt;li&gt;Multi cloud&lt;/li&gt;
-    &lt;li&gt;Self-healing&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div class=&#34;col-xs-6 col-sm-6 col-md-6&#34;&gt;
-  &lt;ul class=&#34;list-unstyled&#34;&gt;
-    &lt;li&gt;Google backed&lt;/li&gt;
-    &lt;li&gt;Vibrant community&lt;/li&gt;
-    &lt;li&gt;Big name supporters&lt;/li&gt;
-    &lt;li&gt;Flexibility&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-Note:
-
-**Managed complexity**: Automation of the deployment, scaling, and operation of application containers in a clustered environment via primitives
-
-**Vendor Lock-in**: Essentially every major cloud provider (public, private, hybrid) support Kubernetes
-
-**Multi-Cloud**: Ideal for managing multi-cloud environments / workloads
-
-**Self-healing**: Auto-placement, auto-restart, auto-replication, auto-scaling
-
-**Google Backed**: Originally built by Google leveraging a decade of experience running containers at scale
-
-**Vibrant Community**: One of the fastest moving projects in open source history
-
-**Big Name Supporters**: Google, Microsoft, AWS, IBM, RedHat, Oracle, VMWare, Intel, Pivotal etc
-
-**Flexibility**: Simplicity of a PaaS with the flexibility of IaaS
-
-&gt; Interesting data points
-
-* 54% of Fortune 100 companies are running Kubernetes
-* Housed within a large, neutral open source foundation, the Cloud Native Computing Foundation
-* CNCF consists of enterprise companies such as Microsoft, Google, AWS, SAP, Oracle, Pivotal, etc
-* Kubernetes has won the orchestration wars and is recognized as the de facto standard for container orchestration
-* Gartner: By 2020, more than 50% of global enterprises will be running containerized applications in production.
-* With that, Kubernetes has emerged as the leading orchestration method in the market with a 71% adoption rate.
-
----
-
-	</section>
-	</div>
-	</div>
-<script src="https://govcloud.github.io/lib/reveal.js/lib/js/head.min.js"></script>
-	<script src="https://govcloud.github.io/lib/reveal.js/js/reveal.js"></script>
-	<script>
-		Reveal.initialize({
-		      	embedded : true,
-				history: true,
-		        
-		        
-		        
-		        dependencies: [
-		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/lib\/js\/classList.js"', condition: function() { return !document.body.classList; } },
-		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/plugin\/markdown\/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/plugin\/markdown\/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/plugin\/zoom-js\/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-		          { src: 'https:\/\/govcloud.github.io\/lib\/reveal.js\/plugin\/notes\/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-		        ]
-		      });
-	</script>
-	
+    </main>
+    
   <footer role="contentinfo" id="wb-info">
     <nav role="navigation" class="container wb-navcurr">
         <h2>About this site</h2>
@@ -274,11 +431,11 @@ Note:
 
 
 <!--[if gte IE 9 | !IE ]><!-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <script src="https://wet-boew.github.io/wet-boew/js/wet-boew.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://govcloud.github.io/lib/wet-boew/js/wet-boew.min.js"></script>
 <!--<![endif]-->
 <!--[if lt IE 9]>
-    <script src="https://wet-boew.github.io/wet-boew/js/ie8-wet-boew2.min.js"></script>
+    <script src="https://govcloud.github.io/lib/wet-boew/js/ie8-wet-boew2.min.js"></script>
 <![endif]-->
 <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>

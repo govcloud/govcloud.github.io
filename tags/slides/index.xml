@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Slides on GovCloud</title>
+    <title>Slides on GoC Cloud Native</title>
     <link>https://govcloud.github.io/tags/slides/</link>
-    <description>Recent content in Slides on GovCloud</description>
+    <description>Recent content in Slides on GoC Cloud Native</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 22 Mar 2018 13:10:52 -0500</lastBuildDate>
@@ -13,13 +13,13 @@
     
     <item>
       <title>Slides</title>
-      <link>https://govcloud.github.io/sitemap/slides/</link>
+      <link>https://govcloud.github.io/slide/</link>
       <pubDate>Thu, 22 Mar 2018 13:10:52 -0500</pubDate>
       
-      <guid>https://govcloud.github.io/sitemap/slides/</guid>
+      <guid>https://govcloud.github.io/slide/</guid>
       <description>Slidedecks for presentations given during the recurring monthly Cloud Native @ Government of Canada meetup:
- 03-22-18 04-24-18 05-29-18 06-26-18 08-26-18 09-28-18 10-12-18 11-15-18  Special Presentations:
- Open First Day (2018)  </description>
+ 2018-03-22 2018-04-24 2018-05-29 2018-06-26 2018-08-26 2018-09-28 2018-10-12 2018-11-15  Special Presentations:
+ Open First Day Containers and Governance  </description>
     </item>
     
   </channel>
